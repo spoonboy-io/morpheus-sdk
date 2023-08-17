@@ -1,0 +1,45 @@
+# MorpheusApi.Check
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Number** |  | [optional] 
+**account** | [**UpdateBlueprintPermissionsRequestResourcePermissionSitesInner**](UpdateBlueprintPermissionsRequestResourcePermissionSitesInner.md) |  | [optional] 
+**active** | **Boolean** |  | [optional] 
+**apiKey** | **String** |  | [optional] 
+**availability** | **Number** |  | [optional] 
+**checkAgent** | **String** |  | [optional] 
+**checkInterval** | **Number** |  | [optional] 
+**checkSpec** | **String** |  | [optional] 
+**checkType** | [**CheckCheckType**](CheckCheckType.md) |  | [optional] 
+**config** | [**CheckConfig**](CheckConfig.md) |  | [optional] 
+**container** | [**CheckContainer**](CheckContainer.md) |  | [optional] 
+**createIncident** | **Boolean** |  | [optional] 
+**muted** | **Boolean** |  | [optional] 
+**createdBy** | [**CheckCreatedBy**](CheckCreatedBy.md) |  | [optional] 
+**dateCreated** | **Date** |  | [optional] 
+**description** | **String** |  | [optional] 
+**endDate** | **Date** |  | [optional] 
+**health** | **Number** |  | [optional] 
+**inUptime** | **Boolean** |  | [optional] 
+**lastBoxStats** | **String** |  | [optional] 
+**lastCheckStatus** | **String** |  | [optional] 
+**lastError** | **String** |  | [optional] 
+**lastErrorDate** | **Date** |  | [optional] 
+**lastMessage** | **String** |  | [optional] 
+**lastMetric** | **String** |  | [optional] 
+**lastRunDate** | **Date** |  | [optional] 
+**lastStats** | **String** |  | [optional] 
+**lastSuccessDate** | **Date** |  | [optional] 
+**lastTimer** | **Number** |  | [optional] 
+**lastUpdated** | **Date** |  | [optional] 
+**lastWarningDate** | **Date** |  | [optional] 
+**name** | **String** |  | [optional] 
+**nextRunDate** | **Date** |  | [optional] 
+**outageTime** | **Number** |  | [optional] 
+**severity** | **String** |  | [optional] 
+**startDate** | **Date** |  | [optional] 
+**deleted** | **Boolean** |  | [optional] 
+
+
