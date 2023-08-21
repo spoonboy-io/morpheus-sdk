@@ -3,8 +3,8 @@ package org.openapitools.model;
 import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.openapitools.model.ApiBlueprintsIdUpdatePermissionsResourcePermissionSites;
 import org.openapitools.model.ArchiveBucketCreateStorageProvider;
-import org.openapitools.model.UpdateBlueprintPermissionsRequestResourcePermissionSitesInner;
 
 @Canonical
 class ArchiveBucketCreate {
@@ -14,33 +14,10 @@ class ArchiveBucketCreate {
     String description
     
     ArchiveBucketCreateStorageProvider storageProvider
-
-    enum VisibilityEnum {
-    
-        PUBLIC("public"),
-        
-        PRIVATE("private")
-    
-        private final String value
-    
-        VisibilityEnum(String value) {
-            this.value = value
-        }
-    
-        String getValue() {
-            value
-        }
-    
-        @Override
-        String toString() {
-            String.valueOf(value)
-        }
-    }
-
     /* Visibility - Set to public to allow all tenants */
-    VisibilityEnum visibility = VisibilityEnum.PRIVATE
+    String visibility = VisibilityEnum.PRIVATE
     /* Public URL - Set to true to allow anonymous access */
     Boolean isPublic = false
     
-    UpdateBlueprintPermissionsRequestResourcePermissionSitesInner accounts
+    ApiBlueprintsIdUpdatePermissionsResourcePermissionSites accounts
 }

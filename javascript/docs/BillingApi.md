@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## getBillingAccount
 
-> ListBillingAccount200Response getBillingAccount(id, opts)
+> Object getBillingAccount(id, opts)
 
 This endpoint will retrieve a specific account by id if the user has permission to access it
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListBillingAccount200Response**](ListBillingAccount200Response.md)
+**Object**
 
 ### Authorization
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ## getBillingInstancesIdentifier
 
-> GetBillingInstancesIdentifier200Response getBillingInstancesIdentifier(identifier, opts)
+> Object getBillingInstancesIdentifier(identifier, opts)
 
 Retrieves billing information for an instance in the requestor&#39;s account. Use instanceUUID whenever possible.
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetBillingInstancesIdentifier200Response**](GetBillingInstancesIdentifier200Response.md)
+**Object**
 
 ### Authorization
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ## getBillingServersIdentifier
 
-> GetBillingServersIdentifier200Response getBillingServersIdentifier(identifier, opts)
+> Object getBillingServersIdentifier(identifier, opts)
 
 Retrieves billing information for a specific server (container host) in the requestor&#39;s account. Use refUUID whenever possible.
 
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetBillingServersIdentifier200Response**](GetBillingServersIdentifier200Response.md)
+**Object**
 
 ### Authorization
 
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 ## getBillingZoneIdentifier
 
-> GetBillingZoneIdentifier200Response getBillingZoneIdentifier(identifier, opts)
+> Object getBillingZoneIdentifier(identifier, opts)
 
 Retrieves billing information for a specific zone in the requestor&#39;s account. Use zoneUUID whenever possible.
 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetBillingZoneIdentifier200Response**](GetBillingZoneIdentifier200Response.md)
+**Object**
 
 ### Authorization
 
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 ## listBillingAccount
 
-> ListBillingAccount200Response listBillingAccount(opts)
+> Object listBillingAccount(opts)
 
 Retrieves billing information for the requesting user&#39;s account.
 
@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListBillingAccount200Response**](ListBillingAccount200Response.md)
+**Object**
 
 ### Authorization
 
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 
 ## listBillingInstances
 
-> ListBillingInstances200Response listBillingInstances(opts)
+> Object listBillingInstances(opts)
 
 Retrieves billing information for all instances on the requestor&#39;s account.
 
@@ -413,7 +413,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListBillingInstances200Response**](ListBillingInstances200Response.md)
+**Object**
 
 ### Authorization
 
@@ -427,7 +427,7 @@ Name | Type | Description  | Notes
 
 ## listBillingServers
 
-> ListBillingServers200Response listBillingServers(opts)
+> Object listBillingServers(opts)
 
 Retrieves billing information for all servers (container hosts) on the requestor&#39;s account.
 
@@ -476,7 +476,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListBillingServers200Response**](ListBillingServers200Response.md)
+**Object**
 
 ### Authorization
 
@@ -490,7 +490,7 @@ Name | Type | Description  | Notes
 
 ## listBillingZone
 
-> ListBillingZone200Response listBillingZone(opts)
+> Object listBillingZone(opts)
 
 Retrieves billing information for all zones on the requestor&#39;s account.
 
@@ -547,7 +547,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListBillingZone200Response**](ListBillingZone200Response.md)
+**Object**
 
 ### Authorization
 

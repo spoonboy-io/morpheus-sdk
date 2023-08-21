@@ -17,6 +17,6 @@ Name | Type | Description | Notes
 **checks** | **[Number]** |  | [optional] 
 **checkGroups** | **[Number]** |  | [optional] 
 **apps** | **[Number]** |  | [optional] 
-**contacts** | [**[AddAlertsRequestAlertContactsInner]**](AddAlertsRequestAlertContactsInner.md) |  | [optional] 
+**contacts** | [**[ApiMonitoringAlertsAlertContacts]**](ApiMonitoringAlertsAlertContacts.md) |  | [optional] 
 
 

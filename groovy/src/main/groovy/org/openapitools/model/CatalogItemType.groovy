@@ -4,10 +4,10 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.ApplianceSettingsEnabledZoneTypesInner;
-import org.openapitools.model.CheckGroupInstance;
+import java.util.List;
+import org.openapitools.model.InlineResponse20040AppDeployInstance;
+import org.openapitools.model.InlineResponse20082LoadBalancerInstanceSslCert;
+import org.openapitools.model.OptionType;
 
 @Canonical
 class CatalogItemType {
@@ -22,7 +22,7 @@ class CatalogItemType {
     
     String description
     
-    List<String> labels
+    List<String> labels = new ArrayList<String>()
     
     String type
     
@@ -48,15 +48,15 @@ class CatalogItemType {
     
     Object config
     
-    CheckGroupInstance workflow
+    InlineResponse20082LoadBalancerInstanceSslCert workflow
     
     String content
     
-    List<Object> optionTypes
+    List<OptionType> optionTypes = new ArrayList<OptionType>()
     
     String createdBy
     
-    ApplianceSettingsEnabledZoneTypesInner owner
+    InlineResponse20040AppDeployInstance owner
     
     Date dateCreated
     

@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 
 @Canonical
 class AppStats {
@@ -26,7 +26,7 @@ class AppStats {
     
     Long instanceCount
     
-    List<Long> instanceDayCount
+    List<Long> instanceDayCount = new ArrayList<Long>()
     
     Long instanceDayCountTotal
 }

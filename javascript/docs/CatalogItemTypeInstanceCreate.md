@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **enabled** | **Boolean** | Can be used to enable / disable the catalog item type. | [optional] [default to true]
 **featured** | **Boolean** | Can be used to feature the catalog item type. | [optional] [default to false]
 **allowQuantity** | **Boolean** | Can users order more than one of this item at a time. | [optional] [default to false]
-**config** | **Object** |  | 
+**config** | [**CatalogItemTypeInstanceScribe**](CatalogItemTypeInstanceScribe.md) |  | 
 **optionTypes** | **[Number]** | Array of option type IDs. Only applies to type instance and blueprint. | [optional] 
 **content** | **String** | Documentation content for this Catalog Item. Markdown-formatted text is accepted and displayed appropriately when the item is ordered from the Service Catalog. A new Catalog Item-type Wiki entry will also be added containing this information. | [optional] 
 

@@ -1,0 +1,21 @@
+
+
+# NetworkPoolServerUpdateBluecat
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | Name |  [optional]
+**enabled** | **Boolean** | Can be used to enable / disable the network pool server. |  [optional]
+**serviceUrl** | **String** | URL |  [optional]
+**serviceUsername** | **String** | Username |  [optional]
+**servicePassword** | **String** | Password |  [optional]
+**serviceThrottleRate** | **Long** | Throttle Rate |  [optional]
+**ignoreSsl** | **Boolean** | Disable SSL SNI Verification |  [optional]
+**networkFilter** | **String** | Network Filter |  [optional]
+**config** | [**NetworkPoolServerCreateBluecatConfig**](NetworkPoolServerCreateBluecatConfig.md) |  |  [optional]
+**credential** | [**NetworkPoolServerCreateBluecatCredential**](NetworkPoolServerCreateBluecatCredential.md) |  |  [optional]
+
+
+

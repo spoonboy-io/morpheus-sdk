@@ -5,9 +5,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.BillingServerUsagesInner;
+import java.util.List;
+import org.openapitools.model.BillingServerUsages;
 
 @Canonical
 class BillingServer {
@@ -32,7 +31,7 @@ class BillingServer {
     
     String currency
     
-    List<BillingServerUsagesInner> usages
+    List<BillingServerUsages> usages = new ArrayList<BillingServerUsages>()
     
     Long numUsages
     

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **Int64** |  | [optional] 
-**Account** | [**UpdateBlueprintPermissionsRequestResourcePermissionSitesInner**](UpdateBlueprintPermissionsRequestResourcePermissionSitesInner.md) |  | [optional] 
+**Account** | [**ApiBlueprintsIdUpdatePermissionsResourcePermissionSites**](ApiBlueprintsIdUpdatePermissionsResourcePermissionSites.md) |  | [optional] 
 **Active** | **Boolean** |  | [optional] 
 **ApiKey** | **String** |  | [optional] 
 **Availability** | **Decimal** |  | [optional] 
@@ -12,11 +12,11 @@ Name | Type | Description | Notes
 **CheckInterval** | **Int64** |  | [optional] 
 **CheckSpec** | **String** |  | [optional] 
 **CheckType** | [**CheckCheckType**](CheckCheckType.md) |  | [optional] 
-**Config** | [**CheckConfig**](CheckConfig.md) |  | [optional] 
+**Config** | [**AnyOfcheckWebConfigcheckSqlConfigcheckElasticsearchConfigcheckSocketConfigobjectcheckVmConfig**](AnyOfcheckWebConfigcheckSqlConfigcheckElasticsearchConfigcheckSocketConfigobjectcheckVmConfig.md) |  | [optional] 
 **Container** | [**CheckContainer**](CheckContainer.md) |  | [optional] 
 **CreateIncident** | **Boolean** |  | [optional] 
 **Muted** | **Boolean** |  | [optional] 
-**CreatedBy** | [**CheckCreatedBy**](CheckCreatedBy.md) |  | [optional] 
+**CreatedBy** | [**InlineResponse20083LoadBalancerNodeCreatedBy**](InlineResponse20083LoadBalancerNodeCreatedBy.md) |  | [optional] 
 **DateCreated** | **System.DateTime** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **EndDate** | **System.DateTime** |  | [optional] 

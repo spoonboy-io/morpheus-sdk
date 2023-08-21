@@ -4,11 +4,11 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.model.BlueprintKubernetesCreateConfigSpecsInner;
+import java.util.List;
+import org.openapitools.model.BlueprintKubernetesCreateConfigSpecs;
 
 @Canonical
 class BlueprintKubernetesCreateConfig {
     /* Array of Kubernetes specs in Morpheus */
-    List<BlueprintKubernetesCreateConfigSpecsInner> specs
+    List<BlueprintKubernetesCreateConfigSpecs> specs = new ArrayList<BlueprintKubernetesCreateConfigSpecs>()
 }

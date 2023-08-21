@@ -1,0 +1,9 @@
+# # ApiLibraryLayoutsIdPermissionsInstanceTypeLayout
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**permissions** | [**\OpenAPI\Client\Model\ApiLibraryLayoutsIdPermissionsInstanceTypeLayoutPermissions**](ApiLibraryLayoutsIdPermissionsInstanceTypeLayoutPermissions.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

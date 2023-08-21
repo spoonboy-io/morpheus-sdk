@@ -3,7 +3,6 @@ package org.openapitools.api;
 import org.openapitools.api.ApiUtils
 import java.math.BigDecimal
 import org.openapitools.model.DefaultError
-import org.openapitools.model.ListActivity200Response
 
 class ActivityApi {
     String basePath = "https://CHANGEME"
@@ -59,7 +58,7 @@ class ActivityApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListActivity200Response.class )
+                    Object.class )
 
     }
 

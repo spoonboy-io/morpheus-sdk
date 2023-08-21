@@ -4,12 +4,11 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.BillingZonesInnerComputeServers;
-import org.openapitools.model.BillingZonesInnerInstances;
-import org.openapitools.model.BillingZonesInnerLoadBalancers;
-import org.openapitools.model.BillingZonesInnerSnapshots;
-import org.openapitools.model.BillingZonesInnerVirtualImages;
+import org.openapitools.model.BillingComputeServers;
+import org.openapitools.model.BillingInstances;
+import org.openapitools.model.BillingLoadBalancers;
+import org.openapitools.model.BillingSnapshots;
+import org.openapitools.model.BillingVirtualImages;
 
 @Canonical
 class BillingZone {
@@ -28,17 +27,17 @@ class BillingZone {
     
     String priceUnit
     
-    BillingZonesInnerComputeServers computeServers
+    BillingComputeServers computeServers
     
-    BillingZonesInnerInstances instances
+    BillingInstances instances
     
-    BillingZonesInnerComputeServers discoveredServers
+    BillingComputeServers discoveredServers
     
-    BillingZonesInnerLoadBalancers loadBalancers
+    BillingLoadBalancers loadBalancers
     
-    BillingZonesInnerVirtualImages virtualImages
+    BillingVirtualImages virtualImages
     
-    BillingZonesInnerSnapshots snapshots
+    BillingSnapshots snapshots
     
     BigDecimal price
     

@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **description** | **String** | A description for the blueprint | [optional] 
 **labels** | **[String]** |  | [optional] 
 **category** | **String** | Category | [optional] 
-**config** | [**BlueprintCreateSuccessConfig**](BlueprintCreateSuccessConfig.md) |  | [optional] 
+**config** | [**OneOfblueprintARMCreateSuccessblueprintCFTCreateSuccessblueprintHelmCreateSuccessblueprintKubernetesCreateSuccessblueprintMorpheusCreateSuccessblueprintTerraformCreateSuccess**](OneOfblueprintARMCreateSuccessblueprintCFTCreateSuccessblueprintHelmCreateSuccessblueprintKubernetesCreateSuccessblueprintMorpheusCreateSuccessblueprintTerraformCreateSuccess.md) |  | [optional] 
 
 

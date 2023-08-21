@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **Price** | **Decimal** |  | [optional] 
 **Cost** | **Decimal** |  | [optional] 
 **Currency** | **String** |  | [optional] 
-**Containers** | [**BillingInstanceContainersInner[]**](BillingInstanceContainersInner.md) |  | [optional] 
+**Containers** | [**BillingInstanceContainers[]**](BillingInstanceContainers.md) |  | [optional] 
 
 ## Examples
 

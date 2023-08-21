@@ -1,20 +1,17 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.AddClient200Response
-import org.openapitools.model.AddClientRequest
 import org.openapitools.model.DefaultError
-import org.openapitools.model.GetClients200Response
-import org.openapitools.model.ListClients200Response
+import org.openapitools.model.InlineObject27
+import org.openapitools.model.InlineObject28
 import org.openapitools.model.Model200Success
-import org.openapitools.model.UpdateClientsRequest
 
 class ClientsApi {
     String basePath = "https://CHANGEME"
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def addClient ( AddClientRequest addClientRequest, Closure onSuccess, Closure onFailure)  {
+    def addClient ( InlineObject27 inlineObject27, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/clients"
 
         // params
@@ -27,12 +24,12 @@ class ClientsApi {
 
 
         contentType = 'application/json';
-        bodyParams = addClientRequest
+        bodyParams = inlineObject27
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    AddClient200Response.class )
+                    Object.class )
 
     }
 
@@ -56,7 +53,7 @@ class ClientsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetClients200Response.class )
+                    Object.class )
 
     }
 
@@ -94,7 +91,7 @@ class ClientsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListClients200Response.class )
+                    Object.class )
 
     }
 
@@ -122,7 +119,7 @@ class ClientsApi {
 
     }
 
-    def updateClients ( Long id, UpdateClientsRequest updateClientsRequest, Closure onSuccess, Closure onFailure)  {
+    def updateClients ( Long id, InlineObject28 inlineObject28, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/clients/${id}"
 
         // params
@@ -139,12 +136,12 @@ class ClientsApi {
 
 
         contentType = 'application/json';
-        bodyParams = updateClientsRequest
+        bodyParams = inlineObject28
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "PUT", "",
-                    AddClient200Response.class )
+                    Object.class )
 
     }
 

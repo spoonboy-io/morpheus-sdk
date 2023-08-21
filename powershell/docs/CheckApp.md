@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **Int64** |  | [optional] 
-**Account** | [**UpdateBlueprintPermissionsRequestResourcePermissionSitesInner**](UpdateBlueprintPermissionsRequestResourcePermissionSitesInner.md) |  | [optional] 
+**Account** | [**ApiBlueprintsIdUpdatePermissionsResourcePermissionSites**](ApiBlueprintsIdUpdatePermissionsResourcePermissionSites.md) |  | [optional] 
 **Active** | **Boolean** |  | [optional] 
-**App** | [**CheckGroupInstance**](CheckGroupInstance.md) |  | [optional] 
+**App** | [**InlineResponse20082LoadBalancerInstanceSslCert**](InlineResponse20082LoadBalancerInstanceSslCert.md) |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
 **InUptime** | **Boolean** |  | [optional] 
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **Severity** | **String** |  | [optional] 
 **CreateIncident** | **Boolean** |  | [optional] 
 **Muted** | **Boolean** |  | [optional] 
-**CreatedBy** | [**ActivityActivityInnerUser**](ActivityActivityInnerUser.md) |  | [optional] 
+**CreatedBy** | [**InlineResponse200107NetworkPoolCreatedBy**](InlineResponse200107NetworkPoolCreatedBy.md) |  | [optional] 
 **DateCreated** | **System.DateTime** |  | [optional] 
 **LastUpdated** | **System.DateTime** |  | [optional] 
 **Availability** | **String** |  | [optional] 

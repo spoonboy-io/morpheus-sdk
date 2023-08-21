@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **NumUnits** | **Decimal** |  | [optional] 
 **Unit** | **String** |  | [optional] 
 **Currency** | **String** |  | [optional] 
-**Usages** | [**BillingServerUsagesInner[]**](BillingServerUsagesInner.md) |  | [optional] 
+**Usages** | [**BillingServerUsages[]**](BillingServerUsages.md) |  | [optional] 
 **NumUsages** | **Int64** |  | [optional] 
 **TotalUsages** | **Int64** |  | [optional] 
 **HasMoreUsages** | **Boolean** |  | [optional] 

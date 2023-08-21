@@ -1,0 +1,31 @@
+
+
+# IdentitySourcesSAMLConfig
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Long** |  |  [optional]
+**name** | **String** |  |  [optional]
+**description** | **String** |  |  [optional]
+**code** | **String** |  |  [optional]
+**type** | **String** |  |  [optional]
+**active** | **Boolean** |  |  [optional]
+**deleted** | **Boolean** |  |  [optional]
+**autoSyncOnLogin** | **Boolean** |  |  [optional]
+**externalLogin** | **Boolean** |  |  [optional]
+**allowCustomMappings** | **Boolean** |  |  [optional]
+**manualRoleAssignment** | **Boolean** |  |  [optional]
+**account** | [**InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  |  [optional]
+**defaultAccountRole** | [**IdentitySourcesLDAPConfigDefaultAccountRole**](IdentitySourcesLDAPConfigDefaultAccountRole.md) |  |  [optional]
+**config** | [**IdentitySourcesSAMLConfigConfig**](IdentitySourcesSAMLConfigConfig.md) |  |  [optional]
+**roleMappings** | [**List&lt;IdentitySourcesSAMLConfigRoleMappings&gt;**](IdentitySourcesSAMLConfigRoleMappings.md) |  |  [optional]
+**subdomain** | **String** |  |  [optional]
+**loginURL** | **String** |  |  [optional]
+**providerSettings** | [**IdentitySourcesSAMLConfigProviderSettings**](IdentitySourcesSAMLConfigProviderSettings.md) |  |  [optional]
+**dateCreated** | **OffsetDateTime** |  |  [optional]
+**lastUpdated** | **OffsetDateTime** |  |  [optional]
+
+
+

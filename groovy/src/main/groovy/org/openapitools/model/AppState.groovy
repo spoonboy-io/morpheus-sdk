@@ -4,22 +4,22 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 import org.openapitools.model.AppStateInput;
 import org.openapitools.model.AppStateOutput;
-import org.openapitools.model.AppStateSpecsInner;
-import org.openapitools.model.AppStateWorkloadsInner;
+import org.openapitools.model.AppStateSpecs;
+import org.openapitools.model.AppStateWorkloads;
 
 @Canonical
 class AppState {
     
-    List<AppStateWorkloadsInner> workloads
+    List<AppStateWorkloads> workloads = new ArrayList<AppStateWorkloads>()
     
     Boolean iacDrift
     
-    List<Object> planResources
+    List<Object> planResources = new ArrayList<Object>()
     
-    List<AppStateSpecsInner> specs
+    List<AppStateSpecs> specs = new ArrayList<AppStateSpecs>()
     
     String stateData
     

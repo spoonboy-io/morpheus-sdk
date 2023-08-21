@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **Number** |  | [optional] 
 **name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
-**account** | [**ApplianceSettingsEnabledZoneTypesInner**](ApplianceSettingsEnabledZoneTypesInner.md) |  | [optional] 
+**account** | [**InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
 **enabled** | **Boolean** |  | [optional] 
 **refScope** | **String** |  | [optional] 
 **refType** | **String** |  | [optional] 

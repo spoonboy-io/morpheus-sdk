@@ -3,21 +3,41 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Price** | **Decimal** |  | [optional] 
-**Cost** | **Decimal** |  | [optional] 
+**ZoneName** | **String** |  | [optional] 
+**ZoneId** | **Int64** |  | [optional] 
+**ZoneUUID** | **String** |  | [optional] 
+**ZoneCode** | **String** |  | [optional] 
 **StartDate** | **System.DateTime** |  | [optional] 
 **EndDate** | **System.DateTime** |  | [optional] 
-**Zones** | [**BillingZonesInner[]**](BillingZonesInner.md) |  | [optional] 
+**PriceUnit** | **String** |  | [optional] 
+**ComputeServers** | [**BillingComputeServers**](BillingComputeServers.md) |  | [optional] 
+**Instances** | [**BillingInstances**](BillingInstances.md) |  | [optional] 
+**DiscoveredServers** | [**BillingComputeServers**](BillingComputeServers.md) |  | [optional] 
+**LoadBalancers** | [**BillingLoadBalancers**](BillingLoadBalancers.md) |  | [optional] 
+**VirtualImages** | [**BillingVirtualImages**](BillingVirtualImages.md) |  | [optional] 
+**Snapshots** | [**BillingSnapshots**](BillingSnapshots.md) |  | [optional] 
+**Price** | **Decimal** |  | [optional] 
+**Cost** | **Decimal** |  | [optional] 
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-$BillingZones = Initialize-PSOpenAPIToolsBillingZones  -Price null `
- -Cost null `
+$BillingZones = Initialize-PSOpenAPIToolsBillingZones  -ZoneName null `
+ -ZoneId null `
+ -ZoneUUID null `
+ -ZoneCode null `
  -StartDate null `
  -EndDate null `
- -Zones null
+ -PriceUnit null `
+ -ComputeServers null `
+ -Instances null `
+ -DiscoveredServers null `
+ -LoadBalancers null `
+ -VirtualImages null `
+ -Snapshots null `
+ -Price null `
+ -Cost null
 ```
 
 - Convert the resource to JSON

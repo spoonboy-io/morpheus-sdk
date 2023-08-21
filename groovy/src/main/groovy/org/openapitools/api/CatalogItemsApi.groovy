@@ -1,22 +1,18 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.AddCatalogItemType200Response
-import org.openapitools.model.AddCatalogItemTypeRequest
-import org.openapitools.model.AddCatalogItemTypeRequest1
 import org.openapitools.model.DefaultError
-import org.openapitools.model.GetCatalogItemType200Response
-import org.openapitools.model.ListCatalogItemTypes200Response
+import org.openapitools.model.InlineObject24
+import org.openapitools.model.InlineObject25
+import org.openapitools.model.InlineResponse20015
 import org.openapitools.model.Model200Success
-import org.openapitools.model.UpdateCatalogItemType200Response
-import org.openapitools.model.UpdateCatalogItemTypeRequest
 
 class CatalogItemsApi {
     String basePath = "https://CHANGEME"
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def addCatalogItemType ( AddCatalogItemTypeRequest addCatalogItemTypeRequest, Closure onSuccess, Closure onFailure)  {
+    def addCatalogItemType ( InlineObject24 inlineObject24, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/catalog-item-types"
 
         // params
@@ -29,12 +25,12 @@ class CatalogItemsApi {
 
 
         contentType = 'application/json';
-        bodyParams = addCatalogItemTypeRequest
+        bodyParams = inlineObject24
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    AddCatalogItemType200Response.class )
+                    Object.class )
 
     }
 
@@ -58,7 +54,7 @@ class CatalogItemsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetCatalogItemType200Response.class )
+                    InlineResponse20015.class )
 
     }
 
@@ -114,7 +110,7 @@ class CatalogItemsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListCatalogItemTypes200Response.class )
+                    Object.class )
 
     }
 
@@ -142,7 +138,7 @@ class CatalogItemsApi {
 
     }
 
-    def updateCatalogItemType ( Long id, UpdateCatalogItemTypeRequest updateCatalogItemTypeRequest, Closure onSuccess, Closure onFailure)  {
+    def updateCatalogItemType ( Long id, InlineObject25 inlineObject25, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/catalog-item-types/${id}"
 
         // params
@@ -159,12 +155,12 @@ class CatalogItemsApi {
 
 
         contentType = 'application/json';
-        bodyParams = updateCatalogItemTypeRequest
+        bodyParams = inlineObject25
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "PUT", "",
-                    UpdateCatalogItemType200Response.class )
+                    Object.class )
 
     }
 
@@ -192,7 +188,7 @@ class CatalogItemsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "PUT", "",
-                    UpdateCatalogItemType200Response.class )
+                    Object.class )
 
     }
 

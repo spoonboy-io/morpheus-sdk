@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **BackupsEnabled** | **Boolean** |  | [optional] 
 **CreateBackups** | **Boolean** |  | [optional] 
 **BackupAppliance** | **Boolean** |  | [optional] 
-**DefaultStorageBucket** | [**ApplianceSettingsEnabledZoneTypesInner**](ApplianceSettingsEnabledZoneTypesInner.md) |  | [optional] 
-**DefaultSchedule** | [**BackupSettingsDefaultSchedule**](BackupSettingsDefaultSchedule.md) |  | [optional] 
+**DefaultStorageBucket** | [**InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
+**DefaultSchedule** | [**InlineResponse20079LoadBalancerMonitorLoadBalancerType**](InlineResponse20079LoadBalancerMonitorLoadBalancerType.md) |  | [optional] 
 **RetentionCount** | **Int64** |  | [optional] 
 
 ## Examples

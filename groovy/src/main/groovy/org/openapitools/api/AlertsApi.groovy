@@ -1,21 +1,17 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.AddAlerts200Response
-import org.openapitools.model.AddAlertsRequest
 import org.openapitools.model.DefaultError
-import org.openapitools.model.GetAlerts200Response
-import org.openapitools.model.ListAlerts200Response
+import org.openapitools.model.InlineObject
+import org.openapitools.model.InlineObject1
 import org.openapitools.model.Model200Success
-import org.openapitools.model.UpdateAlerts200Response
-import org.openapitools.model.UpdateAlertsRequest
 
 class AlertsApi {
     String basePath = "https://CHANGEME"
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def addAlerts ( AddAlertsRequest addAlertsRequest, Closure onSuccess, Closure onFailure)  {
+    def addAlerts ( InlineObject inlineObject, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/monitoring/alerts"
 
         // params
@@ -28,12 +24,12 @@ class AlertsApi {
 
 
         contentType = 'application/json';
-        bodyParams = addAlertsRequest
+        bodyParams = inlineObject
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    AddAlerts200Response.class )
+                    Object.class )
 
     }
 
@@ -81,7 +77,7 @@ class AlertsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetAlerts200Response.class )
+                    Object.class )
 
     }
 
@@ -110,11 +106,11 @@ class AlertsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListAlerts200Response.class )
+                    Object.class )
 
     }
 
-    def updateAlerts ( Long id, UpdateAlertsRequest updateAlertsRequest, Closure onSuccess, Closure onFailure)  {
+    def updateAlerts ( Long id, InlineObject1 inlineObject1, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/monitoring/alerts/${id}"
 
         // params
@@ -131,12 +127,12 @@ class AlertsApi {
 
 
         contentType = 'application/json';
-        bodyParams = updateAlertsRequest
+        bodyParams = inlineObject1
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "PUT", "",
-                    UpdateAlerts200Response.class )
+                    Model200Success.class )
 
     }
 

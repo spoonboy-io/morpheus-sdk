@@ -4,10 +4,9 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.ApplianceSettingsEnabledZoneTypesInner;
+import java.util.List;
 import org.openapitools.model.BudgetStats;
+import org.openapitools.model.InlineResponse20040AppDeployInstance;
 
 @Canonical
 class Budget {
@@ -18,7 +17,7 @@ class Budget {
     
     String description
     
-    ApplianceSettingsEnabledZoneTypesInner account
+    InlineResponse20040AppDeployInstance account
     
     Boolean enabled
     
@@ -44,7 +43,7 @@ class Budget {
     
     String interval
     
-    List<Long> costs
+    List<Long> costs = new ArrayList<Long>()
     
     Boolean isFiscal
     

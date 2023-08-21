@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Cost** | **Decimal** |  | [optional] 
 **StartDate** | **System.DateTime** |  | [optional] 
 **EndDate** | **System.DateTime** |  | [optional] 
-**Servers** | [**BillingServersServersInner[]**](BillingServersServersInner.md) |  | [optional] 
+**Servers** | [**BillingServersServers[]**](BillingServersServers.md) |  | [optional] 
 
 ## Examples
 

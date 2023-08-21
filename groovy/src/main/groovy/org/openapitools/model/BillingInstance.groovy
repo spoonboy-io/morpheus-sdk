@@ -5,9 +5,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.BillingInstanceContainersInner;
+import java.util.List;
+import org.openapitools.model.BillingInstanceContainers;
 
 @Canonical
 class BillingInstance {
@@ -28,5 +27,5 @@ class BillingInstance {
     
     String currency
     
-    List<BillingInstanceContainersInner> containers
+    List<BillingInstanceContainers> containers = new ArrayList<BillingInstanceContainers>()
 }

@@ -1,29 +1,28 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.AddAppInstanceRequest
-import org.openapitools.model.AddApps200Response
 import org.openapitools.model.AppCreate
+import org.openapitools.model.AppPrepareApply
+import org.openapitools.model.AppState
 import org.openapitools.model.AppUpdate
-import org.openapitools.model.ApplyAppStateRequest
 import org.openapitools.model.DefaultError
-import org.openapitools.model.GetApp200Response
-import org.openapitools.model.GetAppSecurityGroups200Response
-import org.openapitools.model.GetAppState200Response
-import org.openapitools.model.ListApps200Response
+import org.openapitools.model.InlineObject267
+import org.openapitools.model.InlineObject3
+import org.openapitools.model.InlineObject4
+import org.openapitools.model.InlineObject5
+import org.openapitools.model.InlineObject6
+import org.openapitools.model.InlineResponse200168
+import org.openapitools.model.InlineResponse2002
+import org.openapitools.model.InlineResponse2003
 import org.openapitools.model.Model200Success
-import org.openapitools.model.PrepareAppApply200Response
-import org.openapitools.model.RemoveAppInstanceRequest
-import org.openapitools.model.SetAppSecurityGroups200Response
-import org.openapitools.model.SetAppSecurityGroupsRequest
-import org.openapitools.model.ValidateAppState200Response
+import org.openapitools.model.UNKNOWN_BASE_TYPE
 
 class AppsApi {
     String basePath = "https://CHANGEME"
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def addAppInstance ( Long id, AddAppInstanceRequest addAppInstanceRequest, Closure onSuccess, Closure onFailure)  {
+    def addAppInstance ( Long id, InlineObject3 inlineObject3, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/apps/${id}/add-instance"
 
         // params
@@ -40,12 +39,12 @@ class AppsApi {
 
 
         contentType = 'application/json';
-        bodyParams = addAppInstanceRequest
+        bodyParams = inlineObject3
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    GetApp200Response.class )
+                    InlineResponse2003.class )
 
     }
 
@@ -69,7 +68,7 @@ class AppsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "PUT", "",
-                    GetApp200Response.class )
+                    InlineResponse2003.class )
 
     }
 
@@ -91,11 +90,11 @@ class AppsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    AddApps200Response.class )
+                    InlineResponse2002.class )
 
     }
 
-    def applyAppState ( Long id, ApplyAppStateRequest applyAppStateRequest, Closure onSuccess, Closure onFailure)  {
+    def applyAppState ( Long id, InlineObject4 inlineObject4, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/apps/${id}/apply"
 
         // params
@@ -112,7 +111,7 @@ class AppsApi {
 
 
         contentType = 'application/json';
-        bodyParams = applyAppStateRequest
+        bodyParams = inlineObject4
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
@@ -183,7 +182,7 @@ class AppsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetApp200Response.class )
+                    InlineResponse2003.class )
 
     }
 
@@ -207,7 +206,7 @@ class AppsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetAppSecurityGroups200Response.class )
+                    Object.class )
 
     }
 
@@ -231,7 +230,31 @@ class AppsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetAppState200Response.class )
+                    AppState.class )
+
+    }
+
+    def getWikiApp ( Long id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/api/apps/${id}/wiki"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+        // verify required params are set
+        if (id == null) {
+            throw new RuntimeException("missing required params id")
+        }
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    InlineResponse200168.class )
 
     }
 
@@ -275,7 +298,7 @@ class AppsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListApps200Response.class )
+                    Object.class )
 
     }
 
@@ -299,7 +322,7 @@ class AppsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    PrepareAppApply200Response.class )
+                    AppPrepareApply.class )
 
     }
 
@@ -329,7 +352,7 @@ class AppsApi {
 
     }
 
-    def removeAppInstance ( Long id, RemoveAppInstanceRequest removeAppInstanceRequest, Closure onSuccess, Closure onFailure)  {
+    def removeAppInstance ( Long id, InlineObject5 inlineObject5, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/apps/${id}/remove-instance"
 
         // params
@@ -346,16 +369,16 @@ class AppsApi {
 
 
         contentType = 'application/json';
-        bodyParams = removeAppInstanceRequest
+        bodyParams = inlineObject5
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    GetApp200Response.class )
+                    InlineResponse2003.class )
 
     }
 
-    def setAppSecurityGroups ( Long id, SetAppSecurityGroupsRequest setAppSecurityGroupsRequest, Closure onSuccess, Closure onFailure)  {
+    def setAppSecurityGroups ( Long id, UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/apps/${id}/security-groups"
 
         // params
@@ -372,12 +395,12 @@ class AppsApi {
 
 
         contentType = 'application/json';
-        bodyParams = setAppSecurityGroupsRequest
+        bodyParams = UNKNOWN_BASE_TYPE
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    SetAppSecurityGroups200Response.class )
+                    Object.class )
 
     }
 
@@ -403,11 +426,37 @@ class AppsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "PUT", "",
-                    GetApp200Response.class )
+                    InlineResponse2003.class )
 
     }
 
-    def validateAppState ( Long id, ApplyAppStateRequest applyAppStateRequest, Closure onSuccess, Closure onFailure)  {
+    def updateWikiApp ( Long id, InlineObject267 inlineObject267, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/api/apps/${id}/wiki"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+        // verify required params are set
+        if (id == null) {
+            throw new RuntimeException("missing required params id")
+        }
+
+
+
+        contentType = 'application/json';
+        bodyParams = inlineObject267
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "PUT", "",
+                    Object.class )
+
+    }
+
+    def validateAppState ( Long id, InlineObject6 inlineObject6, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/apps/${id}/validate-apply"
 
         // params
@@ -424,12 +473,12 @@ class AppsApi {
 
 
         contentType = 'application/json';
-        bodyParams = applyAppStateRequest
+        bodyParams = inlineObject6
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    ValidateAppState200Response.class )
+                    Object.class )
 
     }
 

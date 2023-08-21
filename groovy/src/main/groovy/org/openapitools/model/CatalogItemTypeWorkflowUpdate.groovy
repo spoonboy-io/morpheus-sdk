@@ -4,9 +4,8 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.UpdateBlueprintPermissionsRequestResourcePermissionSitesInner;
+import java.util.List;
+import org.openapitools.model.ApiBlueprintsIdUpdatePermissionsResourcePermissionSites;
 
 @Canonical
 class CatalogItemTypeWorkflowUpdate {
@@ -19,30 +18,9 @@ class CatalogItemTypeWorkflowUpdate {
     /* Catalog Item Type description */
     String description
     /* Array of label strings, can be used for filtering. */
-    List<String> labels
-
-    enum TypeEnum {
-    
-        WORKFLOW("workflow")
-    
-        private final String value
-    
-        TypeEnum(String value) {
-            this.value = value
-        }
-    
-        String getValue() {
-            value
-        }
-    
-        @Override
-        String toString() {
-            String.valueOf(value)
-        }
-    }
-
+    List<String> labels = new ArrayList<String>()
     /* Type, `instance`, `blueprint` or `workflow`. This determines whether an Instance or App will be provisioned. Instance types require a config and blueprint requires a blueprint and appSpec, while workflow types requires a workflow and context. */
-    TypeEnum type
+    String type
     /* Visibility - Set to public to allow all tenants */
     String visibility = "private"
     /* Identifier primarily used for Plugin Catalog Item Types */
@@ -56,7 +34,7 @@ class CatalogItemTypeWorkflowUpdate {
     /* Can users order more than one of this item at a time. */
     Boolean allowQuantity = false
     
-    UpdateBlueprintPermissionsRequestResourcePermissionSitesInner workflow
+    ApiBlueprintsIdUpdatePermissionsResourcePermissionSites workflow
     
     String context
     /* Configuration object that contains settings for the workflow. */

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## addBudgets
 
-> AddBudgets200Response addBudgets(opts)
+> Object addBudgets(opts)
 
 Creates a Budget
 
@@ -31,7 +31,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.BudgetsApi();
 let opts = {
-  'addBudgetsRequest': new MorpheusApi.AddBudgetsRequest() // AddBudgetsRequest | 
+  'inlineObject22': new MorpheusApi.InlineObject22() // InlineObject22 | 
 };
 apiInstance.addBudgets(opts, (error, data, response) => {
   if (error) {
@@ -47,11 +47,11 @@ apiInstance.addBudgets(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addBudgetsRequest** | [**AddBudgetsRequest**](AddBudgetsRequest.md)|  | [optional] 
+ **inlineObject22** | [**InlineObject22**](InlineObject22.md)|  | [optional] 
 
 ### Return type
 
-[**AddBudgets200Response**](AddBudgets200Response.md)
+**Object**
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ## getBudgets
 
-> GetBudgets200Response getBudgets(id)
+> Object getBudgets(id)
 
 Retrieves a Specific Budget
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetBudgets200Response**](GetBudgets200Response.md)
+**Object**
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ## listBudgets
 
-> ListBudgets200Response listBudgets(opts)
+> Object listBudgets(opts)
 
 Retrieves all Budgets
 
@@ -131,7 +131,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.BudgetsApi();
 let opts = {
-  'max': 25, // Number | Maximum number of records to return
+  'max': 25, // Number | Maximum number of records to return, -1 can be used to fetch all records
   'offset': 0, // Number | Offset records, the number of records to skip, for paginating requests
   'sort': "'name'", // String | Sort order, the name of the property to sort by
   'direction': asc, // String | Sort direction, use 'desc' to reverse sort
@@ -152,7 +152,7 @@ apiInstance.listBudgets(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **max** | **Number**| Maximum number of records to return | [optional] [default to 25]
+ **max** | **Number**| Maximum number of records to return, -1 can be used to fetch all records | [optional] [default to 25]
  **offset** | **Number**| Offset records, the number of records to skip, for paginating requests | [optional] [default to 0]
  **sort** | **String**| Sort order, the name of the property to sort by | [optional] [default to &#39;name&#39;]
  **direction** | **String**| Sort direction, use &#39;desc&#39; to reverse sort | [optional] [default to &#39;asc&#39;]
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListBudgets200Response**](ListBudgets200Response.md)
+**Object**
 
 ### Authorization
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 ## updateBudgets
 
-> AddBudgets200Response updateBudgets(id, opts)
+> Object updateBudgets(id, opts)
 
 Updates a Budget
 
@@ -242,7 +242,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.BudgetsApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'addBudgetsRequest': new MorpheusApi.AddBudgetsRequest() // AddBudgetsRequest | 
+  'inlineObject23': new MorpheusApi.InlineObject23() // InlineObject23 | 
 };
 apiInstance.updateBudgets(id, opts, (error, data, response) => {
   if (error) {
@@ -259,11 +259,11 @@ apiInstance.updateBudgets(id, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Morpheus ID of the Object being referenced | 
- **addBudgetsRequest** | [**AddBudgetsRequest**](AddBudgetsRequest.md)|  | [optional] 
+ **inlineObject23** | [**InlineObject23**](InlineObject23.md)|  | [optional] 
 
 ### Return type
 
-[**AddBudgets200Response**](AddBudgets200Response.md)
+**Object**
 
 ### Authorization
 

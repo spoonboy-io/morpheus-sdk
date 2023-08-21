@@ -4,19 +4,18 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import org.openapitools.jackson.nullable.JsonNullable;
+import org.openapitools.model.AnyOfcheckWebConfigcheckSqlConfigcheckElasticsearchConfigcheckSocketConfigobjectcheckVmConfig;
+import org.openapitools.model.ApiBlueprintsIdUpdatePermissionsResourcePermissionSites;
 import org.openapitools.model.CheckCheckType;
-import org.openapitools.model.CheckConfig;
 import org.openapitools.model.CheckContainer;
-import org.openapitools.model.CheckCreatedBy;
-import org.openapitools.model.UpdateBlueprintPermissionsRequestResourcePermissionSitesInner;
+import org.openapitools.model.InlineResponse20083LoadBalancerNodeCreatedBy;
 
 @Canonical
 class Check {
     
     Long id
     
-    UpdateBlueprintPermissionsRequestResourcePermissionSitesInner account
+    ApiBlueprintsIdUpdatePermissionsResourcePermissionSites account
     
     Boolean active
     
@@ -32,7 +31,7 @@ class Check {
     
     CheckCheckType checkType
     
-    CheckConfig config
+    AnyOfcheckWebConfigcheckSqlConfigcheckElasticsearchConfigcheckSocketConfigobjectcheckVmConfig config = null
     
     CheckContainer container
     
@@ -40,7 +39,7 @@ class Check {
     
     Boolean muted
     
-    CheckCreatedBy createdBy
+    InlineResponse20083LoadBalancerNodeCreatedBy createdBy
     
     Date dateCreated
     

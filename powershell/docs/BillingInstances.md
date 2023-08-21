@@ -5,9 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Price** | **Decimal** |  | [optional] 
 **Cost** | **Decimal** |  | [optional] 
-**StartDate** | **System.DateTime** |  | [optional] 
-**EndDate** | **System.DateTime** |  | [optional] 
-**Instances** | [**BillingInstancesInstancesInner[]**](BillingInstancesInstancesInner.md) |  | [optional] 
+**Instances** | [**SystemCollectionsHashtable[]**](SystemCollectionsHashtable.md) |  | [optional] 
+**Count** | **Int64** |  | [optional] 
 
 ## Examples
 
@@ -15,9 +14,8 @@ Name | Type | Description | Notes
 ```powershell
 $BillingInstances = Initialize-PSOpenAPIToolsBillingInstances  -Price null `
  -Cost null `
- -StartDate null `
- -EndDate null `
- -Instances null
+ -Instances null `
+ -Count null
 ```
 
 - Convert the resource to JSON

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**variables** | [**[AppStateInputVariablesInner]**](AppStateInputVariablesInner.md) |  | [optional] 
-**providers** | [**[AppStateInputProvidersInner]**](AppStateInputProvidersInner.md) |  | [optional] 
-**data** | [**[AppStateInputDataInner]**](AppStateInputDataInner.md) |  | [optional] 
+**variables** | [**[AppStateInputVariables]**](AppStateInputVariables.md) |  | [optional] 
+**providers** | [**[AppStateInputProviders]**](AppStateInputProviders.md) |  | [optional] 
+**data** | [**[AppStateInputData]**](AppStateInputData.md) |  | [optional] 
 
 

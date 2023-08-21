@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **Number** |  | [optional] 
-**account** | [**UpdateBlueprintPermissionsRequestResourcePermissionSitesInner**](UpdateBlueprintPermissionsRequestResourcePermissionSitesInner.md) |  | [optional] 
-**instance** | [**CheckGroupInstance**](CheckGroupInstance.md) |  | [optional] 
+**account** | [**ApiBlueprintsIdUpdatePermissionsResourcePermissionSites**](ApiBlueprintsIdUpdatePermissionsResourcePermissionSites.md) |  | [optional] 
+**instance** | [**InlineResponse20082LoadBalancerInstanceSslCert**](InlineResponse20082LoadBalancerInstanceSslCert.md) |  | [optional] 
 **name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **inUptime** | **Boolean** |  | [optional] 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **severity** | **String** |  | [optional] 
 **createIncident** | **Boolean** |  | [optional] 
 **muted** | **Boolean** |  | [optional] 
-**createdBy** | [**ActivityActivityInnerUser**](ActivityActivityInnerUser.md) |  | [optional] 
+**createdBy** | [**InlineResponse200107NetworkPoolCreatedBy**](InlineResponse200107NetworkPoolCreatedBy.md) |  | [optional] 
 **dateCreated** | **Date** |  | [optional] 
 **lastUpdated** | **Date** |  | [optional] 
 **availability** | **Number** |  | [optional] 

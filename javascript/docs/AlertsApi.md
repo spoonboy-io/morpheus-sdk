@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## addAlerts
 
-> AddAlerts200Response addAlerts(opts)
+> Object addAlerts(opts)
 
 Create a New Alert
 
@@ -31,7 +31,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.AlertsApi();
 let opts = {
-  'addAlertsRequest': new MorpheusApi.AddAlertsRequest() // AddAlertsRequest | 
+  'inlineObject': new MorpheusApi.InlineObject() // InlineObject | 
 };
 apiInstance.addAlerts(opts, (error, data, response) => {
   if (error) {
@@ -47,11 +47,11 @@ apiInstance.addAlerts(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addAlertsRequest** | [**AddAlertsRequest**](AddAlertsRequest.md)|  | [optional] 
+ **inlineObject** | [**InlineObject**](InlineObject.md)|  | [optional] 
 
 ### Return type
 
-[**AddAlerts200Response**](AddAlerts200Response.md)
+**Object**
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ## getAlerts
 
-> GetAlerts200Response getAlerts(id)
+> Object getAlerts(id)
 
 Get a Specific Alert
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAlerts200Response**](GetAlerts200Response.md)
+**Object**
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## listAlerts
 
-> ListAlerts200Response listAlerts(opts)
+> Object listAlerts(opts)
 
 List All Alerts
 
@@ -180,7 +180,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.AlertsApi();
 let opts = {
-  'max': 25, // Number | Maximum number of records to return
+  'max': 25, // Number | Maximum number of records to return, -1 can be used to fetch all records
   'offset': 0, // Number | Offset records, the number of records to skip, for paginating requests
   'lastUpdated': 2019-03-06T17:52:29+0000 // Date | Date filter, restricts query to only load resources updated more recently than the date specified (ISO 8601)
 };
@@ -198,13 +198,13 @@ apiInstance.listAlerts(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **max** | **Number**| Maximum number of records to return | [optional] [default to 25]
+ **max** | **Number**| Maximum number of records to return, -1 can be used to fetch all records | [optional] [default to 25]
  **offset** | **Number**| Offset records, the number of records to skip, for paginating requests | [optional] [default to 0]
  **lastUpdated** | **Date**| Date filter, restricts query to only load resources updated more recently than the date specified (ISO 8601) | [optional] 
 
 ### Return type
 
-[**ListAlerts200Response**](ListAlerts200Response.md)
+**Object**
 
 ### Authorization
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ## updateAlerts
 
-> UpdateAlerts200Response updateAlerts(id, opts)
+> Model200Success updateAlerts(id, opts)
 
 Update Alert
 
@@ -236,7 +236,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.AlertsApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'updateAlertsRequest': new MorpheusApi.UpdateAlertsRequest() // UpdateAlertsRequest | 
+  'inlineObject1': new MorpheusApi.InlineObject1() // InlineObject1 | 
 };
 apiInstance.updateAlerts(id, opts, (error, data, response) => {
   if (error) {
@@ -253,11 +253,11 @@ apiInstance.updateAlerts(id, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Morpheus ID of the Object being referenced | 
- **updateAlertsRequest** | [**UpdateAlertsRequest**](UpdateAlertsRequest.md)|  | [optional] 
+ **inlineObject1** | [**InlineObject1**](InlineObject1.md)|  | [optional] 
 
 ### Return type
 
-[**UpdateAlerts200Response**](UpdateAlerts200Response.md)
+[**Model200Success**](Model200Success.md)
 
 ### Authorization
 

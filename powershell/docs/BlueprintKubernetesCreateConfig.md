@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Specs** | [**BlueprintKubernetesCreateConfigSpecsInner[]**](BlueprintKubernetesCreateConfigSpecsInner.md) | Array of Kubernetes specs in Morpheus | [optional] 
+**Specs** | [**BlueprintKubernetesCreateConfigSpecs[]**](BlueprintKubernetesCreateConfigSpecs.md) | Array of Kubernetes specs in Morpheus | [optional] 
 
 ## Examples
 

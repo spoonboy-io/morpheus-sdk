@@ -4,20 +4,42 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.model.BillingZonesInner;
+import org.openapitools.model.BillingComputeServers;
+import org.openapitools.model.BillingInstances;
+import org.openapitools.model.BillingLoadBalancers;
+import org.openapitools.model.BillingSnapshots;
+import org.openapitools.model.BillingVirtualImages;
 
 @Canonical
 class BillingZones {
     
-    BigDecimal price
+    String zoneName
     
-    BigDecimal cost
+    Long zoneId
+    
+    String zoneUUID
+    
+    String zoneCode
     
     Date startDate
     
     Date endDate
     
-    List<BillingZonesInner> zones
+    String priceUnit
+    
+    BillingComputeServers computeServers
+    
+    BillingInstances instances
+    
+    BillingComputeServers discoveredServers
+    
+    BillingLoadBalancers loadBalancers
+    
+    BillingVirtualImages virtualImages
+    
+    BillingSnapshots snapshots
+    
+    BigDecimal price
+    
+    BigDecimal cost
 }

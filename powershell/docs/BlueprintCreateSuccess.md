@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Description** | **String** | A description for the blueprint | [optional] 
 **Labels** | **String[]** |  | [optional] 
 **Category** | **String** | Category | [optional] 
-**Config** | [**BlueprintCreateSuccessConfig**](BlueprintCreateSuccessConfig.md) |  | [optional] 
+**Config** | [**OneOfblueprintARMCreateSuccessblueprintCFTCreateSuccessblueprintHelmCreateSuccessblueprintKubernetesCreateSuccessblueprintMorpheusCreateSuccessblueprintTerraformCreateSuccess**](OneOfblueprintARMCreateSuccessblueprintCFTCreateSuccessblueprintHelmCreateSuccessblueprintKubernetesCreateSuccessblueprintMorpheusCreateSuccessblueprintTerraformCreateSuccess.md) |  | [optional] 
 
 ## Examples
 

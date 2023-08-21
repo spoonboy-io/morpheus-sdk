@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **priceUnit** | **String** |  | [optional] 
 **price** | **Number** |  | [optional] 
 **cost** | **Number** |  | [optional] 
-**zones** | [**[BillingZonesInner]**](BillingZonesInner.md) |  | [optional] 
+**zones** | [**[BillingZones]**](BillingZones.md) |  | [optional] 
 
 

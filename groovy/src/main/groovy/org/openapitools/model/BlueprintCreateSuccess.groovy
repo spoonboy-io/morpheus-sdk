@@ -4,9 +4,8 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.BlueprintCreateSuccessConfig;
+import java.util.List;
+import org.openapitools.model.OneOfblueprintARMCreateSuccessblueprintCFTCreateSuccessblueprintHelmCreateSuccessblueprintKubernetesCreateSuccessblueprintMorpheusCreateSuccessblueprintTerraformCreateSuccess;
 
 @Canonical
 class BlueprintCreateSuccess {
@@ -17,9 +16,9 @@ class BlueprintCreateSuccess {
     /* A description for the blueprint */
     String description
     
-    List<String> labels
+    List<String> labels = new ArrayList<String>()
     /* Category */
     String category
     
-    BlueprintCreateSuccessConfig config
+    OneOfblueprintARMCreateSuccessblueprintCFTCreateSuccessblueprintHelmCreateSuccessblueprintKubernetesCreateSuccessblueprintMorpheusCreateSuccessblueprintTerraformCreateSuccess config = null
 }

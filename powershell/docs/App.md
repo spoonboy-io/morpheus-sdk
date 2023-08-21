@@ -9,10 +9,10 @@ Name | Type | Description | Notes
 **Labels** | **String[]** |  | [optional] 
 **Environment** | **String** |  | [optional] 
 **AccountId** | **Int64** |  | [optional] 
-**Account** | [**ApplianceSettingsEnabledZoneTypesInner**](ApplianceSettingsEnabledZoneTypesInner.md) |  | [optional] 
-**Owner** | [**ActivityActivityInnerUser**](ActivityActivityInnerUser.md) |  | [optional] 
+**Account** | [**InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
+**Owner** | [**InlineResponse200107NetworkPoolCreatedBy**](InlineResponse200107NetworkPoolCreatedBy.md) |  | [optional] 
 **SiteId** | **Int64** |  | [optional] 
-**Group** | [**ApplianceSettingsEnabledZoneTypesInner**](ApplianceSettingsEnabledZoneTypesInner.md) |  | [optional] 
+**Group** | [**InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
 **Blueprint** | [**AppBlueprint**](AppBlueprint.md) |  | [optional] 
 **Type** | **String** |  | [optional] 
 **DateCreated** | **System.DateTime** |  | [optional] 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 **InstanceCount** | **Int64** |  | [optional] 
 **ContainerCount** | **Int64** |  | [optional] 
 **AppTiers** | [**SystemCollectionsHashtable[]**](SystemCollectionsHashtable.md) |  | [optional] 
-**Instances** | [**ApplianceSettingsEnabledZoneTypesInner[]**](ApplianceSettingsEnabledZoneTypesInner.md) |  | [optional] 
+**Instances** | [**InlineResponse20040AppDeployInstance[]**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
 **Stats** | [**AppStats**](AppStats.md) |  | [optional] 
 
 ## Examples

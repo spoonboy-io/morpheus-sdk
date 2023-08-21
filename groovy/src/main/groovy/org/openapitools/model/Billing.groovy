@@ -5,8 +5,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.model.BillingZonesInner;
+import java.util.List;
+import org.openapitools.model.BillingZones;
 
 @Canonical
 class Billing {
@@ -27,5 +27,5 @@ class Billing {
     
     BigDecimal cost
     
-    List<BillingZonesInner> zones
+    List<BillingZones> zones = new ArrayList<BillingZones>()
 }

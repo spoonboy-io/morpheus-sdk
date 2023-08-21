@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## addClient
 
-> AddClient200Response addClient(opts)
+> Object addClient(opts)
 
 Create an Oauth Client
 
@@ -31,7 +31,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.ClientsApi();
 let opts = {
-  'addClientRequest': new MorpheusApi.AddClientRequest() // AddClientRequest | 
+  'inlineObject27': new MorpheusApi.InlineObject27() // InlineObject27 | 
 };
 apiInstance.addClient(opts, (error, data, response) => {
   if (error) {
@@ -47,11 +47,11 @@ apiInstance.addClient(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addClientRequest** | [**AddClientRequest**](AddClientRequest.md)|  | [optional] 
+ **inlineObject27** | [**InlineObject27**](InlineObject27.md)|  | [optional] 
 
 ### Return type
 
-[**AddClient200Response**](AddClient200Response.md)
+**Object**
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ## getClients
 
-> GetClients200Response getClients(id)
+> Object getClients(id)
 
 Retrieves a Specific Oauth Client
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetClients200Response**](GetClients200Response.md)
+**Object**
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ## listClients
 
-> ListClients200Response listClients(opts)
+> Object listClients(opts)
 
 Get All Oauth Clients
 
@@ -131,7 +131,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.ClientsApi();
 let opts = {
-  'max': 25, // Number | Maximum number of records to return
+  'max': 25, // Number | Maximum number of records to return, -1 can be used to fetch all records
   'offset': 0, // Number | Offset records, the number of records to skip, for paginating requests
   'sort': "'clientId'", // String | Sort order, the name of the property to sort by
   'direction': asc, // String | Sort direction, use 'desc' to reverse sort
@@ -152,7 +152,7 @@ apiInstance.listClients(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **max** | **Number**| Maximum number of records to return | [optional] [default to 25]
+ **max** | **Number**| Maximum number of records to return, -1 can be used to fetch all records | [optional] [default to 25]
  **offset** | **Number**| Offset records, the number of records to skip, for paginating requests | [optional] [default to 0]
  **sort** | **String**| Sort order, the name of the property to sort by | [optional] [default to &#39;clientId&#39;]
  **direction** | **String**| Sort direction, use &#39;desc&#39; to reverse sort | [optional] [default to &#39;asc&#39;]
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListClients200Response**](ListClients200Response.md)
+**Object**
 
 ### Authorization
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 ## updateClients
 
-> AddClient200Response updateClients(id, opts)
+> Object updateClients(id, opts)
 
 Updates an Oauth Client
 
@@ -242,7 +242,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.ClientsApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'updateClientsRequest': new MorpheusApi.UpdateClientsRequest() // UpdateClientsRequest | 
+  'inlineObject28': new MorpheusApi.InlineObject28() // InlineObject28 | 
 };
 apiInstance.updateClients(id, opts, (error, data, response) => {
   if (error) {
@@ -259,11 +259,11 @@ apiInstance.updateClients(id, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Morpheus ID of the Object being referenced | 
- **updateClientsRequest** | [**UpdateClientsRequest**](UpdateClientsRequest.md)|  | [optional] 
+ **inlineObject28** | [**InlineObject28**](InlineObject28.md)|  | [optional] 
 
 ### Return type
 
-[**AddClient200Response**](AddClient200Response.md)
+**Object**
 
 ### Authorization
 

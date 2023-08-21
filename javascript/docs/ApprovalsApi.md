@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## getApprovals
 
-> GetApprovals200Response getApprovals(id)
+> InlineResponse2001 getApprovals(id)
 
 Retrieves a Specific Approval
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetApprovals200Response**](GetApprovals200Response.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -111,7 +111,7 @@ Name | Type | Description  | Notes
 
 ## listApprovals
 
-> ListApprovals200Response listApprovals(opts)
+> Object listApprovals(opts)
 
 Retrieves all Approvals
 
@@ -128,7 +128,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.ApprovalsApi();
 let opts = {
-  'max': 25, // Number | Maximum number of records to return
+  'max': 25, // Number | Maximum number of records to return, -1 can be used to fetch all records
   'offset': 0, // Number | Offset records, the number of records to skip, for paginating requests
   'sort': "'name'", // String | Sort order, the name of the property to sort by
   'direction': asc, // String | Sort direction, use 'desc' to reverse sort
@@ -149,7 +149,7 @@ apiInstance.listApprovals(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **max** | **Number**| Maximum number of records to return | [optional] [default to 25]
+ **max** | **Number**| Maximum number of records to return, -1 can be used to fetch all records | [optional] [default to 25]
  **offset** | **Number**| Offset records, the number of records to skip, for paginating requests | [optional] [default to 0]
  **sort** | **String**| Sort order, the name of the property to sort by | [optional] [default to &#39;name&#39;]
  **direction** | **String**| Sort direction, use &#39;desc&#39; to reverse sort | [optional] [default to &#39;asc&#39;]
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListApprovals200Response**](ListApprovals200Response.md)
+**Object**
 
 ### Authorization
 

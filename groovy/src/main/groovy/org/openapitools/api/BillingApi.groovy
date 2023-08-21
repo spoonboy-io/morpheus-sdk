@@ -2,13 +2,6 @@ package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
 import org.openapitools.model.DefaultError
-import org.openapitools.model.GetBillingInstancesIdentifier200Response
-import org.openapitools.model.GetBillingServersIdentifier200Response
-import org.openapitools.model.GetBillingZoneIdentifier200Response
-import org.openapitools.model.ListBillingAccount200Response
-import org.openapitools.model.ListBillingInstances200Response
-import org.openapitools.model.ListBillingServers200Response
-import org.openapitools.model.ListBillingZone200Response
 
 class BillingApi {
     String basePath = "https://CHANGEME"
@@ -68,7 +61,7 @@ class BillingApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListBillingAccount200Response.class )
+                    Object.class )
 
     }
 
@@ -113,7 +106,7 @@ class BillingApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetBillingInstancesIdentifier200Response.class )
+                    Object.class )
 
     }
 
@@ -158,7 +151,7 @@ class BillingApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetBillingServersIdentifier200Response.class )
+                    Object.class )
 
     }
 
@@ -215,7 +208,7 @@ class BillingApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetBillingZoneIdentifier200Response.class )
+                    Object.class )
 
     }
 
@@ -268,7 +261,7 @@ class BillingApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListBillingAccount200Response.class )
+                    Object.class )
 
     }
 
@@ -309,7 +302,7 @@ class BillingApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListBillingInstances200Response.class )
+                    Object.class )
 
     }
 
@@ -350,7 +343,7 @@ class BillingApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListBillingServers200Response.class )
+                    Object.class )
 
     }
 
@@ -403,7 +396,7 @@ class BillingApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListBillingZone200Response.class )
+                    Object.class )
 
     }
 

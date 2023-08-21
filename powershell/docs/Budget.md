@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **Id** | **Int64** |  | [optional] 
 **Name** | **String** |  | [optional] 
 **Description** | **String** |  | [optional] 
-**Account** | [**ApplianceSettingsEnabledZoneTypesInner**](ApplianceSettingsEnabledZoneTypesInner.md) |  | [optional] 
+**Account** | [**InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
 **Enabled** | **Boolean** |  | [optional] 
 **RefScope** | **String** |  | [optional] 
 **RefType** | **String** |  | [optional] 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **config** | **Object** |  | [optional] 
 **visibility** | **String** |  | [optional] 
 **resourcePermission** | **Object** |  | [optional] 
-**owner** | [**ActivityActivityInnerUser**](ActivityActivityInnerUser.md) |  | [optional] 
-**tenant** | [**ApplianceSettingsEnabledZoneTypesInner**](ApplianceSettingsEnabledZoneTypesInner.md) |  | [optional] 
+**owner** | [**InlineResponse200107NetworkPoolCreatedBy**](InlineResponse200107NetworkPoolCreatedBy.md) |  | [optional] 
+**tenant** | [**InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
 
 

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## listApplianceSettings
 
-> ListApplianceSettings200Response listApplianceSettings()
+> InlineResponse200 listApplianceSettings()
 
 Get Appliance Settings
 
@@ -44,7 +44,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ListApplianceSettings200Response**](ListApplianceSettings200Response.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.ApplianceSettingsApi();
 let opts = {
-  'updateApplianceSettingsRequest': {$ref=../components/examples/applianceSettingsUpdate.json} // UpdateApplianceSettingsRequest | 
+  'inlineObject2': new MorpheusApi.InlineObject2() // InlineObject2 | 
 };
 apiInstance.updateApplianceSettings(opts, (error, data, response) => {
   if (error) {
@@ -187,7 +187,7 @@ apiInstance.updateApplianceSettings(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateApplianceSettingsRequest** | [**UpdateApplianceSettingsRequest**](UpdateApplianceSettingsRequest.md)|  | [optional] 
+ **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | [optional] 
 
 ### Return type
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **templateId** | **Number** |  | [optional] 
-**blueprintId** | [**AppCreateBlueprintId**](AppCreateBlueprintId.md) |  | 
+**blueprintId** | [**OneOflongstring**](OneOflongstring.md) | The ID of the Blueprint. Use \&quot;existing\&quot; to create a blank app. | 
 **name** | **String** | A unique name for the app | 
 **description** | **String** | Description | [optional] 
 **labels** | **[String]** | Array of label strings, can be used for filtering. | [optional] 

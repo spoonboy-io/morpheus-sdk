@@ -4,8 +4,7 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.List;
 
 @Canonical
 class ApplianceSettingsUpdate {
@@ -76,9 +75,9 @@ class ApplianceSettingsUpdate {
     /* Set all cloud types enabled status on, overrides enableZoneTypes and disableZoneTypes parameters */
     Boolean enableAllZoneTypes
     /* List of cloud type IDs to set enabled status on */
-    List<Long> enableZoneTypes
+    List<Long> enableZoneTypes = new ArrayList<Long>()
     /* List of cloud type IDs to set enabled status off */
-    List<Long> disableZoneTypes
+    List<Long> disableZoneTypes = new ArrayList<Long>()
     /* Set all cloud types enabled status off, can be used in conjunction with enableZoneTypes */
     Boolean disableAllZoneTypes
 }

@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**activity** | [**[ActivityActivityInner]**](ActivityActivityInner.md) |  | [optional] 
+**activity** | [**[ActivityActivity]**](ActivityActivity.md) |  | [optional] 
 
 

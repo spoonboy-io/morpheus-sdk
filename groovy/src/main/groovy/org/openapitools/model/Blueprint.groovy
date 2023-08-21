@@ -4,10 +4,9 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.ActivityActivityInnerUser;
-import org.openapitools.model.ApplianceSettingsEnabledZoneTypesInner;
+import java.util.List;
+import org.openapitools.model.InlineResponse200107NetworkPoolCreatedBy;
+import org.openapitools.model.InlineResponse20040AppDeployInstance;
 
 @Canonical
 class Blueprint {
@@ -16,7 +15,7 @@ class Blueprint {
     
     String name
     
-    List<String> labels
+    List<String> labels = new ArrayList<String>()
     
     String type
     
@@ -30,7 +29,7 @@ class Blueprint {
     
     Object resourcePermission
     
-    ActivityActivityInnerUser owner
+    InlineResponse200107NetworkPoolCreatedBy owner
     
-    ApplianceSettingsEnabledZoneTypesInner tenant
+    InlineResponse20040AppDeployInstance tenant
 }

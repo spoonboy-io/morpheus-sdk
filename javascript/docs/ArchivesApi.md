@@ -14,6 +14,8 @@ Method | HTTP request | Description
 [**getArchiveFile**](ArchivesApi.md#getArchiveFile) | **GET** /api/archives/download/{bucket}/{filepath} | Download an Archive File
 [**getArchiveFileDetail**](ArchivesApi.md#getArchiveFileDetail) | **GET** /api/archives/files/{id} | Get Archive File Details
 [**getArchiveFileLinks**](ArchivesApi.md#getArchiveFileLinks) | **GET** /api/archives/files/{id}/links | Get Archive File Links
+[**getArchivePublicFile**](ArchivesApi.md#getArchivePublicFile) | **GET** /api/public-archives/download/{bucket}/{filepath} | Download a Public Archive File
+[**getArchivePublicFileLink**](ArchivesApi.md#getArchivePublicFileLink) | **GET** /api/public-archives/link | Download an Archive File Link
 [**listArchiveBuckets**](ArchivesApi.md#listArchiveBuckets) | **GET** /api/archives/buckets | Get All Archive Buckets
 [**listArchiveFiles**](ArchivesApi.md#listArchiveFiles) | **GET** /api/archives/buckets/{bucket}/files/{filepath} | Get All Archive Files
 [**updateArchiveBucket**](ArchivesApi.md#updateArchiveBucket) | **PUT** /api/archives/buckets/{id} | Update an Archive Bucket
@@ -22,7 +24,7 @@ Method | HTTP request | Description
 
 ## addArchiveBucket
 
-> AddArchiveBucket200Response addArchiveBucket(opts)
+> Object addArchiveBucket(opts)
 
 Create an Archive Bucket
 
@@ -39,7 +41,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.ArchivesApi();
 let opts = {
-  'addArchiveBucketRequest': {$ref=../components/examples/archiveBucketRequest.json} // AddArchiveBucketRequest | 
+  'inlineObject7': new MorpheusApi.InlineObject7() // InlineObject7 | 
 };
 apiInstance.addArchiveBucket(opts, (error, data, response) => {
   if (error) {
@@ -55,11 +57,11 @@ apiInstance.addArchiveBucket(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addArchiveBucketRequest** | [**AddArchiveBucketRequest**](AddArchiveBucketRequest.md)|  | [optional] 
+ **inlineObject7** | [**InlineObject7**](InlineObject7.md)|  | [optional] 
 
 ### Return type
 
-[**AddArchiveBucket200Response**](AddArchiveBucket200Response.md)
+**Object**
 
 ### Authorization
 
@@ -73,7 +75,7 @@ Name | Type | Description  | Notes
 
 ## addArchiveFile
 
-> AddArchiveFile200Response addArchiveFile(bucket, filepath, opts)
+> Object addArchiveFile(bucket, filepath, opts)
 
 Upload Archive File
 
@@ -116,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AddArchiveFile200Response**](AddArchiveFile200Response.md)
+**Object**
 
 ### Authorization
 
@@ -130,7 +132,7 @@ Name | Type | Description  | Notes
 
 ## addArchiveFileLink
 
-> AddArchiveFileLink200Response addArchiveFileLink(id, opts)
+> Model200Success addArchiveFileLink(id, opts)
 
 Create an Archive File Link
 
@@ -169,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AddArchiveFileLink200Response**](AddArchiveFileLink200Response.md)
+[**Model200Success**](Model200Success.md)
 
 ### Authorization
 
@@ -332,7 +334,7 @@ Name | Type | Description  | Notes
 
 ## getArchiveBucket
 
-> GetArchiveBucket200Response getArchiveBucket(id)
+> InlineResponse2004 getArchiveBucket(id)
 
 Get a Specific Archive Bucket
 
@@ -367,7 +369,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetArchiveBucket200Response**](GetArchiveBucket200Response.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -432,7 +434,7 @@ null (empty response body)
 
 ## getArchiveFileDetail
 
-> GetArchiveFileDetail200Response getArchiveFileDetail(id)
+> InlineResponse2005 getArchiveFileDetail(id)
 
 Get Archive File Details
 
@@ -467,7 +469,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetArchiveFileDetail200Response**](GetArchiveFileDetail200Response.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -481,7 +483,7 @@ Name | Type | Description  | Notes
 
 ## getArchiveFileLinks
 
-> GetArchiveFileLinks200Response getArchiveFileLinks(id)
+> Object getArchiveFileLinks(id)
 
 Get Archive File Links
 
@@ -516,7 +518,107 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetArchiveFileLinks200Response**](GetArchiveFileLinks200Response.md)
+**Object**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getArchivePublicFile
+
+> getArchivePublicFile(bucket, filepath)
+
+Download a Public Archive File
+
+Files in an archive bucket that has Public URL enabled can be downloaded via this endpoint without any authentication, anonymously.
+
+### Example
+
+```javascript
+import MorpheusApi from 'morpheus_api';
+let defaultClient = MorpheusApi.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new MorpheusApi.ArchivesApi();
+let bucket = "bucket_example"; // String | Bucket name
+let filepath = /config/environments/; // String | The path to to search for files under. Default is the root directory /.
+apiInstance.getArchivePublicFile(bucket, filepath, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **bucket** | **String**| Bucket name | 
+ **filepath** | **String**| The path to to search for files under. Default is the root directory /. | [default to &#39;/&#39;]
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getArchivePublicFileLink
+
+> getArchivePublicFileLink(s)
+
+Download an Archive File Link
+
+Download an archive file link.
+
+### Example
+
+```javascript
+import MorpheusApi from 'morpheus_api';
+let defaultClient = MorpheusApi.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new MorpheusApi.ArchivesApi();
+let s = 45a214fce9a546b9; // String | The secret access token for the archive file being downloaded.
+apiInstance.getArchivePublicFileLink(s, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **s** | **String**| The secret access token for the archive file being downloaded. | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
@@ -530,7 +632,7 @@ Name | Type | Description  | Notes
 
 ## listArchiveBuckets
 
-> ListArchiveBuckets200Response listArchiveBuckets(opts)
+> Object listArchiveBuckets(opts)
 
 Get All Archive Buckets
 
@@ -569,7 +671,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListArchiveBuckets200Response**](ListArchiveBuckets200Response.md)
+**Object**
 
 ### Authorization
 
@@ -583,7 +685,7 @@ Name | Type | Description  | Notes
 
 ## listArchiveFiles
 
-> ListArchiveFiles200Response listArchiveFiles(bucket, filepath, opts)
+> Object listArchiveFiles(bucket, filepath, opts)
 
 Get All Archive Files
 
@@ -602,8 +704,8 @@ let apiInstance = new MorpheusApi.ArchivesApi();
 let bucket = "bucket_example"; // String | Bucket name
 let filepath = /config/environments/; // String | The path to to search for files under. Default is the root directory /.
 let opts = {
-  'name': example-%, // String | Filter by name, wildcard may be specified as %, eg. example-%
-  'phrase': "phrase_example", // String | Search phrase for partial matches on name or description
+  'name': test-config.yaml, // String | If specified will return an exact match on file name
+  'phrase': test-%.yaml, // String | Search phrase for partial matches on file name, wildcard may be specified as %, eg. example-% This also searches for files under sub directories too. 
   'fullTree': false // Boolean | Include files under sub directories too. This is always true when searching with phrase.
 };
 apiInstance.listArchiveFiles(bucket, filepath, opts, (error, data, response) => {
@@ -622,13 +724,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **bucket** | **String**| Bucket name | 
  **filepath** | **String**| The path to to search for files under. Default is the root directory /. | [default to &#39;/&#39;]
- **name** | **String**| Filter by name, wildcard may be specified as %, eg. example-% | [optional] 
- **phrase** | **String**| Search phrase for partial matches on name or description | [optional] 
+ **name** | **String**| If specified will return an exact match on file name | [optional] 
+ **phrase** | **String**| Search phrase for partial matches on file name, wildcard may be specified as %, eg. example-% This also searches for files under sub directories too.  | [optional] 
  **fullTree** | **Boolean**| Include files under sub directories too. This is always true when searching with phrase. | [optional] [default to false]
 
 ### Return type
 
-[**ListArchiveFiles200Response**](ListArchiveFiles200Response.md)
+**Object**
 
 ### Authorization
 
@@ -642,7 +744,7 @@ Name | Type | Description  | Notes
 
 ## updateArchiveBucket
 
-> AddArchiveBucket200Response updateArchiveBucket(id, opts)
+> Object updateArchiveBucket(id, opts)
 
 Update an Archive Bucket
 
@@ -660,7 +762,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.ArchivesApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'updateArchiveBucketRequest': {$ref=../components/examples/archiveBucketUpdateRequest.json} // UpdateArchiveBucketRequest | 
+  'inlineObject8': new MorpheusApi.InlineObject8() // InlineObject8 | 
 };
 apiInstance.updateArchiveBucket(id, opts, (error, data, response) => {
   if (error) {
@@ -677,11 +779,11 @@ apiInstance.updateArchiveBucket(id, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Morpheus ID of the Object being referenced | 
- **updateArchiveBucketRequest** | [**UpdateArchiveBucketRequest**](UpdateArchiveBucketRequest.md)|  | [optional] 
+ **inlineObject8** | [**InlineObject8**](InlineObject8.md)|  | [optional] 
 
 ### Return type
 
-[**AddArchiveBucket200Response**](AddArchiveBucket200Response.md)
+**Object**
 
 ### Authorization
 

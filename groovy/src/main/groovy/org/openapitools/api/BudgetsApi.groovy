@@ -1,11 +1,9 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.AddBudgets200Response
-import org.openapitools.model.AddBudgetsRequest
 import org.openapitools.model.DefaultError
-import org.openapitools.model.GetBudgets200Response
-import org.openapitools.model.ListBudgets200Response
+import org.openapitools.model.InlineObject22
+import org.openapitools.model.InlineObject23
 import org.openapitools.model.Model200Success
 
 class BudgetsApi {
@@ -13,7 +11,7 @@ class BudgetsApi {
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def addBudgets ( AddBudgetsRequest addBudgetsRequest, Closure onSuccess, Closure onFailure)  {
+    def addBudgets ( InlineObject22 inlineObject22, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/budgets"
 
         // params
@@ -26,12 +24,12 @@ class BudgetsApi {
 
 
         contentType = 'application/json';
-        bodyParams = addBudgetsRequest
+        bodyParams = inlineObject22
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    AddBudgets200Response.class )
+                    Object.class )
 
     }
 
@@ -55,7 +53,7 @@ class BudgetsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetBudgets200Response.class )
+                    Object.class )
 
     }
 
@@ -93,7 +91,7 @@ class BudgetsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListBudgets200Response.class )
+                    Object.class )
 
     }
 
@@ -121,7 +119,7 @@ class BudgetsApi {
 
     }
 
-    def updateBudgets ( Long id, AddBudgetsRequest addBudgetsRequest, Closure onSuccess, Closure onFailure)  {
+    def updateBudgets ( Long id, InlineObject23 inlineObject23, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/budgets/${id}"
 
         // params
@@ -138,12 +136,12 @@ class BudgetsApi {
 
 
         contentType = 'application/json';
-        bodyParams = addBudgetsRequest
+        bodyParams = inlineObject23
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "PUT", "",
-                    AddBudgets200Response.class )
+                    Object.class )
 
     }
 

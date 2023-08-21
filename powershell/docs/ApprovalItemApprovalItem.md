@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **LastUpdated** | **System.DateTime** |  | [optional] 
 **DateApproved** | **System.DateTime** |  | [optional] 
 **DateDenied** | **System.DateTime** |  | [optional] 
-**Approval** | [**UpdateBlueprintPermissionsRequestResourcePermissionSitesInner**](UpdateBlueprintPermissionsRequestResourcePermissionSitesInner.md) |  | [optional] 
+**Approval** | [**ApiBlueprintsIdUpdatePermissionsResourcePermissionSites**](ApiBlueprintsIdUpdatePermissionsResourcePermissionSites.md) |  | [optional] 
 **Reference** | [**ApprovalItemApprovalItemReference**](ApprovalItemApprovalItemReference.md) |  | [optional] 
 
 ## Examples

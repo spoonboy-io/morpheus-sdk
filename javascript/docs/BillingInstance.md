@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **price** | **Number** |  | [optional] 
 **cost** | **Number** |  | [optional] 
 **currency** | **String** |  | [optional] 
-**containers** | [**[BillingInstanceContainersInner]**](BillingInstanceContainersInner.md) |  | [optional] 
+**containers** | [**[BillingInstanceContainers]**](BillingInstanceContainers.md) |  | [optional] 
 
 

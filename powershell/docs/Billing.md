@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **PriceUnit** | **String** |  | [optional] 
 **Price** | **Decimal** |  | [optional] 
 **Cost** | **Decimal** |  | [optional] 
-**Zones** | [**BillingZonesInner[]**](BillingZonesInner.md) |  | [optional] 
+**Zones** | [**BillingZones[]**](BillingZones.md) |  | [optional] 
 
 ## Examples
 

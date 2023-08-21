@@ -1,0 +1,9 @@
+# # InlineObject258
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**vdi_app** | [**OneOfObject**](OneOfObject.md) |  |
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

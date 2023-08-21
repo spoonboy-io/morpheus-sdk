@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **yaml** | **String** | ARM Template in YAML | [optional] 
 **git** | [**BlueprintARMCreateArmGit**](BlueprintARMCreateArmGit.md) |  | [optional] 
 **osType** | **String** | OS Type | [optional] 
-**installAgent** | [**BlueprintARMCreateArmInstallAgent**](BlueprintARMCreateArmInstallAgent.md) |  | [optional] 
-**cloudInitEnabled** | [**BlueprintARMCreateArmCloudInitEnabled**](BlueprintARMCreateArmCloudInitEnabled.md) |  | [optional] 
+**installAgent** | [**OneOfbooleanstring**](OneOfbooleanstring.md) | Install Morpheus Agent | [optional] 
+**cloudInitEnabled** | [**OneOfbooleanstring**](OneOfbooleanstring.md) | Cloud Init Enabled | [optional] 
 
 
 

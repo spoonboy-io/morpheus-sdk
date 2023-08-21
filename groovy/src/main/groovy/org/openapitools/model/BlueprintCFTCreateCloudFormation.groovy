@@ -7,33 +7,8 @@ import org.openapitools.model.BlueprintCFTCreateCloudFormationGit;
 
 @Canonical
 class BlueprintCFTCreateCloudFormation {
-
-    enum ConfigTypeEnum {
-    
-        JSON("json"),
-        
-        YAML("yaml"),
-        
-        GIT("git")
-    
-        private final String value
-    
-        ConfigTypeEnum(String value) {
-            this.value = value
-        }
-    
-        String getValue() {
-            value
-        }
-    
-        @Override
-        String toString() {
-            String.valueOf(value)
-        }
-    }
-
     /* Configuration Type */
-    ConfigTypeEnum configType
+    String configType
     /* CloudFormation Template in JSON */
     String json
     /* CloudFormation Template in YAML */

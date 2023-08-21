@@ -1,0 +1,48 @@
+# # InlineResponse20080LoadBalancerPool
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [optional]
+**load_balancer** | [**\OpenAPI\Client\Model\InlineResponse20079LoadBalancerMonitorLoadBalancer**](InlineResponse20079LoadBalancerMonitorLoadBalancer.md) |  | [optional]
+**name** | **string** |  | [optional]
+**category** | **string** |  | [optional]
+**visibility** | **string** |  | [optional]
+**description** | **string** |  | [optional]
+**internal_id** | **string** |  | [optional]
+**external_id** | **string** |  | [optional]
+**enabled** | **bool** |  | [optional]
+**vip_sticky** | **string** |  | [optional]
+**vip_balance** | **string** |  | [optional]
+**allow_nat** | **string** |  | [optional]
+**allow_snat** | **string** |  | [optional]
+**vip_client_ip_mode** | **string** |  | [optional]
+**vip_server_ip_mode** | **string** |  | [optional]
+**min_active** | **int** |  | [optional]
+**min_in_service** | **string** |  | [optional]
+**min_up_monitor** | **string** |  | [optional]
+**min_up_action** | **string** |  | [optional]
+**max_queue_depth** | **string** |  | [optional]
+**max_queue_time** | **string** |  | [optional]
+**number_active** | **int** |  | [optional]
+**number_in_service** | **int** |  | [optional]
+**health_score** | **int** |  | [optional]
+**performance_score** | **int** |  | [optional]
+**health_penalty** | **int** |  | [optional]
+**security_penalty** | **int** |  | [optional]
+**error_penalty** | **int** |  | [optional]
+**down_action** | **string** |  | [optional]
+**ramp_time** | **string** |  | [optional]
+**port** | **string** |  | [optional]
+**port_type** | **string** |  | [optional]
+**status** | **string** |  | [optional]
+**nodes** | [**\OpenAPI\Client\Model\InlineResponse20040AppDeployInstance[]**](InlineResponse20040AppDeployInstance.md) |  | [optional]
+**monitors** | [**\OpenAPI\Client\Model\InlineResponse20040AppDeployInstance[]**](InlineResponse20040AppDeployInstance.md) |  | [optional]
+**members** | **object[]** |  | [optional]
+**config** | **object** |  | [optional]
+**created_by** | **string** |  | [optional]
+**date_created** | [**\DateTime**](\DateTime.md) |  | [optional]
+**last_updated** | [**\DateTime**](\DateTime.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **Config** | [**SystemCollectionsHashtable**](.md) |  | [optional] 
 **Visibility** | **String** |  | [optional] 
 **ResourcePermission** | [**SystemCollectionsHashtable**](.md) |  | [optional] 
-**Owner** | [**ActivityActivityInnerUser**](ActivityActivityInnerUser.md) |  | [optional] 
-**Tenant** | [**ApplianceSettingsEnabledZoneTypesInner**](ApplianceSettingsEnabledZoneTypesInner.md) |  | [optional] 
+**Owner** | [**InlineResponse200107NetworkPoolCreatedBy**](InlineResponse200107NetworkPoolCreatedBy.md) |  | [optional] 
+**Tenant** | [**InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
 
 ## Examples
 

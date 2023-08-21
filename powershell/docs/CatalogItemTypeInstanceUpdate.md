@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **Enabled** | **Boolean** | Can be used to enable / disable the catalog item type. | [optional] [default to $true]
 **Featured** | **Boolean** | Can be used to feature the catalog item type. | [optional] [default to $false]
 **AllowQuantity** | **Boolean** | Can users order more than one of this item at a time. | [optional] [default to $false]
-**Config** | [**SystemCollectionsHashtable**](SystemCollectionsHashtable.md) |  | [optional] 
+**Config** | [**CatalogItemTypeInstanceScribe**](CatalogItemTypeInstanceScribe.md) |  | [optional] 
 **OptionTypes** | **Int64[]** | Array of option type IDs. Only applies to type instance and blueprint. | [optional] 
 
 ## Examples

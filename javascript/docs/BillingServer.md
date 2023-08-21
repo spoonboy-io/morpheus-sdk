@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **numUnits** | **Number** |  | [optional] 
 **unit** | **String** |  | [optional] 
 **currency** | **String** |  | [optional] 
-**usages** | [**[BillingServerUsagesInner]**](BillingServerUsagesInner.md) |  | [optional] 
+**usages** | [**[BillingServerUsages]**](BillingServerUsages.md) |  | [optional] 
 **numUsages** | **Number** |  | [optional] 
 **totalUsages** | **Number** |  | [optional] 
 **hasMoreUsages** | **Boolean** |  | [optional] 

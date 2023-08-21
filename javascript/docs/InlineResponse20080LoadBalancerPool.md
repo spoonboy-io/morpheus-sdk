@@ -1,0 +1,48 @@
+# MorpheusApi.InlineResponse20080LoadBalancerPool
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Number** |  | [optional] 
+**loadBalancer** | [**InlineResponse20079LoadBalancerMonitorLoadBalancer**](InlineResponse20079LoadBalancerMonitorLoadBalancer.md) |  | [optional] 
+**name** | **String** |  | [optional] 
+**category** | **String** |  | [optional] 
+**visibility** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**internalId** | **String** |  | [optional] 
+**externalId** | **String** |  | [optional] 
+**enabled** | **Boolean** |  | [optional] 
+**vipSticky** | **String** |  | [optional] 
+**vipBalance** | **String** |  | [optional] 
+**allowNat** | **String** |  | [optional] 
+**allowSnat** | **String** |  | [optional] 
+**vipClientIpMode** | **String** |  | [optional] 
+**vipServerIpMode** | **String** |  | [optional] 
+**minActive** | **Number** |  | [optional] 
+**minInService** | **String** |  | [optional] 
+**minUpMonitor** | **String** |  | [optional] 
+**minUpAction** | **String** |  | [optional] 
+**maxQueueDepth** | **String** |  | [optional] 
+**maxQueueTime** | **String** |  | [optional] 
+**numberActive** | **Number** |  | [optional] 
+**numberInService** | **Number** |  | [optional] 
+**healthScore** | **Number** |  | [optional] 
+**performanceScore** | **Number** |  | [optional] 
+**healthPenalty** | **Number** |  | [optional] 
+**securityPenalty** | **Number** |  | [optional] 
+**errorPenalty** | **Number** |  | [optional] 
+**downAction** | **String** |  | [optional] 
+**rampTime** | **String** |  | [optional] 
+**port** | **String** |  | [optional] 
+**portType** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
+**nodes** | [**[InlineResponse20040AppDeployInstance]**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
+**monitors** | [**[InlineResponse20040AppDeployInstance]**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
+**members** | **[Object]** |  | [optional] 
+**config** | **Object** |  | [optional] 
+**createdBy** | **String** |  | [optional] 
+**dateCreated** | **Date** |  | [optional] 
+**lastUpdated** | **Date** |  | [optional] 
+
+

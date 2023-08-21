@@ -1,0 +1,46 @@
+# # ZoneVcenterConfig
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**api_url** | **string** |  | [optional]
+**username** | **string** |  | [optional]
+**password** | **string** |  | [optional]
+**datacenter** | **string** |  | [optional]
+**cluster** | **string** |  | [optional]
+**resource_pool_id** | **string** |  | [optional]
+**resource_pool** | **string** |  | [optional]
+**rpc_mode** | **string** |  | [optional]
+**_hide_host_selection** | **string** |  | [optional]
+**hide_host_selection** | **string** |  | [optional]
+**_import_existing** | **string** |  | [optional]
+**import_existing** | **string** |  | [optional]
+**_enable_vnc** | **string** |  | [optional]
+**enable_vnc** | **string** |  | [optional]
+**_enable_disk_type_selection** | **string** |  | [optional]
+**_enable_network_type_selection** | **string** |  | [optional]
+**disk_storage_type** | **string** |  | [optional]
+**appliance_url** | **string** |  | [optional]
+**datacenter_name** | **string** |  | [optional]
+**network_server_id** | **string** |  | [optional]
+**network_server** | [**\OpenAPI\Client\Model\ZoneVcenterConfigNetworkServer**](ZoneVcenterConfigNetworkServer.md) |  | [optional]
+**security_mode** | **string** |  | [optional]
+**certificate_provider** | **string** |  | [optional]
+**backup_mode** | **string** |  | [optional]
+**replication_mode** | **string** |  | [optional]
+**dns_integration_id** | **string** |  | [optional]
+**config_cmdb_id** | **string** |  | [optional]
+**config_management_id** | **string** |  | [optional]
+**config_cm_id** | **string** |  | [optional]
+**security_server** | **string** |  | [optional]
+**service_registry_id** | **string** |  | [optional]
+**enable_disk_type_selection** | **string** |  | [optional]
+**kube_url** | **string** |  | [optional]
+**api_version** | **string** |  | [optional]
+**datacenter_id** | **string** |  | [optional]
+**config_cmdb_discovery** | **bool** |  | [optional]
+**distributed_worker_id** | **string** |  | [optional]
+**password_hash** | **string** |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

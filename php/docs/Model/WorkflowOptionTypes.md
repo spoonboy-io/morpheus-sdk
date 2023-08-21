@@ -1,0 +1,48 @@
+# # WorkflowOptionTypes
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [optional]
+**name** | **string** |  | [optional]
+**description** | **string** |  | [optional]
+**code** | **string** |  | [optional]
+**field_name** | **string** |  | [optional]
+**field_label** | **string** |  | [optional]
+**field_code** | **string** |  | [optional]
+**field_context** | **string** |  | [optional]
+**field_group** | **string** |  | [optional]
+**field_class** | **string** |  | [optional]
+**field_add_on** | **string** |  | [optional]
+**field_component** | **string** |  | [optional]
+**field_input** | **string** |  | [optional]
+**place_holder** | **string** |  | [optional]
+**verify_pattern** | **string** |  | [optional]
+**help_block** | **string** |  | [optional]
+**help_block_field_code** | **string** |  | [optional]
+**default_value** | **string** |  | [optional]
+**option_source** | **string** |  | [optional]
+**option_source_type** | **string** |  | [optional]
+**option_list** | [**\OpenAPI\Client\Model\InlineResponse20082LoadBalancerInstanceSslCert**](InlineResponse20082LoadBalancerInstanceSslCert.md) |  | [optional]
+**type** | **string** |  | [optional]
+**advanced** | **bool** |  | [optional]
+**required** | **bool** |  | [optional]
+**export_meta** | **bool** |  | [optional]
+**editable** | **bool** |  | [optional]
+**creatable** | **bool** |  | [optional]
+**config** | **object** |  | [optional]
+**display_order** | **int** |  | [optional]
+**wrapper_class** | **string** |  | [optional]
+**enabled** | **bool** |  | [optional]
+**no_blank** | **bool** |  | [optional]
+**depends_on_code** | **string** |  | [optional]
+**visible_on_code** | **string** |  | [optional]
+**require_on_code** | **string** |  | [optional]
+**contextual_default** | **bool** |  | [optional]
+**display_value_on_details** | **bool** |  | [optional]
+**show_on_create** | **bool** |  | [optional]
+**show_on_edit** | **bool** |  | [optional]
+**local_credential** | **string** |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

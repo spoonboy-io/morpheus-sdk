@@ -4,9 +4,8 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.AddAlertsRequestAlertContactsInner;
+import java.util.List;
+import org.openapitools.model.ApiMonitoringAlertsAlertContacts;
 
 @Canonical
 class Alert {
@@ -31,11 +30,11 @@ class Alert {
     
     Date lastUpdated
     
-    List<Integer> checks
+    List<Integer> checks = new ArrayList<Integer>()
     
-    List<Integer> checkGroups
+    List<Integer> checkGroups = new ArrayList<Integer>()
     
-    List<Integer> apps
+    List<Integer> apps = new ArrayList<Integer>()
     
-    List<AddAlertsRequestAlertContactsInner> contacts
+    List<ApiMonitoringAlertsAlertContacts> contacts = new ArrayList<ApiMonitoringAlertsAlertContacts>()
 }

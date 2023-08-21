@@ -12,19 +12,21 @@ Method | HTTP request | Description
 [**getApp**](AppsApi.md#getApp) | **GET** /api/apps/{id} | Get a Specific App
 [**getAppSecurityGroups**](AppsApi.md#getAppSecurityGroups) | **GET** /api/apps/{id}/security-groups | Get Security Groups for an App
 [**getAppState**](AppsApi.md#getAppState) | **GET** /api/apps/{id}/state | Get State of an App
+[**getWikiApp**](AppsApi.md#getWikiApp) | **GET** /api/apps/{id}/wiki | Retrieves an App Wiki Page
 [**listApps**](AppsApi.md#listApps) | **GET** /api/apps | Get All Apps
 [**prepareAppApply**](AppsApi.md#prepareAppApply) | **GET** /api/apps/{id}/prepare-apply | Prepare To Apply an App
 [**refreshAppState**](AppsApi.md#refreshAppState) | **POST** /api/apps/{id}/refresh | Refresh State of an App
 [**removeAppInstance**](AppsApi.md#removeAppInstance) | **POST** /api/apps/{id}/remove-instance | Remove Instance from App
 [**setAppSecurityGroups**](AppsApi.md#setAppSecurityGroups) | **POST** /api/apps/{id}/security-groups | Set Security Groups for an App
 [**updateApp**](AppsApi.md#updateApp) | **PUT** /api/apps/{id} | Updating an App
+[**updateWikiApp**](AppsApi.md#updateWikiApp) | **PUT** /api/apps/{id}/wiki | Update an App Wiki Page
 [**validateAppState**](AppsApi.md#validateAppState) | **POST** /api/apps/{id}/validate-apply | Validate Apply State for an App
 
 
 
 ## addAppInstance
 
-> GetApp200Response addAppInstance(id, opts)
+> InlineResponse2003 addAppInstance(id, opts)
 
 Add Existing Instance to App
 
@@ -42,7 +44,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.AppsApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'addAppInstanceRequest': {$ref=../components/examples/appAddInstance.json} // AddAppInstanceRequest | 
+  'inlineObject3': new MorpheusApi.InlineObject3() // InlineObject3 | 
 };
 apiInstance.addAppInstance(id, opts, (error, data, response) => {
   if (error) {
@@ -59,11 +61,11 @@ apiInstance.addAppInstance(id, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Morpheus ID of the Object being referenced | 
- **addAppInstanceRequest** | [**AddAppInstanceRequest**](AddAppInstanceRequest.md)|  | [optional] 
+ **inlineObject3** | [**InlineObject3**](InlineObject3.md)|  | [optional] 
 
 ### Return type
 
-[**GetApp200Response**](GetApp200Response.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -77,7 +79,7 @@ Name | Type | Description  | Notes
 
 ## addAppUndoDelete
 
-> GetApp200Response addAppUndoDelete(id)
+> InlineResponse2003 addAppUndoDelete(id)
 
 Undo Delete of an App
 
@@ -112,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetApp200Response**](GetApp200Response.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -126,7 +128,7 @@ Name | Type | Description  | Notes
 
 ## addApps
 
-> AddApps200Response addApps(opts)
+> InlineResponse2002 addApps(opts)
 
 Create an App
 
@@ -143,7 +145,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.AppsApi();
 let opts = {
-  'appCreate': {$ref=../components/examples/appRequest.json} // AppCreate | 
+  'appCreate': {"blueprintId":"existing","name":"sample","description":"A sample app","group":{"id":1},"defaultCloud":{"id":19}} // AppCreate | 
 };
 apiInstance.addApps(opts, (error, data, response) => {
   if (error) {
@@ -163,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AddApps200Response**](AddApps200Response.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -195,7 +197,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.AppsApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'applyAppStateRequest': new MorpheusApi.ApplyAppStateRequest() // ApplyAppStateRequest | 
+  'inlineObject4': new MorpheusApi.InlineObject4() // InlineObject4 | 
 };
 apiInstance.applyAppState(id, opts, (error, data, response) => {
   if (error) {
@@ -212,7 +214,7 @@ apiInstance.applyAppState(id, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Morpheus ID of the Object being referenced | 
- **applyAppStateRequest** | [**ApplyAppStateRequest**](ApplyAppStateRequest.md)|  | [optional] 
+ **inlineObject4** | [**InlineObject4**](InlineObject4.md)|  | [optional] 
 
 ### Return type
 
@@ -293,7 +295,7 @@ Name | Type | Description  | Notes
 
 ## getApp
 
-> GetApp200Response getApp(id)
+> InlineResponse2003 getApp(id)
 
 Get a Specific App
 
@@ -328,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetApp200Response**](GetApp200Response.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -342,7 +344,7 @@ Name | Type | Description  | Notes
 
 ## getAppSecurityGroups
 
-> GetAppSecurityGroups200Response getAppSecurityGroups(id)
+> Object getAppSecurityGroups(id)
 
 Get Security Groups for an App
 
@@ -377,7 +379,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAppSecurityGroups200Response**](GetAppSecurityGroups200Response.md)
+**Object**
 
 ### Authorization
 
@@ -391,7 +393,7 @@ Name | Type | Description  | Notes
 
 ## getAppState
 
-> GetAppState200Response getAppState(id)
+> AppState getAppState(id)
 
 Get State of an App
 
@@ -426,7 +428,56 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAppState200Response**](GetAppState200Response.md)
+[**AppState**](AppState.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getWikiApp
+
+> InlineResponse200168 getWikiApp(id)
+
+Retrieves an App Wiki Page
+
+This endpoint retrieves an app Wiki page. 
+
+### Example
+
+```javascript
+import MorpheusApi from 'morpheus_api';
+let defaultClient = MorpheusApi.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new MorpheusApi.AppsApi();
+let id = 1; // Number | Morpheus ID of the Object being referenced
+apiInstance.getWikiApp(id, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**| Morpheus ID of the Object being referenced | 
+
+### Return type
+
+[**InlineResponse200168**](InlineResponse200168.md)
 
 ### Authorization
 
@@ -440,7 +491,7 @@ Name | Type | Description  | Notes
 
 ## listApps
 
-> ListApps200Response listApps(opts)
+> Object listApps(opts)
 
 Get All Apps
 
@@ -457,7 +508,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.AppsApi();
 let opts = {
-  'max': 25, // Number | Maximum number of records to return
+  'max': 25, // Number | Maximum number of records to return, -1 can be used to fetch all records
   'offset': 0, // Number | Offset records, the number of records to skip, for paginating requests
   'name': example-%, // String | Filter by name, wildcard may be specified as %, eg. example-%
   'phrase': "phrase_example", // String | Search phrase for partial matches on name or description
@@ -480,7 +531,7 @@ apiInstance.listApps(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **max** | **Number**| Maximum number of records to return | [optional] [default to 25]
+ **max** | **Number**| Maximum number of records to return, -1 can be used to fetch all records | [optional] [default to 25]
  **offset** | **Number**| Offset records, the number of records to skip, for paginating requests | [optional] [default to 0]
  **name** | **String**| Filter by name, wildcard may be specified as %, eg. example-% | [optional] 
  **phrase** | **String**| Search phrase for partial matches on name or description | [optional] 
@@ -491,7 +542,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListApps200Response**](ListApps200Response.md)
+**Object**
 
 ### Authorization
 
@@ -505,7 +556,7 @@ Name | Type | Description  | Notes
 
 ## prepareAppApply
 
-> PrepareAppApply200Response prepareAppApply(id)
+> AppPrepareApply prepareAppApply(id)
 
 Prepare To Apply an App
 
@@ -540,7 +591,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PrepareAppApply200Response**](PrepareAppApply200Response.md)
+[**AppPrepareApply**](AppPrepareApply.md)
 
 ### Authorization
 
@@ -572,7 +623,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.AppsApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'body': {key: null} // Object | 
+  'body': null // Object | 
 };
 apiInstance.refreshAppState(id, opts, (error, data, response) => {
   if (error) {
@@ -607,7 +658,7 @@ Name | Type | Description  | Notes
 
 ## removeAppInstance
 
-> GetApp200Response removeAppInstance(id, opts)
+> InlineResponse2003 removeAppInstance(id, opts)
 
 Remove Instance from App
 
@@ -625,7 +676,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.AppsApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'removeAppInstanceRequest': {$ref=../components/examples/appRemoveInstance.json} // RemoveAppInstanceRequest | 
+  'inlineObject5': new MorpheusApi.InlineObject5() // InlineObject5 | 
 };
 apiInstance.removeAppInstance(id, opts, (error, data, response) => {
   if (error) {
@@ -642,11 +693,11 @@ apiInstance.removeAppInstance(id, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Morpheus ID of the Object being referenced | 
- **removeAppInstanceRequest** | [**RemoveAppInstanceRequest**](RemoveAppInstanceRequest.md)|  | [optional] 
+ **inlineObject5** | [**InlineObject5**](InlineObject5.md)|  | [optional] 
 
 ### Return type
 
-[**GetApp200Response**](GetApp200Response.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -660,7 +711,7 @@ Name | Type | Description  | Notes
 
 ## setAppSecurityGroups
 
-> SetAppSecurityGroups200Response setAppSecurityGroups(id, opts)
+> Object setAppSecurityGroups(id, opts)
 
 Set Security Groups for an App
 
@@ -678,7 +729,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.AppsApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'setAppSecurityGroupsRequest': {$ref=../components/examples/appUpdateSecurityGroups.json} // SetAppSecurityGroupsRequest | 
+  'UNKNOWN_BASE_TYPE': {"securityGroupIds":[19,2]} // UNKNOWN_BASE_TYPE | 
 };
 apiInstance.setAppSecurityGroups(id, opts, (error, data, response) => {
   if (error) {
@@ -695,11 +746,11 @@ apiInstance.setAppSecurityGroups(id, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Morpheus ID of the Object being referenced | 
- **setAppSecurityGroupsRequest** | [**SetAppSecurityGroupsRequest**](SetAppSecurityGroupsRequest.md)|  | [optional] 
+ **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)|  | [optional] 
 
 ### Return type
 
-[**SetAppSecurityGroups200Response**](SetAppSecurityGroups200Response.md)
+**Object**
 
 ### Authorization
 
@@ -713,7 +764,7 @@ Name | Type | Description  | Notes
 
 ## updateApp
 
-> GetApp200Response updateApp(id, opts)
+> InlineResponse2003 updateApp(id, opts)
 
 Updating an App
 
@@ -731,7 +782,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.AppsApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'appUpdate': {$ref=../components/examples/appUpdate.json} // AppUpdate | 
+  'appUpdate': {"name":"My Sample App","description":"A new description of this app"} // AppUpdate | 
 };
 apiInstance.updateApp(id, opts, (error, data, response) => {
   if (error) {
@@ -752,7 +803,60 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetApp200Response**](GetApp200Response.md)
+[**InlineResponse2003**](InlineResponse2003.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## updateWikiApp
+
+> Object updateWikiApp(id, opts)
+
+Update an App Wiki Page
+
+Updates an app Wiki page. 
+
+### Example
+
+```javascript
+import MorpheusApi from 'morpheus_api';
+let defaultClient = MorpheusApi.ApiClient.instance;
+// Configure Bearer access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new MorpheusApi.AppsApi();
+let id = 1; // Number | Morpheus ID of the Object being referenced
+let opts = {
+  'inlineObject267': new MorpheusApi.InlineObject267() // InlineObject267 | 
+};
+apiInstance.updateWikiApp(id, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **Number**| Morpheus ID of the Object being referenced | 
+ **inlineObject267** | [**InlineObject267**](InlineObject267.md)|  | [optional] 
+
+### Return type
+
+**Object**
 
 ### Authorization
 
@@ -766,7 +870,7 @@ Name | Type | Description  | Notes
 
 ## validateAppState
 
-> ValidateAppState200Response validateAppState(id, opts)
+> Object validateAppState(id, opts)
 
 Validate Apply State for an App
 
@@ -784,7 +888,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.AppsApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'applyAppStateRequest': new MorpheusApi.ApplyAppStateRequest() // ApplyAppStateRequest | 
+  'inlineObject6': new MorpheusApi.InlineObject6() // InlineObject6 | 
 };
 apiInstance.validateAppState(id, opts, (error, data, response) => {
   if (error) {
@@ -801,11 +905,11 @@ apiInstance.validateAppState(id, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Morpheus ID of the Object being referenced | 
- **applyAppStateRequest** | [**ApplyAppStateRequest**](ApplyAppStateRequest.md)|  | [optional] 
+ **inlineObject6** | [**InlineObject6**](InlineObject6.md)|  | [optional] 
 
 ### Return type
 
-[**ValidateAppState200Response**](ValidateAppState200Response.md)
+**Object**
 
 ### Authorization
 

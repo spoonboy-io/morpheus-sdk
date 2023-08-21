@@ -1,0 +1,47 @@
+# MorpheusApi.InlineResponse20079LoadBalancerMonitor
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Number** |  | [optional] 
+**loadBalancer** | [**InlineResponse20079LoadBalancerMonitorLoadBalancer**](InlineResponse20079LoadBalancerMonitorLoadBalancer.md) |  | [optional] 
+**name** | **String** |  | [optional] 
+**code** | **String** |  | [optional] 
+**category** | **String** |  | [optional] 
+**visibility** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
+**monitorType** | **String** |  | [optional] 
+**monitorInterval** | **Number** |  | [optional] 
+**monitorTimeout** | **Number** |  | [optional] 
+**sendData** | **String** |  | [optional] 
+**sendVersion** | **String** |  | [optional] 
+**sendType** | **String** |  | [optional] 
+**receiveData** | **String** |  | [optional] 
+**receiveCode** | **String** |  | [optional] 
+**disabledData** | **String** |  | [optional] 
+**monitorUsername** | **String** |  | [optional] 
+**monitorPassword** | **String** |  | [optional] 
+**monitorDestination** | **String** |  | [optional] 
+**monitorReverse** | **Boolean** |  | [optional] 
+**monitorTransparent** | **Boolean** |  | [optional] 
+**monitorAdaptive** | **Boolean** |  | [optional] 
+**aliasAddress** | **String** |  | [optional] 
+**aliasPort** | **Number** |  | [optional] 
+**internalId** | **String** |  | [optional] 
+**externalId** | **String** |  | [optional] 
+**monitorSource** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
+**statusMessage** | **String** |  | [optional] 
+**statusDate** | **Date** |  | [optional] 
+**enabled** | **Boolean** |  | [optional] 
+**maxRetry** | **Number** |  | [optional] 
+**fallCount** | **Number** |  | [optional] 
+**riseCount** | **Number** |  | [optional] 
+**dataLength** | **String** |  | [optional] 
+**config** | **Object** |  | [optional] 
+**createdBy** | **String** |  | [optional] 
+**dateCreated** | **Date** |  | [optional] 
+**lastUpdated** | **Date** |  | [optional] 
+
+

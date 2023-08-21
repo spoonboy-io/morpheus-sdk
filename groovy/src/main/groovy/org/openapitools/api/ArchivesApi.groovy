@@ -1,25 +1,19 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.AddArchiveBucket200Response
-import org.openapitools.model.AddArchiveBucketRequest
-import org.openapitools.model.AddArchiveFile200Response
-import org.openapitools.model.AddArchiveFileLink200Response
 import org.openapitools.model.DefaultError
-import org.openapitools.model.GetArchiveBucket200Response
-import org.openapitools.model.GetArchiveFileDetail200Response
-import org.openapitools.model.GetArchiveFileLinks200Response
-import org.openapitools.model.ListArchiveBuckets200Response
-import org.openapitools.model.ListArchiveFiles200Response
+import org.openapitools.model.InlineObject7
+import org.openapitools.model.InlineObject8
+import org.openapitools.model.InlineResponse2004
+import org.openapitools.model.InlineResponse2005
 import org.openapitools.model.Model200Success
-import org.openapitools.model.UpdateArchiveBucketRequest
 
 class ArchivesApi {
     String basePath = "https://CHANGEME"
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def addArchiveBucket ( AddArchiveBucketRequest addArchiveBucketRequest, Closure onSuccess, Closure onFailure)  {
+    def addArchiveBucket ( InlineObject7 inlineObject7, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/archives/buckets"
 
         // params
@@ -32,16 +26,16 @@ class ArchivesApi {
 
 
         contentType = 'application/json';
-        bodyParams = addArchiveBucketRequest
+        bodyParams = inlineObject7
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    AddArchiveBucket200Response.class )
+                    Object.class )
 
     }
 
-    def addArchiveFile ( String bucket, String filepath, String filename, File _file, Closure onSuccess, Closure onFailure)  {
+    def addArchiveFile ( String bucket, String filepath, String filename, File file, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/archives/buckets/${bucket}/files/${filepath}"
 
         // params
@@ -66,11 +60,11 @@ class ArchivesApi {
 
 
         contentType = 'multipart/form-data';
-        bodyParams = _file
+        bodyParams = file
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    AddArchiveFile200Response.class )
+                    Object.class )
 
     }
 
@@ -97,7 +91,7 @@ class ArchivesApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    AddArchiveFileLink200Response.class )
+                    Model200Success.class )
 
     }
 
@@ -197,7 +191,7 @@ class ArchivesApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetArchiveBucket200Response.class )
+                    InlineResponse2004.class )
 
     }
 
@@ -249,7 +243,7 @@ class ArchivesApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetArchiveFileDetail200Response.class )
+                    InlineResponse2005.class )
 
     }
 
@@ -273,7 +267,62 @@ class ArchivesApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetArchiveFileLinks200Response.class )
+                    Object.class )
+
+    }
+
+    def getArchivePublicFile ( String bucket, String filepath, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/api/public-archives/download/${bucket}/${filepath}"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+        // verify required params are set
+        if (bucket == null) {
+            throw new RuntimeException("missing required params bucket")
+        }
+        // verify required params are set
+        if (filepath == null) {
+            throw new RuntimeException("missing required params filepath")
+        }
+
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
+
+    }
+
+    def getArchivePublicFileLink ( String s, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/api/public-archives/link"
+
+        // params
+        def queryParams = [:]
+        def headerParams = [:]
+        def bodyParams
+        def contentType
+
+        // verify required params are set
+        if (s == null) {
+            throw new RuntimeException("missing required params s")
+        }
+
+        if (s != null) {
+            queryParams.put("s", s)
+        }
+
+
+
+
+        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
+                    "GET", "",
+                    null )
 
     }
 
@@ -299,7 +348,7 @@ class ArchivesApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListArchiveBuckets200Response.class )
+                    Object.class )
 
     }
 
@@ -336,11 +385,11 @@ class ArchivesApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListArchiveFiles200Response.class )
+                    Object.class )
 
     }
 
-    def updateArchiveBucket ( Long id, UpdateArchiveBucketRequest updateArchiveBucketRequest, Closure onSuccess, Closure onFailure)  {
+    def updateArchiveBucket ( Long id, InlineObject8 inlineObject8, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/archives/buckets/${id}"
 
         // params
@@ -357,12 +406,12 @@ class ArchivesApi {
 
 
         contentType = 'application/json';
-        bodyParams = updateArchiveBucketRequest
+        bodyParams = inlineObject8
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "PUT", "",
-                    AddArchiveBucket200Response.class )
+                    Object.class )
 
     }
 

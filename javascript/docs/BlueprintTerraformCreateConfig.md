@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**specs** | [**[BlueprintKubernetesCreateConfigSpecsInner]**](BlueprintKubernetesCreateConfigSpecsInner.md) | Array of Terraform specs in Morpheus | [optional] 
+**specs** | [**[BlueprintKubernetesCreateConfigSpecs]**](BlueprintKubernetesCreateConfigSpecs.md) | Array of Terraform specs in Morpheus | [optional] 
 
 

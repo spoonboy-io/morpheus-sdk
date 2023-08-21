@@ -4,8 +4,7 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.List;
 
 @Canonical
 class AppUpdate {
@@ -14,7 +13,7 @@ class AppUpdate {
     /* Description */
     String description
     /* Array of label strings, can be used for filtering. */
-    List<String> labels
+    List<String> labels = new ArrayList<String>()
     /* Environment code (appContext) */
     String environment
     /* User ID, can be used to change app owner. This also changes the owner for each instance in the app. */

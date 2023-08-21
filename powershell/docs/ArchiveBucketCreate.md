@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **StorageProvider** | [**ArchiveBucketCreateStorageProvider**](ArchiveBucketCreateStorageProvider.md) |  | [optional] 
 **Visibility** | **String** | Visibility - Set to public to allow all tenants | [optional] [default to "private"]
 **IsPublic** | **Boolean** | Public URL - Set to true to allow anonymous access | [optional] [default to $false]
-**Accounts** | [**UpdateBlueprintPermissionsRequestResourcePermissionSitesInner**](UpdateBlueprintPermissionsRequestResourcePermissionSitesInner.md) |  | [optional] 
+**Accounts** | [**ApiBlueprintsIdUpdatePermissionsResourcePermissionSites**](ApiBlueprintsIdUpdatePermissionsResourcePermissionSites.md) |  | [optional] 
 
 ## Examples
 

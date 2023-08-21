@@ -5,8 +5,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.model.BillingServersServersInner;
+import java.util.List;
+import org.openapitools.model.BillingServersServers;
 
 @Canonical
 class BillingServers {
@@ -19,5 +19,5 @@ class BillingServers {
     
     Date endDate
     
-    List<BillingServersServersInner> servers
+    List<BillingServersServers> servers = new ArrayList<BillingServersServers>()
 }

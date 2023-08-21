@@ -5,8 +5,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.model.BillingInstancesInstancesInner;
+import java.util.List;
 
 @Canonical
 class BillingInstances {
@@ -15,9 +14,7 @@ class BillingInstances {
     
     BigDecimal cost
     
-    Date startDate
+    List<Object> instances = new ArrayList<Object>()
     
-    Date endDate
-    
-    List<BillingInstancesInstancesInner> instances
+    Long count
 }

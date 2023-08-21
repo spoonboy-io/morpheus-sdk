@@ -1,0 +1,63 @@
+
+
+# Clusters
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Long** |  |  [optional]
+**name** | **String** |  |  [optional]
+**code** | **String** |  |  [optional]
+**category** | **String** |  |  [optional]
+**visibility** | **String** |  |  [optional]
+**description** | **String** |  |  [optional]
+**location** | **String** |  |  [optional]
+**enabled** | **Boolean** |  |  [optional]
+**serviceUrl** | **String** |  |  [optional]
+**serviceHost** | **String** |  |  [optional]
+**servicePath** | **String** |  |  [optional]
+**serviceHostname** | **String** |  |  [optional]
+**servicePort** | **Long** |  |  [optional]
+**serviceUsername** | **String** |  |  [optional]
+**servicePassword** | **String** |  |  [optional]
+**servicePasswordHash** | **String** |  |  [optional]
+**serviceToken** | **String** |  |  [optional]
+**serviceTokenHash** | **String** |  |  [optional]
+**serviceAccess** | **String** |  |  [optional]
+**serviceAccessHash** | **String** |  |  [optional]
+**serviceCert** | **String** |  |  [optional]
+**serviceCertHash** | **String** |  |  [optional]
+**serviceVersion** | **String** |  |  [optional]
+**searchDomains** | **String** |  |  [optional]
+**enableInternalDns** | **Boolean** |  |  [optional]
+**internalId** | **String** |  |  [optional]
+**externalId** | **String** |  |  [optional]
+**datacenterId** | **String** |  |  [optional]
+**status** | **String** |  |  [optional]
+**statusDate** | **OffsetDateTime** |  |  [optional]
+**statusMessage** | **String** |  |  [optional]
+**inventoryLevel** | **String** |  |  [optional]
+**lastSync** | **OffsetDateTime** |  |  [optional]
+**nextRunDate** | **OffsetDateTime** |  |  [optional]
+**lastSyncDuration** | **Long** |  |  [optional]
+**dateCreated** | **OffsetDateTime** |  |  [optional]
+**lastUpdated** | **OffsetDateTime** |  |  [optional]
+**managed** | **Boolean** |  |  [optional]
+**labels** | **List&lt;String&gt;** |  |  [optional]
+**serviceEntry** | **String** |  |  [optional]
+**createdBy** | [**InlineResponse200107NetworkPoolCreatedBy**](InlineResponse200107NetworkPoolCreatedBy.md) |  |  [optional]
+**userGroup** | **String** |  |  [optional]
+**layout** | [**ClustersLayout**](ClustersLayout.md) |  |  [optional]
+**owner** | [**InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  |  [optional]
+**servers** | [**List&lt;ClustersServers&gt;**](ClustersServers.md) |  |  [optional]
+**accounts** | **List&lt;Object&gt;** |  |  [optional]
+**integrations** | **List&lt;Object&gt;** |  |  [optional]
+**site** | [**InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  |  [optional]
+**type** | [**InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  |  [optional]
+**zone** | [**ClustersZone**](ClustersZone.md) |  |  [optional]
+**workerStats** | [**ClustersWorkerStats**](ClustersWorkerStats.md) |  |  [optional]
+**config** | **Object** |  |  [optional]
+
+
+

@@ -1,0 +1,45 @@
+# # Check
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [optional]
+**account** | [**\OpenAPI\Client\Model\ApiBlueprintsIdUpdatePermissionsResourcePermissionSites**](ApiBlueprintsIdUpdatePermissionsResourcePermissionSites.md) |  | [optional]
+**active** | **bool** |  | [optional]
+**api_key** | **string** |  | [optional]
+**availability** | **float** |  | [optional]
+**check_agent** | **string** |  | [optional]
+**check_interval** | **int** |  | [optional]
+**check_spec** | **string** |  | [optional]
+**check_type** | [**\OpenAPI\Client\Model\CheckCheckType**](CheckCheckType.md) |  | [optional]
+**config** | [**AnyOfCheckWebConfigCheckSqlConfigCheckElasticsearchConfigCheckSocketConfigObjectCheckVmConfig**](AnyOfCheckWebConfigCheckSqlConfigCheckElasticsearchConfigCheckSocketConfigObjectCheckVmConfig.md) |  | [optional]
+**container** | [**\OpenAPI\Client\Model\CheckContainer**](CheckContainer.md) |  | [optional]
+**create_incident** | **bool** |  | [optional]
+**muted** | **bool** |  | [optional]
+**created_by** | [**\OpenAPI\Client\Model\InlineResponse20083LoadBalancerNodeCreatedBy**](InlineResponse20083LoadBalancerNodeCreatedBy.md) |  | [optional]
+**date_created** | [**\DateTime**](\DateTime.md) |  | [optional]
+**description** | **string** |  | [optional]
+**end_date** | [**\DateTime**](\DateTime.md) |  | [optional]
+**health** | **int** |  | [optional]
+**in_uptime** | **bool** |  | [optional]
+**last_box_stats** | **string** |  | [optional]
+**last_check_status** | **string** |  | [optional]
+**last_error** | **string** |  | [optional]
+**last_error_date** | [**\DateTime**](\DateTime.md) |  | [optional]
+**last_message** | **string** |  | [optional]
+**last_metric** | **string** |  | [optional]
+**last_run_date** | [**\DateTime**](\DateTime.md) |  | [optional]
+**last_stats** | **string** |  | [optional]
+**last_success_date** | [**\DateTime**](\DateTime.md) |  | [optional]
+**last_timer** | **int** |  | [optional]
+**last_updated** | [**\DateTime**](\DateTime.md) |  | [optional]
+**last_warning_date** | [**\DateTime**](\DateTime.md) |  | [optional]
+**name** | **string** |  | [optional]
+**next_run_date** | [**\DateTime**](\DateTime.md) |  | [optional]
+**outage_time** | **int** |  | [optional]
+**severity** | **string** |  | [optional]
+**start_date** | [**\DateTime**](\DateTime.md) |  | [optional]
+**deleted** | **bool** |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

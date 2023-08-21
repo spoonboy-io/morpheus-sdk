@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 **ProxyWorkstation** | **String** |  | [optional] 
 **CurrencyProvider** | **String** |  | [optional] 
 **CurrencyKey** | **String** |  | [optional] 
-**EnabledZoneTypes** | [**ApplianceSettingsEnabledZoneTypesInner[]**](ApplianceSettingsEnabledZoneTypesInner.md) |  | [optional] 
+**EnabledZoneTypes** | [**InlineResponse20040AppDeployInstance[]**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
 **StatsRetainmentPeriod** | **Int64** |  | [optional] 
 
 ## Examples

@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **Yaml** | **String** | ARM Template in YAML | [optional] 
 **Git** | [**BlueprintARMCreateArmGit**](BlueprintARMCreateArmGit.md) |  | [optional] 
 **OsType** | **String** | OS Type | [optional] 
-**InstallAgent** | [**BlueprintARMCreateArmInstallAgent**](BlueprintARMCreateArmInstallAgent.md) |  | [optional] 
-**CloudInitEnabled** | [**BlueprintARMCreateArmCloudInitEnabled**](BlueprintARMCreateArmCloudInitEnabled.md) |  | [optional] 
+**InstallAgent** | [**OneOfbooleanstring**](OneOfbooleanstring.md) | Install Morpheus Agent | [optional] 
+**CloudInitEnabled** | [**OneOfbooleanstring**](OneOfbooleanstring.md) | Cloud Init Enabled | [optional] 
 
 ## Examples
 

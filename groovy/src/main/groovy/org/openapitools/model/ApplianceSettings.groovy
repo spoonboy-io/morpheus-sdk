@@ -4,9 +4,8 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.ApplianceSettingsEnabledZoneTypesInner;
+import java.util.List;
+import org.openapitools.model.InlineResponse20040AppDeployInstance;
 
 @Canonical
 class ApplianceSettings {
@@ -67,7 +66,7 @@ class ApplianceSettings {
     
     String currencyKey
     
-    List<ApplianceSettingsEnabledZoneTypesInner> enabledZoneTypes
+    List<InlineResponse20040AppDeployInstance> enabledZoneTypes = new ArrayList<InlineResponse20040AppDeployInstance>()
     
     Long statsRetainmentPeriod
 }

@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **lastUpdated** | **Date** |  | [optional] 
 **dateApproved** | **Date** |  | [optional] 
 **dateDenied** | **Date** |  | [optional] 
-**approval** | [**UpdateBlueprintPermissionsRequestResourcePermissionSitesInner**](UpdateBlueprintPermissionsRequestResourcePermissionSitesInner.md) |  | [optional] 
+**approval** | [**ApiBlueprintsIdUpdatePermissionsResourcePermissionSites**](ApiBlueprintsIdUpdatePermissionsResourcePermissionSites.md) |  | [optional] 
 **reference** | [**ApprovalItemApprovalItemReference**](ApprovalItemApprovalItemReference.md) |  | [optional] 
 
 

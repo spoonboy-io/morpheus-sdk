@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **Enabled** | **Boolean** | Can be used to enable / disable the catalog item type. | [optional] [default to $true]
 **Featured** | **Boolean** | Can be used to feature the catalog item type. | [optional] [default to $false]
 **AllowQuantity** | **Boolean** | Can users order more than one of this item at a time. | [optional] [default to $false]
-**Workflow** | [**UpdateBlueprintPermissionsRequestResourcePermissionSitesInner**](UpdateBlueprintPermissionsRequestResourcePermissionSitesInner.md) |  | 
+**Workflow** | [**ApiBlueprintsIdUpdatePermissionsResourcePermissionSites**](ApiBlueprintsIdUpdatePermissionsResourcePermissionSites.md) |  | 
 **Context** | **String** | Context for running the workflow, determines if a target resource must be selected. | [optional] 
 **WorkflowConfig** | **String** | Configuration object that contains settings for the workflow. | [optional] 
 

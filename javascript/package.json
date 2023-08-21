@@ -1,12 +1,12 @@
 {
   "name": "morpheus_api",
-  "version": "6.1.1",
-  "description": "Morpheus is a powerful cloud management tool that provides provisioning, monitoring, logging, backups, and application deployment strategies.  This document describes the Morpheus API protocol and the available endpoints. Sections are organized in the same manner as they appear in the Morpheus UI.",
+  "version": "6.2.1",
+  "description": "Morpheus_is_a_powerful_cloud_management_tool_that_provides_provisioning_monitoring_logging_backups_and_application_deployment_strategies_This_document_describes_the_Morpheus_API_protocol_and_the_available_endpoints__Sections_are_organized_in_the_same_manner_as_they_appear_in_the_Morpheus_UI_",
   "license": "Apache 2.0",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
-    "prepare": "npm run build",
+    "prepack": "npm run build",
     "test": "mocha --require @babel/register --recursive"
   },
   "browser": {

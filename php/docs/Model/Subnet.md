@@ -1,0 +1,45 @@
+# # Subnet
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [optional]
+**code** | **string** |  | [optional]
+**name** | **string** |  | [optional]
+**labels** | **string[]** |  | [optional]
+**active** | **bool** |  | [optional]
+**description** | **string** |  | [optional]
+**external_id** | **string** |  | [optional]
+**unique_id** | **string** |  | [optional]
+**address_prefix** | **string** |  | [optional]
+**cidr** | **string** |  | [optional]
+**gateway** | **string** |  | [optional]
+**netmask** | **string** |  | [optional]
+**subnet_address** | **string** |  | [optional]
+**tftp_server** | **string** |  | [optional]
+**boot_file** | **string** |  | [optional]
+**pool** | **string** |  | [optional]
+**dhcp_server** | **bool** |  | [optional]
+**has_floating_ips** | **bool** |  | [optional]
+**dhcp_ip** | **string** |  | [optional]
+**dns_primary** | **string** |  | [optional]
+**dns_secondary** | **string** |  | [optional]
+**dhcp_start** | **string** |  | [optional]
+**dhcp_end** | **string** |  | [optional]
+**dhcp_range** | **string** |  | [optional]
+**network_proxy** | **string** |  | [optional]
+**network_domain** | **string** |  | [optional]
+**search_domains** | **string** |  | [optional]
+**default_network** | **bool** |  | [optional]
+**assign_public_ip** | **bool** |  | [optional]
+**visibility** | **string** |  | [optional]
+**status** | [**\OpenAPI\Client\Model\AppStateInputProviders**](AppStateInputProviders.md) |  | [optional]
+**network** | [**\OpenAPI\Client\Model\InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  | [optional]
+**type** | [**\OpenAPI\Client\Model\InlineResponse20079LoadBalancerMonitorLoadBalancerType**](InlineResponse20079LoadBalancerMonitorLoadBalancerType.md) |  | [optional]
+**account** | [**\OpenAPI\Client\Model\InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  | [optional]
+**security_groups** | **object[]** |  | [optional]
+**tenants** | [**\OpenAPI\Client\Model\InlineResponse20040AppDeployInstance[]**](InlineResponse20040AppDeployInstance.md) |  | [optional]
+**resource_permission** | [**\OpenAPI\Client\Model\SubnetResourcePermission**](SubnetResourcePermission.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

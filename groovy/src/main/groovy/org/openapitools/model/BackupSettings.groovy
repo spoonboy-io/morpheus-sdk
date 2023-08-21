@@ -3,8 +3,8 @@ package org.openapitools.model;
 import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.model.ApplianceSettingsEnabledZoneTypesInner;
-import org.openapitools.model.BackupSettingsDefaultSchedule;
+import org.openapitools.model.InlineResponse20040AppDeployInstance;
+import org.openapitools.model.InlineResponse20079LoadBalancerMonitorLoadBalancerType;
 
 @Canonical
 class BackupSettings {
@@ -15,9 +15,9 @@ class BackupSettings {
     
     Boolean backupAppliance
     
-    ApplianceSettingsEnabledZoneTypesInner defaultStorageBucket
+    InlineResponse20040AppDeployInstance defaultStorageBucket
     
-    BackupSettingsDefaultSchedule defaultSchedule
+    InlineResponse20079LoadBalancerMonitorLoadBalancerType defaultSchedule
     
     Long retentionCount
 }

@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## addBlueprint
 
-> AddBlueprint200Response addBlueprint(opts)
+> Object addBlueprint(opts)
 
 Create a Blueprint
 
@@ -33,7 +33,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.BlueprintsApi();
 let opts = {
-  'addBlueprintRequest': {$ref=../components/examples/blueprintARMCreate.json} // AddBlueprintRequest | 
+  'UNKNOWN_BASE_TYPE': {"image":"/assets/apps/template.png","name":"ARM: Ubuntu 16Test","type":"arm","arm":{"json":"{\n    \"$schema\": \"http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#\",\n    \"contentVersion\": \"1.0.0.0\",\n    \"parameters\": {\n        \"virtualMachineName\": {\n            \"type\": \"string\",\n            \"defaultValue\": \"DMUBARM<%=sequence%>\",\n            \"metadata\": {\n                \"description\": \"Name of Virtual Machine\"\n            }\n        },\n        \"networkInterfaceName\": {\n            \"type\": \"string\",\n            \"defaultValue\": \"demo-arm-ubuntu-nic\",\n            \"metadata\": {\n                \"description\": \"Name of Network Interface\"\n            }\n        },\n        \"publicIpAddressName\": {\n            \"type\": \"string\",\n            \"defaultValue\": \"demo-arm-ubuntu-ip\",\n            \"metadata\": {\n                \"description\": \"Name of IP Address\"\n            }\n        },\n        \"adminUsername\": {\n            \"type\": \"string\",\n            \"defaultValue\": \"morpheus\",\n            \"metadata\": {\n                \"description\": \"OS Username\"\n            }\n        },\n        \"adminPassword\": {\n            \"type\": \"securestring\",\n            \"metadata\": {\n                \"description\": \"OS Password\"\n            }\n        },\n        \"location\": {\n            \"type\": \"string\",\n            \"defaultValue\": \"westus\"\n        },\n        \"virtualMachineSize\": {\n            \"type\": \"string\",\n            \"defaultValue\": \"Standard_A1\"\n        },\n        \"virtualNetworkName\": {\n            \"type\": \"string\",\n            \"defaultValue\": \"morphdemoVnet\"\n        },    \n        \"networkSecurityGroupName\": {\n            \"type\": \"string\",\n            \"defaultValue\": \"morph-demo-sg\"\n        },\n        \"diagnosticsStorageAccountName\": {\n            \"type\": \"string\",\n            \"defaultValue\": \"morphdemosa\"\n        },\n        \"subnetName\": {\n            \"type\": \"string\",\n            \"defaultValue\": \"morphDemoSubnet\"\n        },\n        \"publicIpAddressType\": {\n            \"type\": \"string\",\n            \"defaultValue\": \"Dynamic\"\n        },\n        \"publicIpAddressSku\": {\n            \"type\": \"string\",\n            \"defaultValue\": \"Basic\"\n        }\n    },\n    \"variables\": {\n        \"vnetId\": \"[resourceId('morph-demo','Microsoft.Network/virtualNetworks', parameters('virtualNetworkName'))]\",\n        \"subnetRef\": \"[concat(variables('vnetId'), '/subnets/', parameters('subnetName'))]\"\n    },\n    \"resources\": [\n        {\n            \"name\": \"[parameters('virtualMachineName')]\",\n            \"type\": \"Microsoft.Compute/virtualMachines\",\n            \"apiVersion\": \"2016-04-30-preview\",\n            \"location\": \"[parameters('location')]\",\n            \"dependsOn\": [\n                \"[concat('Microsoft.Network/networkInterfaces/', parameters('networkInterfaceName'))]\"\n            ],\n            \"properties\": {\n                \"osProfile\": {\n                    \"computerName\": \"[parameters('virtualMachineName')]\",\n                    \"adminUsername\": \"[parameters('adminUsername')]\",\n                    \"adminPassword\": \"[parameters('adminPassword')]\"\n                },\n                \"hardwareProfile\": {\n                    \"vmSize\": \"[parameters('virtualMachineSize')]\"\n                },\n                \"storageProfile\": {\n                    \"imageReference\": {\n                        \"publisher\": \"Canonical\",\n                        \"offer\": \"UbuntuServer\",\n                        \"sku\": \"16.04-LTS\",\n                        \"version\": \"latest\"\n                    },\n                    \"osDisk\": {\n                        \"createOption\": \"fromImage\",\n                        \"managedDisk\": {\n                            \"storageAccountType\": \"Standard_LRS\"\n                        }\n                    },\n                    \"dataDisks\": []\n                },\n                \"networkProfile\": {\n                    \"networkInterfaces\": [\n                        {\n                            \"id\": \"[resourceId('Microsoft.Network/networkInterfaces', parameters('networkInterfaceName'))]\"\n                        }\n                    ]\n                },\n                \"diagnosticsProfile\": {\n                    \"bootDiagnostics\": {\n                        \"enabled\": true,\n                        \"storageUri\": \"[reference(resourceId('morph-demo', 'Microsoft.Storage/storageAccounts', parameters('diagnosticsStorageAccountName')), '2015-06-15').primaryEndpoints['blob']]\"\n                    }\n                }\n            }\n        },\n        {\n            \"name\": \"[parameters('networkInterfaceName')]\",\n            \"type\": \"Microsoft.Network/networkInterfaces\",\n            \"apiVersion\": \"2016-09-01\",\n            \"location\": \"[parameters('location')]\",\n            \"dependsOn\": [\n                \"[concat('Microsoft.Network/publicIpAddresses/', parameters('publicIpAddressName'))]\"\n            ],\n            \"properties\": {\n                \"ipConfigurations\": [\n                    {\n                        \"name\": \"ipconfig1\",\n                        \"properties\": {\n                            \"subnet\": {\n                                \"id\": \"[variables('subnetRef')]\"\n                            },\n                            \"privateIPAllocationMethod\": \"Dynamic\",\n                            \"publicIpAddress\": {\n                                \"id\": \"[resourceId('morph-demo','Microsoft.Network/publicIpAddresses', parameters('publicIpAddressName'))]\"\n                            }\n                        }\n                    }\n                ],\n                \"networkSecurityGroup\": {\n                    \"id\": \"[resourceId('morph-demo', 'Microsoft.Network/networkSecurityGroups', parameters('networkSecurityGroupName'))]\"\n                }\n            }\n        },\n        {\n            \"name\": \"[parameters('publicIpAddressName')]\",\n            \"type\": \"Microsoft.Network/publicIpAddresses\",\n            \"apiVersion\": \"2017-08-01\",\n            \"location\": \"[parameters('location')]\",\n            \"properties\": {\n                \"publicIpAllocationMethod\": \"[parameters('publicIpAddressType')]\"\n            },\n            \"sku\": {\n                \"name\": \"[parameters('publicIpAddressSku')]\"\n            }\n        }\n    ],\n    \"outputs\": {\n        \"adminUsername\": {\n            \"type\": \"string\",\n            \"value\": \"[parameters('adminUsername')]\"\n        }\n    }\n}","configType":"json","installAgent":true}} // UNKNOWN_BASE_TYPE | 
 };
 apiInstance.addBlueprint(opts, (error, data, response) => {
   if (error) {
@@ -49,11 +49,11 @@ apiInstance.addBlueprint(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addBlueprintRequest** | [**AddBlueprintRequest**](AddBlueprintRequest.md)|  | [optional] 
+ **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)|  | [optional] 
 
 ### Return type
 
-[**AddBlueprint200Response**](AddBlueprint200Response.md)
+**Object**
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ## getBlueprint
 
-> GetBlueprint200Response getBlueprint(id)
+> InlineResponse20014 getBlueprint(id)
 
 Get a Specific Blueprint
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetBlueprint200Response**](GetBlueprint200Response.md)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ## listBlueprints
 
-> ListBlueprints200Response listBlueprints(opts)
+> Object listBlueprints(opts)
 
 Get All Blueprints
 
@@ -182,7 +182,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.BlueprintsApi();
 let opts = {
-  'max': 25, // Number | Maximum number of records to return
+  'max': 25, // Number | Maximum number of records to return, -1 can be used to fetch all records
   'offset': 0, // Number | Offset records, the number of records to skip, for paginating requests
   'name': example-%, // String | Filter by name, wildcard may be specified as %, eg. example-%
   'phrase': "phrase_example", // String | Search phrase for partial matches on name or description
@@ -203,7 +203,7 @@ apiInstance.listBlueprints(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **max** | **Number**| Maximum number of records to return | [optional] [default to 25]
+ **max** | **Number**| Maximum number of records to return, -1 can be used to fetch all records | [optional] [default to 25]
  **offset** | **Number**| Offset records, the number of records to skip, for paginating requests | [optional] [default to 0]
  **name** | **String**| Filter by name, wildcard may be specified as %, eg. example-% | [optional] 
  **phrase** | **String**| Search phrase for partial matches on name or description | [optional] 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListBlueprints200Response**](ListBlueprints200Response.md)
+**Object**
 
 ### Authorization
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ## updateBlueprint
 
-> GetBlueprint200Response updateBlueprint(id, opts)
+> InlineResponse20014 updateBlueprint(id, opts)
 
 Updating a Blueprint
 
@@ -244,7 +244,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.BlueprintsApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'addBlueprintRequest': {$ref=../components/examples/blueprintUpdate.json} // AddBlueprintRequest | 
+  'UNKNOWN_BASE_TYPE': {"name":"sample","description":"A sample nginx blueprint","type":"morpheus","tiers":{"Web":{"linkedTiers":[],"tierIndex":1,"instances":[{"instance":{"type":"nginx"},"groups":{"My Group":{"clouds":{"My Cloud":{"instance":{"layout":{"code":"nginx-vmware-1.9-single","id":179},"name":"test-nginx-${sequence}","allowExisting":false,"createUser":"on","type":"nginx","userGroup":{"id":""}},"networkInterfaces":[{"ipMode":"","primaryInterface":true,"network":{"id":"","hasPool":false},"networkInterfaceTypeId":4,"networkInterfaceTypeIdName":"VMXNET 3"}],"volumes":[{"vId":255,"controllerMountPoint":"46:0:4:0","size":10,"maxIOPS":null,"name":"root","rootVolume":true,"storageType":1,"datastoreId":"autoCluster","maxStorage":0}],"config":{"resourcePoolId":"resgroup-123","createUser":true},"plan":{"code":"vm-1024","id":76}}}}}}]}}} // UNKNOWN_BASE_TYPE | 
 };
 apiInstance.updateBlueprint(id, opts, (error, data, response) => {
   if (error) {
@@ -261,11 +261,11 @@ apiInstance.updateBlueprint(id, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Morpheus ID of the Object being referenced | 
- **addBlueprintRequest** | [**AddBlueprintRequest**](AddBlueprintRequest.md)|  | [optional] 
+ **UNKNOWN_BASE_TYPE** | [**UNKNOWN_BASE_TYPE**](UNKNOWN_BASE_TYPE.md)|  | [optional] 
 
 ### Return type
 
-[**GetBlueprint200Response**](GetBlueprint200Response.md)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 ## updateBlueprintImage
 
-> GetBlueprint200Response updateBlueprintImage(id, opts)
+> InlineResponse20014 updateBlueprintImage(id, opts)
 
 Update Blueprint Image
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetBlueprint200Response**](GetBlueprint200Response.md)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -332,7 +332,7 @@ Name | Type | Description  | Notes
 
 ## updateBlueprintPermissions
 
-> GetBlueprint200Response updateBlueprintPermissions(id, opts)
+> InlineResponse20014 updateBlueprintPermissions(id, opts)
 
 Update Blueprint Permissions
 
@@ -350,7 +350,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.BlueprintsApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'updateBlueprintPermissionsRequest': {$ref=../components/examples/instanceTypeLayoutPermissionsUpdate.json} // UpdateBlueprintPermissionsRequest | 
+  'inlineObject21': new MorpheusApi.InlineObject21() // InlineObject21 | 
 };
 apiInstance.updateBlueprintPermissions(id, opts, (error, data, response) => {
   if (error) {
@@ -367,11 +367,11 @@ apiInstance.updateBlueprintPermissions(id, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Morpheus ID of the Object being referenced | 
- **updateBlueprintPermissionsRequest** | [**UpdateBlueprintPermissionsRequest**](UpdateBlueprintPermissionsRequest.md)|  | [optional] 
+ **inlineObject21** | [**InlineObject21**](InlineObject21.md)|  | [optional] 
 
 ### Return type
 
-[**GetBlueprint200Response**](GetBlueprint200Response.md)
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 

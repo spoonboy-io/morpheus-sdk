@@ -10,10 +10,10 @@ Name | Type | Description | Notes
 **labels** | **[String]** |  | [optional] 
 **environment** | **String** |  | [optional] 
 **accountId** | **Number** |  | [optional] 
-**account** | [**ApplianceSettingsEnabledZoneTypesInner**](ApplianceSettingsEnabledZoneTypesInner.md) |  | [optional] 
-**owner** | [**ActivityActivityInnerUser**](ActivityActivityInnerUser.md) |  | [optional] 
+**account** | [**InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
+**owner** | [**InlineResponse200107NetworkPoolCreatedBy**](InlineResponse200107NetworkPoolCreatedBy.md) |  | [optional] 
 **siteId** | **Number** |  | [optional] 
-**group** | [**ApplianceSettingsEnabledZoneTypesInner**](ApplianceSettingsEnabledZoneTypesInner.md) |  | [optional] 
+**group** | [**InlineResponse20040AppDeployInstance**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
 **blueprint** | [**AppBlueprint**](AppBlueprint.md) |  | [optional] 
 **type** | **String** |  | [optional] 
 **dateCreated** | **Date** |  | [optional] 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **instanceCount** | **Number** |  | [optional] 
 **containerCount** | **Number** |  | [optional] 
 **appTiers** | **[Object]** |  | [optional] 
-**instances** | [**[ApplianceSettingsEnabledZoneTypesInner]**](ApplianceSettingsEnabledZoneTypesInner.md) |  | [optional] 
+**instances** | [**[InlineResponse20040AppDeployInstance]**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
 **stats** | [**AppStats**](AppStats.md) |  | [optional] 
 
 

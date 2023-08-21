@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## listActivity
 
-> ListActivity200Response listActivity(opts)
+> Object listActivity(opts)
 
 Retrieves Activity
 
@@ -27,7 +27,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.ActivityApi();
 let opts = {
-  'max': 25, // Number | Maximum number of records to return
+  'max': 25, // Number | Maximum number of records to return, -1 can be used to fetch all records
   'offset': 0, // Number | Offset records, the number of records to skip, for paginating requests
   'sort': "'name'", // String | Sort order, the name of the property to sort by
   'order': "'asc'", // String | Sort direction, use 'desc' to reverse sort
@@ -53,7 +53,7 @@ apiInstance.listActivity(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **max** | **Number**| Maximum number of records to return | [optional] [default to 25]
+ **max** | **Number**| Maximum number of records to return, -1 can be used to fetch all records | [optional] [default to 25]
  **offset** | **Number**| Offset records, the number of records to skip, for paginating requests | [optional] [default to 0]
  **sort** | **String**| Sort order, the name of the property to sort by | [optional] [default to &#39;name&#39;]
  **order** | **String**| Sort direction, use &#39;desc&#39; to reverse sort | [optional] [default to &#39;asc&#39;]
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListActivity200Response**](ListActivity200Response.md)
+**Object**
 
 ### Authorization
 

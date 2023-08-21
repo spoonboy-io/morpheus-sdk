@@ -1,0 +1,29 @@
+# ApiStorageVolumesIdStorageVolume
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Name** | **String** | A unique name scoped to your account for the storage volume | [optional] 
+**Type** | **String** | Storage Type Code or ID | [optional] 
+**Config** | [**SystemCollectionsHashtable**](.md) | Configuration object with parameters that vary by &#x60;type&#x60;. | [optional] 
+**StorageServer** | [**ApiStorageVolumesStorageVolumeStorageServer**](ApiStorageVolumesStorageVolumeStorageServer.md) |  | [optional] 
+**StorageGroup** | [**ApiStorageVolumesStorageVolumeStorageServer**](ApiStorageVolumesStorageVolumeStorageServer.md) |  | [optional] 
+
+## Examples
+
+- Prepare the resource
+```powershell
+$ApiStorageVolumesIdStorageVolume = Initialize-PSOpenAPIToolsApiStorageVolumesIdStorageVolume  -Name null `
+ -Type null `
+ -Config null `
+ -StorageServer null `
+ -StorageGroup null
+```
+
+- Convert the resource to JSON
+```powershell
+$ApiStorageVolumesIdStorageVolume | ConvertTo-JSON
+```
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

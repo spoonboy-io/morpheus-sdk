@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **Checks** | **Int32[]** |  | [optional] 
 **CheckGroups** | **Int32[]** |  | [optional] 
 **Apps** | **Int32[]** |  | [optional] 
-**Contacts** | [**AddAlertsRequestAlertContactsInner[]**](AddAlertsRequestAlertContactsInner.md) |  | [optional] 
+**Contacts** | [**ApiMonitoringAlertsAlertContacts[]**](ApiMonitoringAlertsAlertContacts.md) |  | [optional] 
 
 ## Examples
 

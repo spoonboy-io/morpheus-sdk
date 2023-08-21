@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## addCatalogItemType
 
-> AddCatalogItemType200Response addCatalogItemType(opts)
+> Object addCatalogItemType(opts)
 
 Create a Catalog Item Type
 
@@ -32,7 +32,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.CatalogItemsApi();
 let opts = {
-  'addCatalogItemTypeRequest': {$ref=../components/examples/catalogItemTypeInstanceCreate.json} // AddCatalogItemTypeRequest | 
+  'inlineObject24': new MorpheusApi.InlineObject24() // InlineObject24 | 
 };
 apiInstance.addCatalogItemType(opts, (error, data, response) => {
   if (error) {
@@ -48,11 +48,11 @@ apiInstance.addCatalogItemType(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addCatalogItemTypeRequest** | [**AddCatalogItemTypeRequest**](AddCatalogItemTypeRequest.md)|  | [optional] 
+ **inlineObject24** | [**InlineObject24**](InlineObject24.md)|  | [optional] 
 
 ### Return type
 
-[**AddCatalogItemType200Response**](AddCatalogItemType200Response.md)
+**Object**
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ## getCatalogItemType
 
-> GetCatalogItemType200Response getCatalogItemType(id)
+> InlineResponse20015 getCatalogItemType(id)
 
 Get a Specific Catalog Item Type
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetCatalogItemType200Response**](GetCatalogItemType200Response.md)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 
 ## listCatalogItemTypes
 
-> ListCatalogItemTypes200Response listCatalogItemTypes(opts)
+> Object listCatalogItemTypes(opts)
 
 Get All Catalog Item Types
 
@@ -132,7 +132,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.CatalogItemsApi();
 let opts = {
-  'max': 25, // Number | Maximum number of records to return
+  'max': 25, // Number | Maximum number of records to return, -1 can be used to fetch all records
   'offset': 0, // Number | Offset records, the number of records to skip, for paginating requests
   'sort': "'name'", // String | Sort order, the name of the property to sort by
   'direction': asc, // String | Sort direction, use 'desc' to reverse sort
@@ -159,7 +159,7 @@ apiInstance.listCatalogItemTypes(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **max** | **Number**| Maximum number of records to return | [optional] [default to 25]
+ **max** | **Number**| Maximum number of records to return, -1 can be used to fetch all records | [optional] [default to 25]
  **offset** | **Number**| Offset records, the number of records to skip, for paginating requests | [optional] [default to 0]
  **sort** | **String**| Sort order, the name of the property to sort by | [optional] [default to &#39;name&#39;]
  **direction** | **String**| Sort direction, use &#39;desc&#39; to reverse sort | [optional] [default to &#39;asc&#39;]
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ListCatalogItemTypes200Response**](ListCatalogItemTypes200Response.md)
+**Object**
 
 ### Authorization
 
@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 
 ## updateCatalogItemType
 
-> UpdateCatalogItemType200Response updateCatalogItemType(id, opts)
+> Object updateCatalogItemType(id, opts)
 
 Update a Catalog Item Type
 
@@ -255,7 +255,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new MorpheusApi.CatalogItemsApi();
 let id = 1; // Number | Morpheus ID of the Object being referenced
 let opts = {
-  'updateCatalogItemTypeRequest': {$ref=../components/examples/catalogItemTypeUpdate.json} // UpdateCatalogItemTypeRequest | 
+  'inlineObject25': new MorpheusApi.InlineObject25() // InlineObject25 | 
 };
 apiInstance.updateCatalogItemType(id, opts, (error, data, response) => {
   if (error) {
@@ -272,11 +272,11 @@ apiInstance.updateCatalogItemType(id, opts, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Number**| Morpheus ID of the Object being referenced | 
- **updateCatalogItemTypeRequest** | [**UpdateCatalogItemTypeRequest**](UpdateCatalogItemTypeRequest.md)|  | [optional] 
+ **inlineObject25** | [**InlineObject25**](InlineObject25.md)|  | [optional] 
 
 ### Return type
 
-[**UpdateCatalogItemType200Response**](UpdateCatalogItemType200Response.md)
+**Object**
 
 ### Authorization
 
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 ## updateCatalogItemTypeLogo
 
-> UpdateCatalogItemType200Response updateCatalogItemTypeLogo(id, opts)
+> Object updateCatalogItemTypeLogo(id, opts)
 
 Update Logo For Catalog Item Type
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UpdateCatalogItemType200Response**](UpdateCatalogItemType200Response.md)
+**Object**
 
 ### Authorization
 

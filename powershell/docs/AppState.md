@@ -3,10 +3,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Workloads** | [**AppStateWorkloadsInner[]**](AppStateWorkloadsInner.md) |  | [optional] 
+**Workloads** | [**AppStateWorkloads[]**](AppStateWorkloads.md) |  | [optional] 
 **IacDrift** | **Boolean** |  | [optional] 
 **PlanResources** | [**SystemCollectionsHashtable[]**](SystemCollectionsHashtable.md) |  | [optional] 
-**Specs** | [**AppStateSpecsInner[]**](AppStateSpecsInner.md) |  | [optional] 
+**Specs** | [**AppStateSpecs[]**](AppStateSpecs.md) |  | [optional] 
 **StateData** | **String** |  | [optional] 
 **PlanData** | **String** |  | [optional] 
 **VarInput** | [**AppStateInput**](AppStateInput.md) |  | [optional] 

@@ -3,8 +3,7 @@ package org.openapitools.api;
 import org.openapitools.api.ApiUtils
 import org.openapitools.model.ApprovalItem
 import org.openapitools.model.DefaultError
-import org.openapitools.model.GetApprovals200Response
-import org.openapitools.model.ListApprovals200Response
+import org.openapitools.model.InlineResponse2001
 import org.openapitools.model.Model200Success
 
 class ApprovalsApi {
@@ -32,7 +31,7 @@ class ApprovalsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetApprovals200Response.class )
+                    InlineResponse2001.class )
 
     }
 
@@ -94,7 +93,7 @@ class ApprovalsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListApprovals200Response.class )
+                    Object.class )
 
     }
 

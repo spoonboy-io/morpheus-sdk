@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Activity** | [**ActivityActivityInner[]**](ActivityActivityInner.md) |  | [optional] 
+**Activity** | [**ActivityActivity[]**](ActivityActivity.md) |  | [optional] 
 
 ## Examples
 

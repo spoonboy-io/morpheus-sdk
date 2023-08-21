@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**workloads** | [**[AppStateWorkloadsInner]**](AppStateWorkloadsInner.md) |  | [optional] 
+**workloads** | [**[AppStateWorkloads]**](AppStateWorkloads.md) |  | [optional] 
 **iacDrift** | **Boolean** |  | [optional] 
 **planResources** | **[Object]** |  | [optional] 
-**specs** | [**[AppStateSpecsInner]**](AppStateSpecsInner.md) |  | [optional] 
+**specs** | [**[AppStateSpecs]**](AppStateSpecs.md) |  | [optional] 
 **stateData** | **String** |  | [optional] 
 **planData** | **String** |  | [optional] 
 **input** | [**AppStateInput**](AppStateInput.md) |  | [optional] 

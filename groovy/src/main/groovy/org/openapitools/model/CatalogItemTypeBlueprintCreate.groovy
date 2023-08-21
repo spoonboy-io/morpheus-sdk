@@ -4,8 +4,7 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
+import java.util.List;
 import org.openapitools.model.CatalogItemTypeBlueprintCreateBlueprint;
 
 @Canonical
@@ -19,30 +18,9 @@ class CatalogItemTypeBlueprintCreate {
     /* Catalog Item Type description */
     String description
     /* Array of label strings, can be used for filtering. */
-    List<String> labels
-
-    enum TypeEnum {
-    
-        BLUEPRINT("blueprint")
-    
-        private final String value
-    
-        TypeEnum(String value) {
-            this.value = value
-        }
-    
-        String getValue() {
-            value
-        }
-    
-        @Override
-        String toString() {
-            String.valueOf(value)
-        }
-    }
-
+    List<String> labels = new ArrayList<String>()
     /* Type, `instance`, `blueprint` or `workflow`. This determines whether an Instance or App will be provisioned. Instance types require a config and blueprint requires a blueprint and appSpec, while workflow types requires a workflow and context. */
-    TypeEnum type
+    String type
     /* Visibility - Set to public to allow all tenants */
     String visibility = "private"
     /* Identifier primarily used for Plugin Catalog Item Types */
@@ -56,5 +34,5 @@ class CatalogItemTypeBlueprintCreate {
     /* The appSpec for blueprint type catalog items is a string in the Scribe YAML format with fields */
     String appSpec
     /* Array of option type IDs, see Inputs. Only applies to type instance and blueprint. */
-    List<Long> optionTypes
+    List<Long> optionTypes = new ArrayList<Long>()
 }

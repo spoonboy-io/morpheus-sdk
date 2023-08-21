@@ -4,10 +4,9 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.ApplianceSettingsEnabledZoneTypesInner;
+import java.util.List;
 import org.openapitools.model.ArchiveBucketCreatedBy;
+import org.openapitools.model.InlineResponse20040AppDeployInstance;
 
 @Canonical
 class ArchiveBucket {
@@ -18,9 +17,9 @@ class ArchiveBucket {
     
     String description
     
-    ApplianceSettingsEnabledZoneTypesInner storageProvider
+    InlineResponse20040AppDeployInstance storageProvider
     
-    ApplianceSettingsEnabledZoneTypesInner owner
+    InlineResponse20040AppDeployInstance owner
     
     ArchiveBucketCreatedBy createdBy
     
@@ -36,7 +35,7 @@ class ArchiveBucket {
     
     Long fileCount
     
-    List<Object> accounts
+    List<Object> accounts = new ArrayList<Object>()
     
     Date dateCreated
     

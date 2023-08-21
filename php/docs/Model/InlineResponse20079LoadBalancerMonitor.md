@@ -1,0 +1,47 @@
+# # InlineResponse20079LoadBalancerMonitor
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [optional]
+**load_balancer** | [**\OpenAPI\Client\Model\InlineResponse20079LoadBalancerMonitorLoadBalancer**](InlineResponse20079LoadBalancerMonitorLoadBalancer.md) |  | [optional]
+**name** | **string** |  | [optional]
+**code** | **string** |  | [optional]
+**category** | **string** |  | [optional]
+**visibility** | **string** |  | [optional]
+**description** | **string** |  | [optional]
+**monitor_type** | **string** |  | [optional]
+**monitor_interval** | **int** |  | [optional]
+**monitor_timeout** | **int** |  | [optional]
+**send_data** | **string** |  | [optional]
+**send_version** | **string** |  | [optional]
+**send_type** | **string** |  | [optional]
+**receive_data** | **string** |  | [optional]
+**receive_code** | **string** |  | [optional]
+**disabled_data** | **string** |  | [optional]
+**monitor_username** | **string** |  | [optional]
+**monitor_password** | **string** |  | [optional]
+**monitor_destination** | **string** |  | [optional]
+**monitor_reverse** | **bool** |  | [optional]
+**monitor_transparent** | **bool** |  | [optional]
+**monitor_adaptive** | **bool** |  | [optional]
+**alias_address** | **string** |  | [optional]
+**alias_port** | **int** |  | [optional]
+**internal_id** | **string** |  | [optional]
+**external_id** | **string** |  | [optional]
+**monitor_source** | **string** |  | [optional]
+**status** | **string** |  | [optional]
+**status_message** | **string** |  | [optional]
+**status_date** | [**\DateTime**](\DateTime.md) |  | [optional]
+**enabled** | **bool** |  | [optional]
+**max_retry** | **int** |  | [optional]
+**fall_count** | **int** |  | [optional]
+**rise_count** | **int** |  | [optional]
+**data_length** | **string** |  | [optional]
+**config** | **object** |  | [optional]
+**created_by** | **string** |  | [optional]
+**date_created** | [**\DateTime**](\DateTime.md) |  | [optional]
+**last_updated** | [**\DateTime**](\DateTime.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

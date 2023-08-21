@@ -32,7 +32,7 @@ Name | Type | Description | Notes
 **proxyWorkstation** | **String** |  | [optional] 
 **currencyProvider** | **String** |  | [optional] 
 **currencyKey** | **String** |  | [optional] 
-**enabledZoneTypes** | [**[ApplianceSettingsEnabledZoneTypesInner]**](ApplianceSettingsEnabledZoneTypesInner.md) |  | [optional] 
+**enabledZoneTypes** | [**[InlineResponse20040AppDeployInstance]**](InlineResponse20040AppDeployInstance.md) |  | [optional] 
 **statsRetainmentPeriod** | **Number** |  | [optional] 
 
 

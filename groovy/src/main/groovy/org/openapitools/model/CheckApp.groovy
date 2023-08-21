@@ -4,22 +4,21 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.ActivityActivityInnerUser;
-import org.openapitools.model.CheckGroupInstance;
-import org.openapitools.model.UpdateBlueprintPermissionsRequestResourcePermissionSitesInner;
+import java.util.List;
+import org.openapitools.model.ApiBlueprintsIdUpdatePermissionsResourcePermissionSites;
+import org.openapitools.model.InlineResponse200107NetworkPoolCreatedBy;
+import org.openapitools.model.InlineResponse20082LoadBalancerInstanceSslCert;
 
 @Canonical
 class CheckApp {
     
     Long id
     
-    UpdateBlueprintPermissionsRequestResourcePermissionSitesInner account
+    ApiBlueprintsIdUpdatePermissionsResourcePermissionSites account
     
     Boolean active
     
-    CheckGroupInstance app
+    InlineResponse20082LoadBalancerInstanceSslCert app
     
     String name
     
@@ -51,7 +50,7 @@ class CheckApp {
     
     Boolean muted
     
-    ActivityActivityInnerUser createdBy
+    InlineResponse200107NetworkPoolCreatedBy createdBy
     
     Date dateCreated
     
@@ -59,7 +58,7 @@ class CheckApp {
     
     String availability
     
-    List<Long> checks
+    List<Long> checks = new ArrayList<Long>()
     
-    List<Long> checkGroups
+    List<Long> checkGroups = new ArrayList<Long>()
 }

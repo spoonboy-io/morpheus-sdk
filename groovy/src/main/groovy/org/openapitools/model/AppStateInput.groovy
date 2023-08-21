@@ -4,17 +4,17 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.model.AppStateInputDataInner;
-import org.openapitools.model.AppStateInputProvidersInner;
-import org.openapitools.model.AppStateInputVariablesInner;
+import java.util.List;
+import org.openapitools.model.AppStateInputData;
+import org.openapitools.model.AppStateInputProviders;
+import org.openapitools.model.AppStateInputVariables;
 
 @Canonical
 class AppStateInput {
     
-    List<AppStateInputVariablesInner> variables
+    List<AppStateInputVariables> variables = new ArrayList<AppStateInputVariables>()
     
-    List<AppStateInputProvidersInner> providers
+    List<AppStateInputProviders> providers = new ArrayList<AppStateInputProviders>()
     
-    List<AppStateInputDataInner> data
+    List<AppStateInputData> data = new ArrayList<AppStateInputData>()
 }

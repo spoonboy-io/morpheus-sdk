@@ -5,21 +5,20 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.ActivityActivityInnerUser;
+import java.util.List;
+import org.openapitools.model.ApiBlueprintsIdUpdatePermissionsResourcePermissionSites;
 import org.openapitools.model.CheckCheckType;
-import org.openapitools.model.CheckGroupInstance;
-import org.openapitools.model.UpdateBlueprintPermissionsRequestResourcePermissionSitesInner;
+import org.openapitools.model.InlineResponse200107NetworkPoolCreatedBy;
+import org.openapitools.model.InlineResponse20082LoadBalancerInstanceSslCert;
 
 @Canonical
 class CheckGroup {
     
     Long id
     
-    UpdateBlueprintPermissionsRequestResourcePermissionSitesInner account
+    ApiBlueprintsIdUpdatePermissionsResourcePermissionSites account
     
-    CheckGroupInstance instance
+    InlineResponse20082LoadBalancerInstanceSslCert instance
     
     String name
     
@@ -57,7 +56,7 @@ class CheckGroup {
     
     Boolean muted
     
-    ActivityActivityInnerUser createdBy
+    InlineResponse200107NetworkPoolCreatedBy createdBy
     
     Date dateCreated
     
@@ -67,5 +66,5 @@ class CheckGroup {
     
     CheckCheckType checkType
     
-    List<Long> checks
+    List<Long> checks = new ArrayList<Long>()
 }

@@ -1,0 +1,46 @@
+# # PowerSchedule
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [optional]
+**name** | **string** |  | [optional]
+**description** | **string** |  | [optional]
+**visibility** | **string** |  | [optional]
+**enabled** | **bool** |  | [optional]
+**schedule_type** | **string** |  | [optional]
+**schedule_timezone** | **string** |  | [optional]
+**monday_on** | **int** |  | [optional]
+**monday_on_time** | **string** |  | [optional]
+**monday_off** | **int** |  | [optional]
+**monday_off_time** | **string** |  | [optional]
+**tuesday_on** | **int** |  | [optional]
+**tuesday_on_time** | **string** |  | [optional]
+**tuesday_off** | **int** |  | [optional]
+**tuesday_off_time** | **string** |  | [optional]
+**wednesday_on** | **int** |  | [optional]
+**wednesday_on_time** | **string** |  | [optional]
+**wednesday_off** | **int** |  | [optional]
+**wednesday_off_time** | **string** |  | [optional]
+**thursday_on** | **int** |  | [optional]
+**thursday_on_time** | **string** |  | [optional]
+**thursday_off** | **int** |  | [optional]
+**thursday_off_time** | **string** |  | [optional]
+**friday_on** | **int** |  | [optional]
+**friday_on_time** | **string** |  | [optional]
+**friday_off** | **int** |  | [optional]
+**friday_off_time** | **string** |  | [optional]
+**saturday_on** | **int** |  | [optional]
+**saturday_on_time** | **string** |  | [optional]
+**saturday_off** | **int** |  | [optional]
+**saturday_off_time** | **string** |  | [optional]
+**sunday_on** | **int** |  | [optional]
+**sunday_on_time** | **string** |  | [optional]
+**sunday_off** | **int** |  | [optional]
+**sunday_off_time** | **string** |  | [optional]
+**total_monthly_hours_saved** | **float** |  | [optional]
+**date_created** | [**\DateTime**](\DateTime.md) |  | [optional]
+**last_updated** | [**\DateTime**](\DateTime.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

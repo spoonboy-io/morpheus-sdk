@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## listBackupSettings
 
-> ListBackupSettings200Response listBackupSettings()
+> InlineResponse2009 listBackupSettings()
 
 Get Backup Settings
 
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**ListBackupSettings200Response**](ListBackupSettings200Response.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new MorpheusApi.BackupSettingsApi();
 let opts = {
-  'updateBackupSettingsRequest': {$ref=../components/examples/backupSettingsUpdate.json} // UpdateBackupSettingsRequest | 
+  'inlineObject15': new MorpheusApi.InlineObject15() // InlineObject15 | 
 };
 apiInstance.updateBackupSettings(opts, (error, data, response) => {
   if (error) {
@@ -89,7 +89,7 @@ apiInstance.updateBackupSettings(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateBackupSettingsRequest** | [**UpdateBackupSettingsRequest**](UpdateBackupSettingsRequest.md)|  | [optional] 
+ **inlineObject15** | [**InlineObject15**](InlineObject15.md)|  | [optional] 
 
 ### Return type
 

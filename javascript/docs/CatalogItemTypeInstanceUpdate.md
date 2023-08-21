@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **enabled** | **Boolean** | Can be used to enable / disable the catalog item type. | [optional] [default to true]
 **featured** | **Boolean** | Can be used to feature the catalog item type. | [optional] [default to false]
 **allowQuantity** | **Boolean** | Can users order more than one of this item at a time. | [optional] [default to false]
-**config** | **Object** |  | [optional] 
+**config** | [**CatalogItemTypeInstanceScribe**](CatalogItemTypeInstanceScribe.md) |  | [optional] 
 **optionTypes** | **[Number]** | Array of option type IDs. Only applies to type instance and blueprint. | [optional] 
 
 

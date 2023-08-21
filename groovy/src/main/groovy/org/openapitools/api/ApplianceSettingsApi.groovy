@@ -2,9 +2,9 @@ package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
 import org.openapitools.model.DefaultError
-import org.openapitools.model.ListApplianceSettings200Response
+import org.openapitools.model.InlineObject2
+import org.openapitools.model.InlineResponse200
 import org.openapitools.model.Model200Success
-import org.openapitools.model.UpdateApplianceSettingsRequest
 
 class ApplianceSettingsApi {
     String basePath = "https://CHANGEME"
@@ -27,7 +27,7 @@ class ApplianceSettingsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListApplianceSettings200Response.class )
+                    InlineResponse200.class )
 
     }
 
@@ -74,7 +74,7 @@ class ApplianceSettingsApi {
 
     }
 
-    def updateApplianceSettings ( UpdateApplianceSettingsRequest updateApplianceSettingsRequest, Closure onSuccess, Closure onFailure)  {
+    def updateApplianceSettings ( InlineObject2 inlineObject2, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/appliance-settings"
 
         // params
@@ -87,7 +87,7 @@ class ApplianceSettingsApi {
 
 
         contentType = 'application/json';
-        bodyParams = updateApplianceSettingsRequest
+        bodyParams = inlineObject2
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,

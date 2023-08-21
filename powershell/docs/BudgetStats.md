@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Currency** | **String** |  | [optional] 
 **ConversionRate** | **Int64** |  | [optional] 
-**Intervals** | [**BudgetStatsIntervalsInner[]**](BudgetStatsIntervalsInner.md) |  | [optional] 
+**Intervals** | [**BudgetStatsIntervals[]**](BudgetStatsIntervals.md) |  | [optional] 
 **Current** | [**BudgetStatsCurrent**](BudgetStatsCurrent.md) |  | [optional] 
 
 ## Examples

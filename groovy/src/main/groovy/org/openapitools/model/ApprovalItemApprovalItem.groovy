@@ -3,9 +3,8 @@ package org.openapitools.model;
 import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
+import org.openapitools.model.ApiBlueprintsIdUpdatePermissionsResourcePermissionSites;
 import org.openapitools.model.ApprovalItemApprovalItemReference;
-import org.openapitools.model.UpdateBlueprintPermissionsRequestResourcePermissionSitesInner;
 
 @Canonical
 class ApprovalItemApprovalItem {
@@ -36,7 +35,7 @@ class ApprovalItemApprovalItem {
     
     Date dateDenied
     
-    UpdateBlueprintPermissionsRequestResourcePermissionSitesInner approval
+    ApiBlueprintsIdUpdatePermissionsResourcePermissionSites approval
     
     ApprovalItemApprovalItemReference reference
 }

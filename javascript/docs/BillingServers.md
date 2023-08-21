@@ -8,6 +8,6 @@ Name | Type | Description | Notes
 **cost** | **Number** |  | [optional] 
 **startDate** | **Date** |  | [optional] 
 **endDate** | **Date** |  | [optional] 
-**servers** | [**[BillingServersServersInner]**](BillingServersServersInner.md) |  | [optional] 
+**servers** | [**[BillingServersServers]**](BillingServersServers.md) |  | [optional] 
 
 

@@ -1,20 +1,19 @@
 package org.openapitools.api;
 
 import org.openapitools.api.ApiUtils
-import org.openapitools.model.AddBlueprint200Response
-import org.openapitools.model.AddBlueprintRequest
 import org.openapitools.model.DefaultError
-import org.openapitools.model.GetBlueprint200Response
-import org.openapitools.model.ListBlueprints200Response
+import org.openapitools.model.InlineObject21
+import org.openapitools.model.InlineResponse20014
 import org.openapitools.model.Model200Success
-import org.openapitools.model.UpdateBlueprintPermissionsRequest
+import org.openapitools.model.OneOfblueprintARMCreateblueprintCFTCreateblueprintHelmCreateblueprintKubernetesCreateblueprintMorpheusCreateblueprintTerraformCreate
+import org.openapitools.model.UNKNOWN_BASE_TYPE
 
 class BlueprintsApi {
     String basePath = "https://CHANGEME"
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def addBlueprint ( AddBlueprintRequest addBlueprintRequest, Closure onSuccess, Closure onFailure)  {
+    def addBlueprint ( UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/blueprints"
 
         // params
@@ -27,12 +26,12 @@ class BlueprintsApi {
 
 
         contentType = 'application/json';
-        bodyParams = addBlueprintRequest
+        bodyParams = UNKNOWN_BASE_TYPE
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    AddBlueprint200Response.class )
+                    Object.class )
 
     }
 
@@ -80,7 +79,7 @@ class BlueprintsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    GetBlueprint200Response.class )
+                    InlineResponse20014.class )
 
     }
 
@@ -118,11 +117,11 @@ class BlueprintsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "",
-                    ListBlueprints200Response.class )
+                    Object.class )
 
     }
 
-    def updateBlueprint ( Long id, AddBlueprintRequest addBlueprintRequest, Closure onSuccess, Closure onFailure)  {
+    def updateBlueprint ( Long id, UNKNOWN_BASE_TYPE UNKNOWN_BASE_TYPE, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/blueprints/${id}"
 
         // params
@@ -139,12 +138,12 @@ class BlueprintsApi {
 
 
         contentType = 'application/json';
-        bodyParams = addBlueprintRequest
+        bodyParams = UNKNOWN_BASE_TYPE
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "PUT", "",
-                    GetBlueprint200Response.class )
+                    InlineResponse20014.class )
 
     }
 
@@ -170,11 +169,11 @@ class BlueprintsApi {
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "POST", "",
-                    GetBlueprint200Response.class )
+                    InlineResponse20014.class )
 
     }
 
-    def updateBlueprintPermissions ( Long id, UpdateBlueprintPermissionsRequest updateBlueprintPermissionsRequest, Closure onSuccess, Closure onFailure)  {
+    def updateBlueprintPermissions ( Long id, InlineObject21 inlineObject21, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/api/blueprints/${id}/update-permissions"
 
         // params
@@ -191,12 +190,12 @@ class BlueprintsApi {
 
 
         contentType = 'application/json';
-        bodyParams = updateBlueprintPermissionsRequest
+        bodyParams = inlineObject21
 
 
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "PUT", "",
-                    GetBlueprint200Response.class )
+                    InlineResponse20014.class )
 
     }
 

@@ -4,12 +4,11 @@ import groovy.transform.Canonical
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
-import java.util.Arrays;
-import org.openapitools.jackson.nullable.JsonNullable;
-import org.openapitools.model.ActivityActivityInnerUser;
+import java.util.List;
 import org.openapitools.model.AppBlueprint;
 import org.openapitools.model.AppStats;
-import org.openapitools.model.ApplianceSettingsEnabledZoneTypesInner;
+import org.openapitools.model.InlineResponse200107NetworkPoolCreatedBy;
+import org.openapitools.model.InlineResponse20040AppDeployInstance;
 
 @Canonical
 class App {
@@ -20,19 +19,19 @@ class App {
     
     String description
     
-    List<String> labels
+    List<String> labels = new ArrayList<String>()
     
     String environment
     
     Long accountId
     
-    ApplianceSettingsEnabledZoneTypesInner account
+    InlineResponse20040AppDeployInstance account
     
-    ActivityActivityInnerUser owner
+    InlineResponse200107NetworkPoolCreatedBy owner
     
     Long siteId
     
-    ApplianceSettingsEnabledZoneTypesInner group
+    InlineResponse20040AppDeployInstance group
     
     AppBlueprint blueprint
     
@@ -54,9 +53,9 @@ class App {
     
     Long containerCount
     
-    List<Object> appTiers
+    List<Object> appTiers = new ArrayList<Object>()
     
-    List<ApplianceSettingsEnabledZoneTypesInner> instances
+    List<InlineResponse20040AppDeployInstance> instances = new ArrayList<InlineResponse20040AppDeployInstance>()
     
     AppStats stats
 }
