@@ -1,6 +1,10 @@
 ## Morpheus SDK
 
-Experimental. Based on version 6.2.1
+> Experimental. Based on version 6.2.1
+> 
+> Note: there is currently an unresolved issue re invalid 4XX and 5XX status codes in the SDKs. These will cause compile 
+> time or run time errors.
+> This appears to be a bug with OpenAPI Generator.
 
 Using the Morpheus OpenAPI specification to generate SDK's for popular client languages.
 

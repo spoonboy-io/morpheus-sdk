@@ -3,6 +3,7 @@ all-sdk: go-sdk js-sdk powershell-sdk java-sdk grooy-sdk python-sdk php-sdk
 bundled:
 	rm -Rf ./morpheus-openapi
 	git clone https://github.com/gomorpheus/morpheus-openapi.git
+	## find replace 4XX 5XX response codes as code generator does not handle
 	docker run --rm -v "${PWD}/morpheus-openapi":/spec redocly/openapi-cli bundle openapi.yaml > bundled.yaml
 
 validate:
