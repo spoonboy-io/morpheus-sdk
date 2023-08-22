@@ -132,7 +132,7 @@ func (a *HealthApiService) AcknowledgeHealthAlarmExecute(r ApiAcknowledgeHealthA
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -142,7 +142,7 @@ func (a *HealthApiService) AcknowledgeHealthAlarmExecute(r ApiAcknowledgeHealthA
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -265,7 +265,7 @@ func (a *HealthApiService) AcknowledgeHealthAlarmsExecute(r ApiAcknowledgeHealth
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -275,7 +275,7 @@ func (a *HealthApiService) AcknowledgeHealthAlarmsExecute(r ApiAcknowledgeHealth
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -471,7 +471,7 @@ func (a *HealthApiService) ExportHealthLogsExecute(r ApiExportHealthLogsRequest)
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -481,7 +481,7 @@ func (a *HealthApiService) ExportHealthLogsExecute(r ApiExportHealthLogsRequest)
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -601,7 +601,7 @@ func (a *HealthApiService) GetHealthAlarmsExecute(r ApiGetHealthAlarmsRequest) (
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -611,7 +611,7 @@ func (a *HealthApiService) GetHealthAlarmsExecute(r ApiGetHealthAlarmsRequest) (
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -727,7 +727,7 @@ func (a *HealthApiService) ListHealthExecute(r ApiListHealthRequest) (map[string
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -737,7 +737,7 @@ func (a *HealthApiService) ListHealthExecute(r ApiListHealthRequest) (map[string
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -909,7 +909,7 @@ func (a *HealthApiService) ListHealthAlarmsExecute(r ApiListHealthAlarmsRequest)
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -919,7 +919,7 @@ func (a *HealthApiService) ListHealthAlarmsExecute(r ApiListHealthAlarmsRequest)
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1107,7 +1107,7 @@ func (a *HealthApiService) ListHealthLogsExecute(r ApiListHealthLogsRequest) (ma
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1117,7 +1117,7 @@ func (a *HealthApiService) ListHealthLogsExecute(r ApiListHealthLogsRequest) (ma
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1236,7 +1236,7 @@ func (a *HealthApiService) PingExecute(r ApiPingRequest) (Ping, *_nethttp.Respon
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1246,7 +1246,7 @@ func (a *HealthApiService) PingExecute(r ApiPingRequest) (Ping, *_nethttp.Respon
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {

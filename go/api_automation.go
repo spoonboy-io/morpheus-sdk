@@ -128,7 +128,7 @@ func (a *AutomationApiService) AddExecuteSchedulesExecute(r ApiAddExecuteSchedul
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -138,7 +138,7 @@ func (a *AutomationApiService) AddExecuteSchedulesExecute(r ApiAddExecuteSchedul
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -266,7 +266,7 @@ func (a *AutomationApiService) AddPowerScheduleInstancesExecute(r ApiAddPowerSch
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -276,7 +276,7 @@ func (a *AutomationApiService) AddPowerScheduleInstancesExecute(r ApiAddPowerSch
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -404,7 +404,7 @@ func (a *AutomationApiService) AddPowerScheduleServersExecute(r ApiAddPowerSched
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -414,7 +414,7 @@ func (a *AutomationApiService) AddPowerScheduleServersExecute(r ApiAddPowerSched
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -538,7 +538,7 @@ func (a *AutomationApiService) AddPowerSchedulesExecute(r ApiAddPowerSchedulesRe
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -548,7 +548,7 @@ func (a *AutomationApiService) AddPowerSchedulesExecute(r ApiAddPowerSchedulesRe
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -672,7 +672,7 @@ func (a *AutomationApiService) AddScaleThresholdsExecute(r ApiAddScaleThresholds
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -682,7 +682,7 @@ func (a *AutomationApiService) AddScaleThresholdsExecute(r ApiAddScaleThresholds
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -806,7 +806,7 @@ func (a *AutomationApiService) AddTasksExecute(r ApiAddTasksRequest) (map[string
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -816,7 +816,7 @@ func (a *AutomationApiService) AddTasksExecute(r ApiAddTasksRequest) (map[string
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -940,7 +940,7 @@ func (a *AutomationApiService) AddWorkflowsExecute(r ApiAddWorkflowsRequest) (ma
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -950,7 +950,7 @@ func (a *AutomationApiService) AddWorkflowsExecute(r ApiAddWorkflowsRequest) (ma
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1078,7 +1078,7 @@ func (a *AutomationApiService) DeletePowerScheduleInstancesExecute(r ApiDeletePo
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1088,7 +1088,7 @@ func (a *AutomationApiService) DeletePowerScheduleInstancesExecute(r ApiDeletePo
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1216,7 +1216,7 @@ func (a *AutomationApiService) DeletePowerScheduleServersExecute(r ApiDeletePowe
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1226,7 +1226,7 @@ func (a *AutomationApiService) DeletePowerScheduleServersExecute(r ApiDeletePowe
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1374,7 +1374,7 @@ func (a *AutomationApiService) ExecuteExecutionRequestExecute(r ApiExecuteExecut
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1384,7 +1384,7 @@ func (a *AutomationApiService) ExecuteExecutionRequestExecute(r ApiExecuteExecut
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1512,7 +1512,7 @@ func (a *AutomationApiService) ExecuteTasksExecute(r ApiExecuteTasksRequest) (ma
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1522,7 +1522,7 @@ func (a *AutomationApiService) ExecuteTasksExecute(r ApiExecuteTasksRequest) (ma
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1650,7 +1650,7 @@ func (a *AutomationApiService) ExecuteWorkflowsExecute(r ApiExecuteWorkflowsRequ
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1660,7 +1660,7 @@ func (a *AutomationApiService) ExecuteWorkflowsExecute(r ApiExecuteWorkflowsRequ
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1781,7 +1781,7 @@ func (a *AutomationApiService) GetExecuteSchedulesExecute(r ApiGetExecuteSchedul
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1791,7 +1791,7 @@ func (a *AutomationApiService) GetExecuteSchedulesExecute(r ApiGetExecuteSchedul
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1912,7 +1912,7 @@ func (a *AutomationApiService) GetExecutionRequestExecute(r ApiGetExecutionReque
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1922,7 +1922,7 @@ func (a *AutomationApiService) GetExecutionRequestExecute(r ApiGetExecutionReque
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2043,7 +2043,7 @@ func (a *AutomationApiService) GetPowerSchedulesExecute(r ApiGetPowerSchedulesRe
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2053,7 +2053,7 @@ func (a *AutomationApiService) GetPowerSchedulesExecute(r ApiGetPowerSchedulesRe
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2174,7 +2174,7 @@ func (a *AutomationApiService) GetScaleThresholdsExecute(r ApiGetScaleThresholds
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2184,7 +2184,7 @@ func (a *AutomationApiService) GetScaleThresholdsExecute(r ApiGetScaleThresholds
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2305,7 +2305,7 @@ func (a *AutomationApiService) GetTaskTypesExecute(r ApiGetTaskTypesRequest) (In
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2315,7 +2315,7 @@ func (a *AutomationApiService) GetTaskTypesExecute(r ApiGetTaskTypesRequest) (In
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2436,7 +2436,7 @@ func (a *AutomationApiService) GetTasksExecute(r ApiGetTasksRequest) (map[string
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2446,7 +2446,7 @@ func (a *AutomationApiService) GetTasksExecute(r ApiGetTasksRequest) (map[string
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2567,7 +2567,7 @@ func (a *AutomationApiService) GetWorkflowsExecute(r ApiGetWorkflowsRequest) (ma
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2577,7 +2577,7 @@ func (a *AutomationApiService) GetWorkflowsExecute(r ApiGetWorkflowsRequest) (ma
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2742,7 +2742,7 @@ func (a *AutomationApiService) ListExecuteSchedulesExecute(r ApiListExecuteSched
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2752,7 +2752,7 @@ func (a *AutomationApiService) ListExecuteSchedulesExecute(r ApiListExecuteSched
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2917,7 +2917,7 @@ func (a *AutomationApiService) ListPowerSchedulesExecute(r ApiListPowerSchedules
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -2927,7 +2927,7 @@ func (a *AutomationApiService) ListPowerSchedulesExecute(r ApiListPowerSchedules
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -3092,7 +3092,7 @@ func (a *AutomationApiService) ListScaleThresholdsExecute(r ApiListScaleThreshol
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -3102,7 +3102,7 @@ func (a *AutomationApiService) ListScaleThresholdsExecute(r ApiListScaleThreshol
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -3236,7 +3236,7 @@ func (a *AutomationApiService) ListTaskTypesExecute(r ApiListTaskTypesRequest) (
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -3246,7 +3246,7 @@ func (a *AutomationApiService) ListTaskTypesExecute(r ApiListTaskTypesRequest) (
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -3435,7 +3435,7 @@ func (a *AutomationApiService) ListTasksExecute(r ApiListTasksRequest) (map[stri
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -3445,7 +3445,7 @@ func (a *AutomationApiService) ListTasksExecute(r ApiListTasksRequest) (map[stri
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -3634,7 +3634,7 @@ func (a *AutomationApiService) ListWorkflowsExecute(r ApiListWorkflowsRequest) (
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -3644,7 +3644,7 @@ func (a *AutomationApiService) ListWorkflowsExecute(r ApiListWorkflowsRequest) (
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -3765,7 +3765,7 @@ func (a *AutomationApiService) RemoveExecuteSchedulesExecute(r ApiRemoveExecuteS
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -3775,7 +3775,7 @@ func (a *AutomationApiService) RemoveExecuteSchedulesExecute(r ApiRemoveExecuteS
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -3896,7 +3896,7 @@ func (a *AutomationApiService) RemovePowerSchedulesExecute(r ApiRemovePowerSched
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -3906,7 +3906,7 @@ func (a *AutomationApiService) RemovePowerSchedulesExecute(r ApiRemovePowerSched
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4027,7 +4027,7 @@ func (a *AutomationApiService) RemoveScaleThresholdsExecute(r ApiRemoveScaleThre
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4037,7 +4037,7 @@ func (a *AutomationApiService) RemoveScaleThresholdsExecute(r ApiRemoveScaleThre
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4158,7 +4158,7 @@ func (a *AutomationApiService) RemoveTasksExecute(r ApiRemoveTasksRequest) (Mode
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4168,7 +4168,7 @@ func (a *AutomationApiService) RemoveTasksExecute(r ApiRemoveTasksRequest) (Mode
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4289,7 +4289,7 @@ func (a *AutomationApiService) RemoveWorkflowsExecute(r ApiRemoveWorkflowsReques
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4299,7 +4299,7 @@ func (a *AutomationApiService) RemoveWorkflowsExecute(r ApiRemoveWorkflowsReques
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4427,7 +4427,7 @@ func (a *AutomationApiService) UpdateExecuteSchedulesExecute(r ApiUpdateExecuteS
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4437,7 +4437,7 @@ func (a *AutomationApiService) UpdateExecuteSchedulesExecute(r ApiUpdateExecuteS
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4565,7 +4565,7 @@ func (a *AutomationApiService) UpdatePowerSchedulesExecute(r ApiUpdatePowerSched
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4575,7 +4575,7 @@ func (a *AutomationApiService) UpdatePowerSchedulesExecute(r ApiUpdatePowerSched
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4703,7 +4703,7 @@ func (a *AutomationApiService) UpdateScaleThresholdsExecute(r ApiUpdateScaleThre
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4713,7 +4713,7 @@ func (a *AutomationApiService) UpdateScaleThresholdsExecute(r ApiUpdateScaleThre
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4841,7 +4841,7 @@ func (a *AutomationApiService) UpdateTasksExecute(r ApiUpdateTasksRequest) (map[
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4851,7 +4851,7 @@ func (a *AutomationApiService) UpdateTasksExecute(r ApiUpdateTasksRequest) (map[
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4979,7 +4979,7 @@ func (a *AutomationApiService) UpdateWorkflowsExecute(r ApiUpdateWorkflowsReques
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -4989,7 +4989,7 @@ func (a *AutomationApiService) UpdateWorkflowsExecute(r ApiUpdateWorkflowsReques
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {

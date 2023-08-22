@@ -128,7 +128,7 @@ func (a *GroupsApiService) AddGroupsExecute(r ApiAddGroupsRequest) (map[string]i
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -138,7 +138,7 @@ func (a *GroupsApiService) AddGroupsExecute(r ApiAddGroupsRequest) (map[string]i
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -259,7 +259,7 @@ func (a *GroupsApiService) GetGroupsExecute(r ApiGetGroupsRequest) (InlineRespon
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -269,7 +269,7 @@ func (a *GroupsApiService) GetGroupsExecute(r ApiGetGroupsRequest) (InlineRespon
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -390,7 +390,7 @@ func (a *GroupsApiService) GetWikiGroupExecute(r ApiGetWikiGroupRequest) (Inline
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -400,7 +400,7 @@ func (a *GroupsApiService) GetWikiGroupExecute(r ApiGetWikiGroupRequest) (Inline
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -565,7 +565,7 @@ func (a *GroupsApiService) ListGroupsExecute(r ApiListGroupsRequest) (map[string
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -575,7 +575,7 @@ func (a *GroupsApiService) ListGroupsExecute(r ApiListGroupsRequest) (map[string
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -696,7 +696,7 @@ func (a *GroupsApiService) RemoveGroupsExecute(r ApiRemoveGroupsRequest) (Model2
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -706,7 +706,7 @@ func (a *GroupsApiService) RemoveGroupsExecute(r ApiRemoveGroupsRequest) (Model2
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -834,7 +834,7 @@ func (a *GroupsApiService) UpdateGroupsExecute(r ApiUpdateGroupsRequest) (Inline
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -844,7 +844,7 @@ func (a *GroupsApiService) UpdateGroupsExecute(r ApiUpdateGroupsRequest) (Inline
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -972,7 +972,7 @@ func (a *GroupsApiService) UpdateGroupsZonesExecute(r ApiUpdateGroupsZonesReques
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -982,7 +982,7 @@ func (a *GroupsApiService) UpdateGroupsZonesExecute(r ApiUpdateGroupsZonesReques
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1110,7 +1110,7 @@ func (a *GroupsApiService) UpdateWikiGroupExecute(r ApiUpdateWikiGroupRequest) (
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		if localVarHTTPResponse.StatusCode == 4XX {
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
@@ -1120,7 +1120,7 @@ func (a *GroupsApiService) UpdateWikiGroupExecute(r ApiUpdateWikiGroupRequest) (
 			newErr.model = v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
-		if localVarHTTPResponse.StatusCode == 5XX {
+		if localVarHTTPResponse.StatusCode >= 500 {
 			var v DefaultError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {

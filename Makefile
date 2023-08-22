@@ -3,10 +3,10 @@ all-sdk: go-sdk js-sdk powershell-sdk java-sdk grooy-sdk python-sdk php-sdk
 bundled:
 	rm -Rf ./morpheus-openapi
 	git clone https://github.com/gomorpheus/morpheus-openapi.git
-	## find replace 4XX 5XX response codes as code generator does not handle
 	docker run --rm -v "${PWD}/morpheus-openapi":/spec redocly/openapi-cli bundle openapi.yaml > bundled.yaml
 
 validate:
+	cd morpheus-openapi
 	docker run --rm \
 	  	-v ${PWD}:/local openapitools/openapi-generator-cli:v5.0.0 validate \
       	-i local/bundled.yaml
@@ -19,6 +19,10 @@ list-generators:
 	docker run --rm \
 	  	-v ${PWD}:/local openapitools/openapi-generator-cli list
 
+clean-code:
+	##find go -type f -name "*.go" -exec sed -i '' -e 's/localVarHTTPResponse.StatusCode == 4XX/localVarHTTPResponse.StatusCode >= 400 \&\& localVarHTTPResponse.StatusCode < 500/g' {} +
+	##find go -type f -name "*.go" -exec sed -i '' -e 's/localVarHTTPResponse.StatusCode == 5XX/localVarHTTPResponse.StatusCode >= 500/g' {} +
+
 go-sdk:
 	echo "Creating Go SDK"
 	rm -Rf ./go
@@ -28,6 +32,9 @@ go-sdk:
   		-i local/bundled.yaml \
   		-g go \
   		-o /local/go
+  	## fix the 4XX and 5XX issues
+	find go -type f -name "*.go" -exec sed -i '' -e 's/localVarHTTPResponse.StatusCode == 4XX/localVarHTTPResponse.StatusCode >= 400 \&\& localVarHTTPResponse.StatusCode < 500/g' {} +
+	find go -type f -name "*.go" -exec sed -i '' -e 's/localVarHTTPResponse.StatusCode == 5XX/localVarHTTPResponse.StatusCode >= 500/g' {} +
 
 js-sdk:
 	echo "Creating JavaScript SDK"
