@@ -19,10 +19,6 @@ list-generators:
 	docker run --rm \
 	  	-v ${PWD}:/local openapitools/openapi-generator-cli list
 
-clean-code:
-	##find go -type f -name "*.go" -exec sed -i '' -e 's/localVarHTTPResponse.StatusCode == 4XX/localVarHTTPResponse.StatusCode >= 400 \&\& localVarHTTPResponse.StatusCode < 500/g' {} +
-	##find go -type f -name "*.go" -exec sed -i '' -e 's/localVarHTTPResponse.StatusCode == 5XX/localVarHTTPResponse.StatusCode >= 500/g' {} +
-
 go-sdk:
 	echo "Creating Go SDK"
 	rm -Rf ./go
@@ -46,7 +42,7 @@ js-sdk:
   		-g javascript \
   		-o /local/javascript
 
-python-sdk:
+python-sdk: ## not working
 	echo "Creating Python SDK"
 	rm -Rf ./python
 	mkdir python
@@ -65,8 +61,14 @@ php-sdk:
   		-i local/bundled.yaml \
   		-g php \
   		-o /local/php
+	## fix the 4XX and 5XX issues
+	find php -type f -name "*.php" -exec sed -i '' -e 's/case 4XX:/case 400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417:/g' {} +
+	find php -type f -name "*.php" -exec sed -i '' -e 's/case 5XX:/case 500,501,502,503,504,505,506,507,509,510:/g' {} +
 
-powershell-sdk:
+
+
+
+powershell-sdk: ## not working
 	echo "Creating PowerShell SDK"
 	rm -Rf ./powershell
 	mkdir powershell
