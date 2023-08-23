@@ -2,9 +2,11 @@
 
 > Experimental. Based on version 6.2.1
 > 
-> Note: there is currently an unresolved issue re invalid 4XX and 5XX status codes in the SDKs. These will cause compile 
-> time or run time errors.
-> This appears to be a bug with OpenAPI Generator.
+> Some SDKs can not be generated.
+>
+> There are currently many issues with the generated SDKs that have been built.
+
+<hr>
 
 Using the Morpheus OpenAPI specification to generate SDK's for popular client languages.
 
@@ -12,14 +14,17 @@ Uses the [OpenAPI Generator](https://openapi-generator.tech/) to build the SDKs 
 
 Uses v5.0.0 to work past some issues in OpenAPI Generator while not moving too far from the 3.0.3 spec.
 
-Included language targets and their status below. ATM two targets fail to build using OpenAPI Generator v5.0.0
-- Go
-- JavaScript
-- Java
-- Groovy
-- Python (does not build)
-- PHP
-- PowerShell (does not build)
+Included language targets and their status below. 
+
+| Language   | Generates | Tested | Good | Comment                              |
+|------------|-----------|--------|-----|--------------------------------------|
+| Go         | ✅         | ✅      | ❌   | Issue #2, Issue #3                   |
+| JavaScript | ✅         | ❌      |     |                                      |
+| Java       | ✅         | ❌      |     |                                      |
+| Groovy     |    ✅       | ❌      |     |                                      | 
+| Python     | ❌         |        |     | OpenAPI generator fails to build SDK |   
+| PHP        | ✅         | ❌      |     | Issue #2                             |
+| PowerShell | ❌          |        |     | OpenAPI generator fails to build SDK |
 
 ### Using
 
