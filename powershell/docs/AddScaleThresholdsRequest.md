@@ -1,0 +1,21 @@
+# AddScaleThresholdsRequest
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ScaleThreshold** | [**AddScaleThresholdsRequestScaleThreshold**](AddScaleThresholdsRequestScaleThreshold.md) |  | 
+
+## Examples
+
+- Prepare the resource
+```powershell
+$AddScaleThresholdsRequest = Initialize-PSOpenAPIToolsAddScaleThresholdsRequest  -ScaleThreshold null
+```
+
+- Convert the resource to JSON
+```powershell
+$AddScaleThresholdsRequest | ConvertTo-JSON
+```
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

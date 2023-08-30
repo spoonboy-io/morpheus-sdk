@@ -1,0 +1,16 @@
+# UserSourceCreateCustomApi
+
+Custom API Configuration
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**endpoint** | **str** | API Endpoint | [optional] 
+**api_style** | **str** | API Style | [optional] 
+**encryption_algo** | **str** | Encryption Algorithm | [optional] 
+**encryption_key** | **str** | Encryption Key | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

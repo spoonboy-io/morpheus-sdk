@@ -1,0 +1,57 @@
+# VirtualImage
+
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [optional] 
+**name** | **str** |  | [optional] 
+**description** | **str, none_type** |  | [optional] 
+**labels** | **[str]** |  | [optional] 
+**owner_id** | **int** |  | [optional] 
+**tenant** | [**ListDeploys200ResponseAllOfAppDeploysInnerInstance**](ListDeploys200ResponseAllOfAppDeploysInnerInstance.md) |  | [optional] 
+**image_type** | **str** |  | [optional] 
+**user_uploaded** | **bool** |  | [optional] 
+**user_defined** | **bool** |  | [optional] 
+**system_image** | **bool** |  | [optional] 
+**is_cloud_init** | **bool** |  | [optional] 
+**ssh_username** | **str, none_type** |  | [optional] 
+**ssh_password** | **str, none_type** |  | [optional] 
+**ssh_password_hash** | **str, none_type** |  | [optional] 
+**ssh_key** | **str, none_type** |  | [optional] 
+**os_type** | [**VirtualImageOsType**](VirtualImageOsType.md) |  | [optional] 
+**min_ram** | **int, none_type** |  | [optional] 
+**min_ram_gb** | **int, none_type** |  | [optional] 
+**min_disk** | **str, none_type** |  | [optional] 
+**min_disk_gb** | **str, none_type** |  | [optional] 
+**raw_size** | **int, none_type** |  | [optional] 
+**raw_size_gb** | **float, none_type** |  | [optional] 
+**trial_version** | **bool** |  | [optional] 
+**virtio_supported** | **bool** |  | [optional] 
+**uefi** | **str, none_type** |  | [optional] 
+**is_auto_join_domain** | **bool** |  | [optional] 
+**vm_tools_installed** | **bool** |  | [optional] 
+**install_agent** | **bool** |  | [optional] 
+**is_force_customization** | **bool** |  | [optional] 
+**is_sysprep** | **bool** |  | [optional] 
+**fips_enabled** | **bool** |  | [optional] 
+**user_data** | **str, none_type** |  | [optional] 
+**console_keymap** | **str, none_type** |  | [optional] 
+**storage_provider** | **str, none_type** |  | [optional] 
+**external_id** | **str, none_type** |  | [optional] 
+**visibility** | **str** |  | [optional] 
+**accounts** | [**[ListDeploys200ResponseAllOfAppDeploysInnerInstance]**](ListDeploys200ResponseAllOfAppDeploysInnerInstance.md) |  | [optional] 
+**config** | [**VirtualImageConfig**](VirtualImageConfig.md) |  | [optional] 
+**volumes** | **[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]** |  | [optional] 
+**storage_controllers** | **[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]** |  | [optional] 
+**network_interfaces** | **[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]** |  | [optional] 
+**tags** | **[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]** |  | [optional] 
+**locations** | **[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]** |  | [optional] 
+**date_created** | **datetime** |  | [optional] 
+**last_updated** | **datetime** |  | [optional] 
+**status** | **str** |  | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

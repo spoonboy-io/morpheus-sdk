@@ -12,19 +12,19 @@ Using the Morpheus OpenAPI specification to generate SDK's for popular client la
 
 Uses the [OpenAPI Generator](https://openapi-generator.tech/) to build the SDKs via Docker.
 
-Uses v5.0.0 to work past some issues in OpenAPI Generator while not moving too far from the 3.0.3 spec.
+Uses v5.0.0 to work past some issues, v6.0.0 works allows Python to be generated and Powershell partially.
 
 Included language targets and their status below. 
 
-| Language   | Generates | Tested | Good | Comment                              |
-|------------|-----------|--------|-----|--------------------------------------|
-| Go         | ✅         | ✅      | ❌   | Issue #2, Issue #3                   |
-| JavaScript | ✅         | ❌      |     |                                      |
-| Java       | ✅         | ❌      |     |                                      |
-| Groovy     |    ✅       | ❌      |     |                                      | 
-| Python     | ❌         |        |     | OpenAPI generator fails to build SDK |   
-| PHP        | ✅         | ❌      |     | Issue #2                             |
-| PowerShell | ❌          |        |     | OpenAPI generator fails to build SDK |
+| Language   | Generates | Tested | Good | Comment                                      |
+|------------|---------|--------|-----|----------------------------------------------|
+| Go         | ✅       | ✅      | ❌   | Issue #2, Issue #3                           |
+| JavaScript | ✅       | ❌      |     |                                              |
+| Java       | ✅       | ❌      |     |                                              |
+| Groovy     |    ✅     | ❌      |     |                                              | 
+| Python     | ✅        |   ❌     |     | Builds with 6.0.0                            |   
+| PHP        | ✅       | ❌      |     | Issue #2                                     |
+| PowerShell | 🤷        |    ❌     |     | OpenAPI 6.0.0 outputs much of it, but errors |
 
 ### Using
 

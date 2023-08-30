@@ -42,12 +42,12 @@ js-sdk:
   		-g javascript \
   		-o /local/javascript
 
-python-sdk: ## not working
+python-sdk: ## v6.0.0 seems to work here, latest fails however
 	echo "Creating Python SDK"
 	rm -Rf ./python
 	mkdir python
 	docker run --rm \
-  		-v ${PWD}:/local openapitools/openapi-generator-cli:v5.0.0 generate --skip-validate-spec \
+  		-v ${PWD}:/local openapitools/openapi-generator-cli:v6.0.0 generate --skip-validate-spec \
   		-i local/bundled.yaml \
   		-g python \
   		-o /local/python
@@ -65,15 +65,12 @@ php-sdk:
 	find php -type f -name "*.php" -exec sed -i '' -e 's/case 4XX:/case 400,401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417:/g' {} +
 	find php -type f -name "*.php" -exec sed -i '' -e 's/case 5XX:/case 500,501,502,503,504,505,506,507,509,510:/g' {} +
 
-
-
-
 powershell-sdk: ## not working
 	echo "Creating PowerShell SDK"
 	rm -Rf ./powershell
 	mkdir powershell
 	docker run --rm \
-  		-v ${PWD}:/local openapitools/openapi-generator-cli:v5.0.0 generate --skip-validate-spec \
+  		-v ${PWD}:/local openapitools/openapi-generator-cli:v6.0.0 generate --skip-validate-spec \
   		-i local/bundled.yaml \
   		-g powershell \
   		-o /local/powershell

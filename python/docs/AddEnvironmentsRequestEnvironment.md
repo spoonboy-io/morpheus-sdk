@@ -1,0 +1,17 @@
+# AddEnvironmentsRequestEnvironment
+
+Payload for creating a new environment
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A unique name for the environment | 
+**code** | **str** | A unique code for the environment | 
+**description** | **str** | A description of the environment | [optional] 
+**visibility** | **str** | private or public | [optional]  if omitted the server will use the default value of "private"
+**sort_order** | **int** | Sort order | [optional]  if omitted the server will use the default value of 0
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

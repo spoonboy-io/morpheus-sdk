@@ -1,0 +1,55 @@
+# StorageServer
+
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [optional] 
+**name** | **str** |  | [optional] 
+**type** | [**ListLoadBalancerMonitors200ResponseAllOfLoadBalancerMonitorsInnerLoadBalancerType**](ListLoadBalancerMonitors200ResponseAllOfLoadBalancerMonitorsInnerLoadBalancerType.md) |  | [optional] 
+**chassis** | **str, none_type** |  | [optional] 
+**visibility** | **str** |  | [optional] 
+**description** | **str, none_type** |  | [optional] 
+**internal_id** | **str, none_type** |  | [optional] 
+**external_id** | **str, none_type** |  | [optional] 
+**service_url** | **str, none_type** |  | [optional] 
+**service_host** | **str, none_type** |  | [optional] 
+**service_path** | **str, none_type** |  | [optional] 
+**service_token** | **str, none_type** |  | [optional] 
+**service_token_hash** | **str, none_type** |  | [optional] 
+**service_version** | **str, none_type** |  | [optional] 
+**service_username** | **str, none_type** |  | [optional] 
+**service_password** | **str, none_type** |  | [optional] 
+**service_password_hash** | **str, none_type** |  | [optional] 
+**internal_ip** | **str, none_type** |  | [optional] 
+**external_ip** | **str, none_type** |  | [optional] 
+**api_port** | **str, none_type** |  | [optional] 
+**admin_port** | **str, none_type** |  | [optional] 
+**config** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
+**ref_type** | **str** |  | [optional] 
+**ref_id** | **int** |  | [optional] 
+**category** | **str, none_type** |  | [optional] 
+**server_vendor** | **str, none_type** |  | [optional] 
+**server_model** | **str, none_type** |  | [optional] 
+**serial_number** | **str, none_type** |  | [optional] 
+**status** | **str** |  | [optional] 
+**status_message** | **str, none_type** |  | [optional] 
+**status_date** | **datetime** |  | [optional] 
+**error_message** | **str, none_type** |  | [optional] 
+**max_storage** | **str, none_type** |  | [optional] 
+**used_storage** | **str, none_type** |  | [optional] 
+**disk_count** | **str, none_type** |  | [optional] 
+**date_created** | **datetime** |  | [optional] 
+**last_updated** | **datetime** |  | [optional] 
+**enabled** | **bool** |  | [optional] 
+**groups** | **[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]** |  | [optional] 
+**host_groups** | **[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]** |  | [optional] 
+**hosts** | **[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]** |  | [optional] 
+**tenants** | **[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]** |  | [optional] 
+**owner** | [**ListDeploys200ResponseAllOfAppDeploysInnerInstance**](ListDeploys200ResponseAllOfAppDeploysInnerInstance.md) |  | [optional] 
+**credential** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

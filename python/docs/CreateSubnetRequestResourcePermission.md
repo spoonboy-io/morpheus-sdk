@@ -1,0 +1,15 @@
+# CreateSubnetRequestResourcePermission
+
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**all** | **bool** | Pass true to allow access all groups | [optional] 
+**sites** | [**[UpdateBlueprintPermissionsRequestResourcePermissionSitesInner]**](UpdateBlueprintPermissionsRequestResourcePermissionSitesInner.md) | Array of groups ID objects that are allowed access | [optional] 
+**all_plans** | **bool** |  | [optional] 
+**plans** | **[{str: (bool, date, datetime, dict, float, int, list, str, none_type)}]** |  | [optional] 
+**any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

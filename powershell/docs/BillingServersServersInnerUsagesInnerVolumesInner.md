@@ -1,0 +1,25 @@
+# BillingServersServersInnerUsagesInnerVolumesInner
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Size** | **Int64** |  | [optional] 
+**TypeCode** | **String** |  | [optional] 
+**Datastore** | **String** |  | [optional] 
+
+## Examples
+
+- Prepare the resource
+```powershell
+$BillingServersServersInnerUsagesInnerVolumesInner = Initialize-PSOpenAPIToolsBillingServersServersInnerUsagesInnerVolumesInner  -Size null `
+ -TypeCode null `
+ -Datastore null
+```
+
+- Convert the resource to JSON
+```powershell
+$BillingServersServersInnerUsagesInnerVolumesInner | ConvertTo-JSON
+```
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
